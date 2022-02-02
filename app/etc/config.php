@@ -309,6 +309,7 @@ return [
         'Webjump_PostCode' => 1,
         'Webjump_ProductIncrementButtons' => 1,
         'Webjump_ViaCep' => 1,
-        'Yotpo_Yotpo' => 1
+        'Yotpo_Yotpo' => 1,
+        'webjumpCarbonoGrupo2' => 1
     ]
 ];

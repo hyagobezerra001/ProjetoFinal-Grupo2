@@ -302,6 +302,7 @@ return [
         'Webjump_Carbono' => 1,
         'Webjump_CarbonoSales' => 1,
         'Webjump_CmsPageTranslator' => 1,
+        'Webjump_Configuration' => 1,
         'Webjump_CoreConfigurator' => 1,
         'Webjump_CustomerBr' => 1,
         'Webjump_DisableRegistration' => 1,
@@ -309,7 +310,6 @@ return [
         'Webjump_PostCode' => 1,
         'Webjump_ProductIncrementButtons' => 1,
         'Webjump_ViaCep' => 1,
-        'Yotpo_Yotpo' => 1,
-        'webjumpCarbonoGrupo2' => 1
+        'Yotpo_Yotpo' => 1
     ]
 ];

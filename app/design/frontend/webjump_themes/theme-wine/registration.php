@@ -7,3 +7,4 @@
 use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(ComponentRegistrar::THEME, 'frontend/webjump_themes/theme-wine', __DIR__);
+

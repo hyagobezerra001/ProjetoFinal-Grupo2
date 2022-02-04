@@ -310,8 +310,7 @@ return [
         'Webjump_PostCode' => 1,
         'Webjump_ProductIncrementButtons' => 1,
         'Webjump_ViaCep' => 1,
-        'Yotpo_Yotpo' => 1,
-        'webjumpCarbonoGrupo2' => 1
+        'Yotpo_Yotpo' => 1
     ],
     'scopes' => [
         'websites' => [
@@ -329,7 +328,7 @@ return [
                 'name' => 'Fashion',
                 'sort_order' => '1',
                 'default_group_id' => '1',
-                'is_default' => '1'
+                'is_default' => '0'
             ],
             'wine' => [
                 'website_id' => '2',
@@ -337,7 +336,7 @@ return [
                 'name' => 'Wine',
                 'sort_order' => '2',
                 'default_group_id' => '2',
-                'is_default' => '0'
+                'is_default' => '1'
             ]
         ],
         'groups' => [

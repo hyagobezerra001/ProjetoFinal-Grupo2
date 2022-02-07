@@ -10,7 +10,7 @@ use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Laminas\Filter\ToInt;
 
-class SetCarbonoTheme implements DataPatchInterface
+    class SetCarbonoTheme implements DataPatchInterface
 {
     /**
      * @var ModuleDataSetupInterface

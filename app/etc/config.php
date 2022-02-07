@@ -290,7 +290,6 @@ return [
         'Carbono_CalculatorShipping' => 1,
         'Dotdigitalgroup_Email' => 1,
         'Dotdigitalgroup_Chat' => 1,
-        'Ho_Templatehints' => 1,
         'Klarna_Core' => 1,
         'Klarna_Ordermanagement' => 1,
         'Klarna_Onsitemessaging' => 1,
@@ -353,7 +352,7 @@ return [
                 'group_id' => '1',
                 'website_id' => '1',
                 'name' => 'Fashion Store',
-                'root_category_id' => '2',
+                'root_category_id' => null,
                 'default_store_id' => '1',
                 'code' => 'fashion_store'
             ],
@@ -361,7 +360,7 @@ return [
                 'group_id' => '2',
                 'website_id' => '2',
                 'name' => 'Wine Store',
-                'root_category_id' => '2',
+                'root_category_id' => null,
                 'default_store_id' => '2',
                 'code' => 'wine_store'
             ]

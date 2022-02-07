@@ -19,6 +19,16 @@
  *
  */
 module.exports = {
+    themewine: {
+        area: 'frontend',
+        name: 'webjump_themes/theme-wine',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
     blank: {
         area: 'frontend',
         name: 'Magento/blank',

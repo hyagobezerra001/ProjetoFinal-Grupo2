@@ -1,4 +1,55 @@
-.panel, .wrapper{
-    background: #eaeaea;
- 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@471&family=Urbanist:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@471&family=Raleway:wght@500&family=Urbanist:wght@100;400&display=swap');
+
+//Retirando mensagem padrão
+.not-logged-in {
+    display: none;
 }
+
+//Alterando cor do Entre e Cadastre-se
+.panel, .wrapper{
+    background-color: #eaeaea; 
+}
+
+//Alterando panel
+.header.panel > .header.links > li > a {
+    color: #666666;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.header.panel > .header.links > li > a:hover {
+    color: #000;
+}
+
+.header.panel > .header.links > .authorization-link:after {
+    color: #666666;
+    font-family: 'Raleway';
+    font-size: 14px;
+}
+
+//Alterando campo de pesquisa
+.block-search  input{
+    font-family: 'Urbanist';
+    height: 38px;
+    border: 1px solid #a6a6a6;
+}
+
+//Estilizando Nav
+.navigation {
+    background-color: #ffffff;
+}
+
+.navigation span{
+    color: #c59c3f;
+    font-family: 'Urbanist';  
+    font-size: 16px;
+    letter-spacing: -0.16px;
+}
+
+
+
+
+ 

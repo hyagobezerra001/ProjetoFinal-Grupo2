@@ -24,7 +24,8 @@ class CreateCategories implements DataPatchInterface
         ModuleDataSetupInterface $moduleDataSetup,
         CategoryFactory $category,
         CategoryRepository $repository,
-        StoreRepository $storeRepository
+        StoreRepository $storeRepository,
+        WebsiteConfigure $websiteConfigure
     ){
         $this->storeRepository = $storeRepository;
         $this->category = $category;
@@ -114,11 +115,11 @@ class CreateCategories implements DataPatchInterface
 
         $this->moduleDataSetup->getConnection()->startSetup();
     }
-    public static function getDependencies()
+    public static function getDependencies():array
     {
-        return [];
+        return [WebsiteConfigure::class];
     }
-    public function getAliases()
+    public function getAliases():array
     {
         return [];
     }

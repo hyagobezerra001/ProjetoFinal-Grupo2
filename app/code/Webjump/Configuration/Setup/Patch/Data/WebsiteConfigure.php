@@ -15,8 +15,10 @@ class WebsiteConfigure implements DataPatchInterface
 
     const WEBSITE_FASHION_CODE = 'fashion';
     const WEBSITE_FASHION_STORE_CODE = 'fashion_store';
+    const WEBSITE_FASHION_STORE_CODE_EN = 'fashion_en';
     const WEBSITE_WINE_CODE = 'wine';
     const WEBSITE_FASHION_WINE_CODE = 'wine_store';
+    const WEBSITE_WINE_STORE_CODE_EN = 'wine_en';
 
 
     private $moduleDataSetup;
@@ -131,7 +133,7 @@ class WebsiteConfigure implements DataPatchInterface
                         'is_active' => '1'
                     ],
                     'en' => [
-                        'code' => self::WEBSITE_FASHION_CODE,
+                        'code' => self::WEBSITE_FASHION_STORE_CODE_EN,
                         'name' => 'Fashion Store View en',
                         'sort_order' => '2',
                         'is_active' => '1'
@@ -159,7 +161,7 @@ class WebsiteConfigure implements DataPatchInterface
                         'is_active' => '1'
                     ],
                     'en' => [
-                        'code' => self::WEBSITE_FASHION_CODE,
+                        'code' => self::WEBSITE_WINE_STORE_CODE_EN,
                         'name' => 'Wine Store View en',
                         'sort_order' => '2',
                         'is_active' => '1'

@@ -37,8 +37,8 @@ class SetUrls implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
-        $this->writer->save('web/unsecure/base_url', 'http://admin.develop.com.br/', 'default', 0);
-        $this->writer->save('web/unsecure/base_link_url', 'http://admin.develop.com.br/', 'default', 0);
+        $this->writer->save('web/unsecure/base_url', 'http://projetofinal.develop.com.br/', 'default', 0);
+        $this->writer->save('web/unsecure/base_link_url', 'http://projetofinal.develop.com.br/', 'default', 0);
 
         $wine = $this->collectionFactory->create()->addFieldToFilter('name', 'Wine')->setPageSize(1);
 

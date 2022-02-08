@@ -10,9 +10,9 @@ use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 
 class CreateAttrCategory implements DataPatchInterface
 {
-    const CATEGORY_CODE_WINE = 'wine_category';
+    const CATEGORY_CODE_WINE = 'Wine001';
 
-    const CATEGORY_CODE_FASHION = 'wine_fashion';
+    const CATEGORY_CODE_FASHION = 'Fashion001';
 
     private $moduleDataSetup;
     private $eavSetupFactory;

@@ -2,11 +2,4 @@
 "Sign In",Entre,module,Magento_Checkout
 "Search entire store here...","Qual vinho você está buscando?",module,Magento_Search
 
-"Search Terms","Todos os vinhos",module,Magento_Reports
-"Privacy and Cookie Policy","Tintos",module,Magento_Cms
-"Orders and Returns","Brancos",module,Magento_Sales
-"Contact Us","Rosés",module,Magento_Contact
-"Advanced Search","Espumantes",module,Magento_CatalogSearch
-
-
 "Enter your email address","Insira seu e-mail aqui",module,Magento_Newsletter

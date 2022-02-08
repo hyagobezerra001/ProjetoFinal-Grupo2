@@ -13,4 +13,34 @@
             <argument name="logo_file" xsi:type="string">images/wineclub.png</argument>
         </arguments>
     </referenceBlock>
+
+    <referenceBlock name= "footer_links" remove="true"></referenceBlock>
+
+    <referenceContainer name="footer-container">
+        <container name="footer-links" htmlTag="div" htmlClass="footer-links">
+            <block class="Magento\Cms\Block\Block" name="link4" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-link4</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link1" after="link4">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-link1</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link2" after="link1">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-link2</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link3" after="link2">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-link3</argument>
+                </arguments>
+            </block>
+        </container>
+    </referenceContainer>    
 </page>

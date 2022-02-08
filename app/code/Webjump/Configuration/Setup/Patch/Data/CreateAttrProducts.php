@@ -23,7 +23,7 @@ class CreateAttrProducts implements DataPatchInterface {
     const SET_ATTRIBUTE_FASHION = 'Fashion';
     const ATTRIBUTE_FASHION1 = 'tecido';
     const ATTRIBUTE_FASHION2 = 'tamanho';
-    const ATTRIBUTE_FASHION3 = 'moda_verao'; //bool
+    const ATTRIBUTE_FASHION3 = 'moda_verao';
 
 
     private $moduleDataSetup;

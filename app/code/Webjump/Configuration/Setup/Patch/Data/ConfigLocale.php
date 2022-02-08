@@ -43,6 +43,13 @@ class ConfigLocale implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
+        $this->config->saveConfig(
+            'system/currency/installed',
+            'BRL,USD',
+            ScopeInterface::SCOPE_TYPE_DEFAULT,
+            0
+        );
+
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
 
         $this->config->saveConfig(

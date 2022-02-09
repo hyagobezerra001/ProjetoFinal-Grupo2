@@ -9,6 +9,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Framework\App\Config\ScopeConfigInterface;
 
 
 class ConfigLocale implements DataPatchInterface
@@ -46,7 +47,7 @@ class ConfigLocale implements DataPatchInterface
         $this->config->saveConfig(
             'system/currency/installed',
             'BRL,USD',
-            ScopeInterface::SCOPE_TYPE_DEFAULT,
+            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
             0
         );
 

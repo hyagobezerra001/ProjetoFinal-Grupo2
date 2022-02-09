@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@471&family=Urbanist:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@471&family=Raleway:wght@500&family=Urbanist:wght@100;400&display=swap');
 
-
 //HEADER
+//Retirando mensagem padrão
+
+
 //Alterando cor do Entre e Cadastre-se
 .panel, .wrapper{
-    background-color: #eaeaea; 
+    background-color: #eaeaea;
 }
 
 //Alterando panel
@@ -15,9 +17,10 @@
     font-weight: 500;
     font-size: 14px;
     transition: 0.2s;
-    &:hover {
-        color: #000;
-    }
+}
+
+.header.panel > .header.links > li > a:hover {
+    color: #000;
 }
 
 .header.panel > .header.links > .authorization-link:after {
@@ -41,7 +44,7 @@
 
 .navigation span{
     color: #c59c3f;
-    font-family: 'Urbanist';  
+    font-family: 'Urbanist';
     font-size: 16px;
     letter-spacing: -0.16px;
 }
@@ -57,9 +60,10 @@
     font-family: "Urbanist";
     font-size: 16px;
     line-height: 27.32px;
-    &:hover {
-        color: #f6f4f4;
-    }
+}
+
+.footer.content .links a:hover {
+    color: #f6f4f4;
 }
 
 //Alterando campo de newsletter

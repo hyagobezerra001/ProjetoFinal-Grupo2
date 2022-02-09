@@ -17,7 +17,7 @@ class WebsiteConfigure implements DataPatchInterface
     const WEBSITE_FASHION_STORE_CODE = 'fashion_store';
     const WEBSITE_FASHION_STORE_CODE_EN = 'fashion_en';
     const WEBSITE_WINE_CODE = 'wine';
-    const WEBSITE_FASHION_WINE_CODE = 'wine_store';
+    const WEBSITE_WINE_STORE_CODE = 'wine_store';
     const WEBSITE_WINE_STORE_CODE_EN = 'wine_en';
 
 
@@ -150,7 +150,7 @@ class WebsiteConfigure implements DataPatchInterface
                 'group' => [
                     'name' => 'Wine Store',
                     'root_category_id' => '2',
-                    'code' => self::WEBSITE_FASHION_WINE_CODE,
+                    'code' => self::WEBSITE_WINE_STORE_CODE,
                     'default_store_id' => 0
                 ],
                 'store' => [

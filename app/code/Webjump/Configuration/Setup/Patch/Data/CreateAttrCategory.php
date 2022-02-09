@@ -10,9 +10,9 @@ use Magento\Eav\Model\Entity\Attribute\ScopedAttributeInterface;
 
 class CreateAttrCategory implements DataPatchInterface
 {
-    const CATEGORY_CODE_WINE = 'Wine001';
+    const ATTRIBUTE_WINE = 'Wine';
+    const ATTRIBUTE_FASHION = 'Fashion';
 
-    const CATEGORY_CODE_FASHION = 'Fashion001';
 
     private $moduleDataSetup;
     private $eavSetupFactory;
@@ -31,7 +31,7 @@ class CreateAttrCategory implements DataPatchInterface
         $this->moduleDataSetup->getConnection()->startSetup();
         $eavConfig = $this->eavSetupFactory->create(['setup' => $this->moduleDataSetup]);
 
-        $eavConfig->addAttribute(Category::ENTITY, self::CATEGORY_CODE_WINE, [
+        $eavConfig->addAttribute(Category::ENTITY, self::ATTRIBUTE_WINE, [
             'type' => 'varchar',
             'label' => 'Produtos (wine)',
             'input' => 'text',
@@ -45,7 +45,7 @@ class CreateAttrCategory implements DataPatchInterface
         ]);
 
 
-        $eavConfig->addAttribute(Category::ENTITY, self::CATEGORY_CODE_FASHION, [
+        $eavConfig->addAttribute(Category::ENTITY, self::ATTRIBUTE_FASHION, [
             'type' => 'varchar',
             'label' => 'Produtos (fashion)',
             'input' => 'text',
@@ -77,4 +77,3 @@ class CreateAttrCategory implements DataPatchInterface
         return [];
     }
 }
-

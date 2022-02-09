@@ -58,7 +58,7 @@ class CreateCategories implements DataPatchInterface
         $temp->setName($name)
             ->setParentId($idRoot)
             ->setIsActive(true)
-            ->setPosition(2);
+            ->setPosition($idRoot->getPosition());
         $this->repository->save($temp);
         return $temp;
 

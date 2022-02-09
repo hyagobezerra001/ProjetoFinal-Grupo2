@@ -9,61 +9,53 @@ use Magento\Framework\App\Config\Storage\WriterInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\View\Design\Theme\ThemeProviderInterface;
 use Laminas\Filter\ToInt;
+use Magento\Store\Model\StoreManagerInterface;
 
 class SetFashionTheme implements DataPatchInterface
 {
-    /**
-     * @var ModuleDataSetupInterface
-     */
     private $moduleDataSetup;
-    /**
-     * @var WriterInterface
-     */
     private $writer;
-    /**
-     * @var ThemeProviderInterface
-     */
     private $themeProvider;
+    private $storeManager;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         WriterInterface          $writer,
-        ThemeProviderInterface   $themeProvider
+        ThemeProviderInterface   $themeProvider,
+        StoreManagerInterface $storeManager
     )
     {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->writer = $writer;
         $this->themeProvider = $themeProvider;
-
+        $this->storeManager = $storeManager;
     }
 
-    public static function getDependencies(): array
-    {
-        return [];
-    }
-
-    public function getAliases(): array
-    {
-        return [];
-    }
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
         $theme = $this->themeProvider->getThemeByFullPath('frontend/webjump_themes/theme-fashion');
 
-        $scopes = [
-            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-            ScopeInterface::SCOPE_STORES
-        ];
+        $storeId = $this->storeManager->getStore(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
 
-        foreach ($scopes as $scope) {
-            $this->writer->save(
-                'design/theme/theme_id',
-                $theme->getId(),
-                $scope
-            );
-        }
+        $this->writer->save(
+            'design/theme/theme_id',
+            $theme->getId(),
+            ScopeInterface::SCOPE_STORES,
+            $storeId
+        );
+
         $this->moduleDataSetup->getConnection()->endSetup();
+    }
+    public function getAliases(): array
+    {
+        return [];
+    }
+    public static function getDependencies(): array
+    {
+        return [
+            WebsiteConfigure:: class
+        ];
     }
 }

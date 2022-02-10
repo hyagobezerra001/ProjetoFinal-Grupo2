@@ -7,12 +7,11 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Webjump\Configuration\app\FindCategories;
 
-class TranslateCategoriesNames implements DataPatchInterface
+class TranslateCategoriesNamesFashion implements DataPatchInterface
 {
     private $moduleDataSetup;
     private $categoryRepository;
     private $storeRepository;
-
     private $category;
 
 
@@ -37,12 +36,7 @@ class TranslateCategoriesNames implements DataPatchInterface
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
         $datas = $this->data();
 
-        $root [] = $this->category->getId('Roupas');
-        $root [] = $this->category->getId('Lingerie');
-        $root [] = $this->category->getId('Calçados');
-        //$root [] = $this->category->getId('Acessórios');
-       //$root [] = $this->category->getId('Promoções');
-        foreach ($datas as $data){
+            foreach ($datas as $data){
             $id =$this->category->getId($data['original-name']);
 
             $category = $this->categoryRepository->get($id,$fashionEN);
@@ -81,8 +75,8 @@ class TranslateCategoriesNames implements DataPatchInterface
                 'original-name' => 'Promoções',
                 'name' => 'Promotions',
                 'parent' => null,
-                'meta' => 'Magnolia | Promotions',
-                'url' => 'promotions'
+                'meta' => 'WineClub | Promotions',
+                'url' => 'promotion'
             ],
             /* SUBCATEGORIES of Blouses */
             [
@@ -143,11 +137,46 @@ class TranslateCategoriesNames implements DataPatchInterface
                 'parent' => 2,
                 'meta' => 'Magnolia | Shoes - Sneakers',
                 'url' => 'sneakers'
-            ]
+            ],
+            /* SUBCATEGORIE OF ACESSORIES */
+            [
+                'original-name' => 'Brinco',
+                'name' => 'Earring',
+                'parent' => 3,
+                'meta' => 'Magnolia | Acessories - Earring',
+                'url' => 'earring'
+            ],
+            [
+                'original-name' => 'Colar',
+                'name' => 'Necklace',
+                'parent' => 3,
+                'meta' => 'Magnolia | Acessories - Necklace',
+                'url' => 'necklace'
+            ],
+            [
+                'original-name' => 'Pulseiras',
+                'name' => 'Bracelets',
+                'parent' => 3,
+                'meta' => 'Magnolia | Acessories - bracelets',
+                'url' => 'bracelets'
+            ],
+            /* SUBCATEGORIE OF PROMOTIONS */
+            [
+                'original-name' => 'Últimas Peças',
+                'name' => 'Last Pieces',
+                'parent' => 4,
+                'meta' => 'Magnolia | Promotions - Last Pieces',
+                'url' => 'lastpieces'
+            ],
+            [
+                'original-name' => 'Pague 1 Leve 2',
+                'name' => 'Buy 1 Take 2',
+                'parent' => 2,
+                'meta' => 'Magnolia | Promotions - Buy 1 Take 2',
+                'url' => 'buy1take2'
+            ],
         ];
     }
-        /* SUBCATEGORIE OF ACESSORIES */
-
 
     public static function getDependencies()
     {

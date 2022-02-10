@@ -41,6 +41,16 @@ module.exports = {
         ],
         dsl: 'less'
     },
+    themewine: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
     backend: {
         area: 'adminhtml',
         name: 'Magento/backend',

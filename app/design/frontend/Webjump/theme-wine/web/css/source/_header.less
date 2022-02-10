@@ -6,13 +6,13 @@
 }
 
 //Alterando cor do Entre e Cadastre-se
-.panel, .wrapper{
+.panel, .wrapper {
     background-color: #eaeaea;
 } 
 
 //Alterando panel
 .header.panel > .header.links > li > a { 
-    color: @panel-color;
+    color: #666666;
     font-family: 'Raleway';
     font-weight: 500;
     font-size: 14px;
@@ -23,21 +23,31 @@
 }
 
 .header.panel > .header.links > .authorization-link:after {
-    color: @panel-color;
+    color: #666666;
     font-family: 'Raleway';
     font-size: 14px;
 }
 
 .view-wine span {
-    color: @panel-color;
+    color: #666666;
 }
 
 .page-header .panel.wrapper .switcher .options .action.toggle:after, .page-footer .switcher .options .action.toggle:after{
-    color: @panel-color;
+    color: #666666;
 }
 
 //Alterando campo de pesquisa
-.block-search  input{
+
+.block-search {
+    margin-right: 100px;
+}
+
+.block-search .action.search::before {
+    content: '';
+    background: url('../../images/bag.png');
+}
+
+.block-search  input { 
     font-family: 'Urbanist';
     font-size: 15px;
     font-weight: 400;
@@ -53,7 +63,7 @@
     background-color: #ffffff;
 }
 
-.navigation span{
+.navigation span {
     color: #c59c3f;
     font-family: 'Urbanist';  
     font-size: 16px;
@@ -64,6 +74,6 @@
     }
 }
 
-.navigation .level0.parent > .level-top > .ui-menu-icon:after{
+.navigation .level0.parent > .level-top > .ui-menu-icon:after {
     content: '';
 }

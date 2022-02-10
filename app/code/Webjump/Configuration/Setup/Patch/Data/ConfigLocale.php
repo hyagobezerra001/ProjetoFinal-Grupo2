@@ -10,6 +10,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Setup\Module\Setup;
 
 
 class ConfigLocale implements DataPatchInterface
@@ -17,16 +18,19 @@ class ConfigLocale implements DataPatchInterface
     private $moduleDataSetup;
     private $storeRepository;
     private $config;
+    private $setup;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         ConfigInterface $config,
-        StoreRepositoryInterface $storeRepository
+        StoreRepositoryInterface $storeRepository,
+        Setup $setup
     )
     {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->config = $config;
         $this->storeRepository = $storeRepository;
+        $this->setup = $setup;
     }
 
     public static function getDependencies()
@@ -49,6 +53,12 @@ class ConfigLocale implements DataPatchInterface
             'BRL,USD',
             ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
             0
+        );
+
+        $this->setup->getConnection()->insertArray(
+            'directory_currency_rate',
+            ['currency_from', 'currency_to', 'rate'],
+            [['BRL', 'USD', 0.19104321]]
         );
 
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();

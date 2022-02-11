@@ -1,0 +1,117 @@
+//Home
+body {
+    overflow-x: hidden; 
+    max-width: 100%;
+    min-height: 100vh;
+    margin-top: 0px;
+}
+
+.content{
+    margin-top: 0px;
+}
+
+// welcome padrão
+.not-logged-in{
+    display: none;
+}
+.panel, .wrapper{
+    background-color: #eaeaea;;
+};
+
+.header.panel > .header.links > li > a{
+    color: #666666;
+    font-family: 'Raleway-Regular';
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:hover{
+        color:#000000;
+    }
+}
+
+.header.panel > .header.links > .authorization-link:after {
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Raleway-Regular';
+}
+
+// Alteração da lupa do input
+.block-search{
+    margin-right: 30px;
+    .block-content{
+        .action.search{
+            right: 5px;
+            top: 8px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: #666666;
+                background: url('@{baseDir}images/search.png');
+            }
+
+        }
+    }
+}
+// Alteração do Carrinho de compras
+.minicart-wrapper{
+    .action.showcart{
+        display: inline-block;
+        position: relative;
+        top: 3px;   
+            &::before {
+                content: '';
+                display: block;
+                width: 19px;
+                height: 25px;
+                background-color: #000000;
+                background: url('@{baseDir}images/bag.png');
+
+        }
+    }
+}
+//nav 
+.navigation{
+    background-color: #40015f;
+}
+
+.naviagtion ul{
+    height: 50px;
+ }
+        
+
+.navigation span{
+    height: 19px;
+    color: #ffffff;
+    font-family: 'Raleway-Regular';
+    font-size: 20px;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    line-height: normal;
+    text-align: center; 
+}
+ // Botão de Promoção
+.nav-5 a span{
+    font-family: 'Raleway-SemiBold';
+    color: #fee95f
+}
+
+
+.navigation .level0.parent > .level-top > .ui-menu-icon:after {
+    content: '';
+}
+
+
+.block-search input{
+    height: 32px;
+    width: 261px;
+    border: 1px solid #a6a6a6;
+
+    &::placeholder{
+        color: #666666;
+    }
+}
+
+

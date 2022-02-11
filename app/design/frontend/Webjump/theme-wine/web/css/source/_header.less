@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&family=Urbanist:wght@300&display=swap');
 
+@font-face {
+    font-family: "Raleway";
+    src: url("./fonts/Raleway-Regular.ttf") format("truetype"),
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    height: 100vh;
+    width: 100%;
+}
+
 //Removendo mensagem padrão
 .not-logged-in {
     display: none;
@@ -32,19 +45,14 @@
     color: #666666;
 }
 
-.page-header .panel.wrapper .switcher .options .action.toggle:after, .page-footer .switcher .options .action.toggle:after{
+.page-header .panel.wrapper .switcher .options.switcher .options .action.toggle:after{
     color: #666666;
 }
 
 //Alterando campo de pesquisa
 
 .block-search {
-    margin-right: 100px;
-}
-
-.block-search .action.search::before {
-    content: '';
-    background: url('../../images/bag.png');
+    margin-right: 40px;
 }
 
 .block-search  input { 
@@ -54,13 +62,50 @@
     height: 38px; 
     border: 1px solid #a6a6a6;
     height: 38px;
-    width: 310px;
+    width: 270px;
+}
+
+.block-search {
+    .block-content {
+        .action.search {
+            right: 2px;
+            top: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: #666666;
+                background: url('@{baseDir}images/search.png') no-repeat 50% 50%;
+            }
+        }
+    }
+} 
+
+
+
+.minicart-wrapper {
+    .action.showcart {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 19px;
+            height: 25px;
+            background-color: #000000;
+            background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+        }
+    }
 }
 
 //Estilizando Nav
 .navigation ul {
     height: 50px;
-    background-color: #ffffff;
+    // background-color: #ffffff;
 }
 
 .navigation span {

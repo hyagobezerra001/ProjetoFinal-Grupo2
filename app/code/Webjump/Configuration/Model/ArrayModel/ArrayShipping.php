@@ -129,4 +129,12 @@ class ArrayShipping
         ];
     }
 
+    public function arrayConfigurationEn () : array {
+        return [
+            ['carriers/tablerate/title', 'Delivery Method'],
+            ['carriers/tablerate/name', 'Delivery Method'],
+            ['carriers/tablerate/specificerrmsg', 'Unfortunately the selected method is not available'],
+        ];
+    }
+
 }

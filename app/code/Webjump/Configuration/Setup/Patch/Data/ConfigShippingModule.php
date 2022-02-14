@@ -10,6 +10,8 @@ use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Api\WebsiteRepositoryInterface;
 use Webjump\Configuration\Model\ArrayModel\ArrayShipping;
 use Magento\Setup\Module\Setup;
+use Magento\Store\Api\StoreRepositoryInterface;
+use Magento\Store\Model\ScopeInterface;
 
 class ConfigShippingModule implements DataPatchInterface
 {
@@ -20,13 +22,15 @@ class ConfigShippingModule implements DataPatchInterface
     private $config;
     private $arrayShipping;
     private $setup;
+    private $storeRepository;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         ConfigInterface $config,
         WebsiteRepositoryInterface $websiteRepository,
         ArrayShipping $arrayShipping,
-        Setup $setup
+        Setup $setup,
+        StoreRepositoryInterface $storeRepository
     )
     {
 
@@ -35,6 +39,7 @@ class ConfigShippingModule implements DataPatchInterface
         $this->websiteRepository = $websiteRepository;
         $this->arrayShipping = $arrayShipping;
         $this->setup = $setup;
+        $this->storeRepository = $storeRepository;
     }
 
 
@@ -54,6 +59,28 @@ class ConfigShippingModule implements DataPatchInterface
             $this->config->saveConfig($config[0], $config[1]);
         }
 
+        $translateLabel = $this->arrayShipping->arrayConfigurationEn();
+
+
+        $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
+        $wineEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_STORE_CODE_EN)->getId();
+        foreach ($translateLabel as $label){
+            $this->config->saveConfig(
+                $label[0],
+                $label[1],
+                ScopeInterface::SCOPE_STORES,
+                $fashionEN
+            );
+        }
+
+        foreach ($translateLabel as $label){
+            $this->config->saveConfig(
+                $label[0],
+                $label[1],
+                ScopeInterface::SCOPE_STORES,
+                $wineEN
+            );
+        }
         $this->moduleaDataSetup->getConnection()->endSetup();
     }
 

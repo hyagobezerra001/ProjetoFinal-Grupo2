@@ -35,7 +35,7 @@ class SetWineTheme implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
-        $theme = $this->themeProvider->getThemeByFullPath('frontend/webjump_themes/theme-wine');
+        $theme = $this->themeProvider->getThemeByFullPath('frontend/Webjump/theme-wine');
 
         $storeId = $this->storeManager->getStore(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
         $storeIdEN  = $this->storeManager->getStore(WebsiteConfigure::WEBSITE_WINE_STORE_CODE_EN)->getId();

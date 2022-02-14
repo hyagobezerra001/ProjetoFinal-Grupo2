@@ -24,8 +24,7 @@ class CreateCategories implements DataPatchInterface
         ModuleDataSetupInterface $moduleDataSetup,
         CategoryFactory $category,
         CategoryRepository $repository,
-        StoreRepository $storeRepository,
-        WebsiteConfigure $websiteConfigure
+        StoreRepository $storeRepository
     ){
         $this->storeRepository = $storeRepository;
         $this->category = $category;
@@ -100,13 +99,12 @@ class CreateCategories implements DataPatchInterface
         $premium = $this->createCategories('Premium', $wine->getID());
         $kits = $this->createCategories('Kits', $wine->getID());
 
-        $this->createCategories('País', $vinhos->getID());
-        $this->createCategories('Tipo', $vinhos->getID());
-        $this->createCategories('Uva', $vinhos->getID());
+        $this->createCategories('Branco', $vinhos->getID());
+        $this->createCategories('Rose', $vinhos->getID());
+        $this->createCategories('Tinto', $vinhos->getID());
 
-        $this->createCategories('País', $espumantes->getID());
-        $this->createCategories('Tipo', $espumantes->getID());
-        $this->createCategories('Uva', $espumantes->getID());
+        $this->createCategories('Charmat', $espumantes->getID());
+        $this->createCategories('Champenoise', $espumantes->getID());
 
         $this->createCategories('Escolhidos dos Enólogos', $premium->getID());
 

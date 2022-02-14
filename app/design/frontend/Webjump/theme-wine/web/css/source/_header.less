@@ -4,22 +4,27 @@
 }
 
 //Alterando cor do Entre e Cadastre-se
-.panel, .wrapper {
+.page-header .panel.wrapper {
+    height: 45px; 
     background-color: #eaeaea;
-    height: 45px;
 } 
 
 //Alterando panel
-.header.panel > .header.links > li > a { 
-    color: #666666;
-    font-family: 'Raleway';
-    font-weight: 500;
-    font-size: 14px;
-    transition: 0.2s;  
+.header.panel > .header.links, span {
+    line-height: 28px;
 
-    &:hover {
-        color: #000;
-    }  
+    li > a { 
+        color: #666666;
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.2s;  
+    
+        &:hover {
+            color: #000;
+        }  
+    }
+    
 }
 
 .authorization-link:after {
@@ -29,40 +34,40 @@
     font-weight: 500;
 }
 
-.header.panel > .header.links > 
 
 .view-wine span {
     color: #666666;
 }
 
-.page-header .panel.wrapper .switcher .options.switcher .options .action.toggle:after{
-    color: #666666;
+.action.toggle:after {
+    color: red;
 }
 
 //Alterando campo de pesquisa
-
 .block-search {
     margin-right: 75px;
-}
 
-.block-search  input { 
-    font-family: 'Urbane-thin';
-    font-size: 15px;
-    font-weight: 400;
-    height: 38px; 
-    border: 1px solid #a6a6a6;
-    height: 38px;
-    width: 310px;
-
-    &::placeholder {
-        color: #666666;
+    input { 
+        height: 38px; 
+        border: 1px solid #a6a6a6;
+        height: 38px;
+        width: 310px;
+    
+        &::placeholder {
+            color: #666666;
+            font-family: 'Urbane-thin';
+            font-size: 15px;
+            font-weight: 400;
+        }
     }
 }
 
+
+//Substituindo icone da lupa
 .block-search {
     .block-content {
         .action.search {
-            right: 2px;
+            right: -35px;
             top: 10px;
 
             &::before {
@@ -78,7 +83,7 @@
 } 
 
 
-
+//Alterando icone do carrinho
 .minicart-wrapper {
     .action.showcart {
         display: inline-block;
@@ -97,26 +102,35 @@
 }
 
 //Estilizando Nav
+.nav-sections {
+    background-color: #ffffff;
+}
+
 .navigation {
     background-color: #ffffff;
+    width: 1642px;
+    height: 50px;
 
-    .navigation ul {
-        height: 50px;
+    span {
+        color: #c59c3f;
+        font-family: 'Urbane';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        transition: 0.2s;
+        &:hover {
+            color: #dfb147; 
+        }
     }
 }
 
-.navigation span {
-    color: #c59c3f;
-    font-family: 'Urbane';
-    font-weight: 300;
-    font-size: 16px;
-    letter-spacing: -0.16px;
-    transition: 0.2s;
-    &:hover {
-        color: #dfb147; 
+//Tirando setas da nav
+.navigation {
+    .level0.parent {
+        .level-top {
+            .ui-menu-icon:after {
+                content: '';
+            }
+        }
     }
-}
-
-.navigation .level0.parent > .level-top > .ui-menu-icon:after {
-    content: '';
-}
+}   

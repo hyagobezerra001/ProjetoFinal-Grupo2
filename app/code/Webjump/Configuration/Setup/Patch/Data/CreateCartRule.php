@@ -8,6 +8,9 @@ use Magento\SalesRule\Model\ResourceModel\Rule;
 use Magento\SalesRule\Model\RuleFactory;
 use Magento\Store\Api\WebsiteRepositoryInterface;
 use Magento\SalesRule\Model\Rule\Condition\CombineFactory;
+use Magento\SalesRule\Model\Rule\Condition\AddressFactory;
+use Magento\SalesRule\Model\Rule\Condition\Address;
+
 
 
 class CreateCartRule implements DataPatchInterface
@@ -18,13 +21,16 @@ class CreateCartRule implements DataPatchInterface
     private $ruleFactory;
     private $rule;
     private $moduleDataSetup;
+    private $addressFactory;
+
 
     public function __construct(
         CombineFactory $combineFactory,
         WebsiteRepositoryInterface $websiteRepository,
         RuleFactory $ruleFactory,
         Rule $rule,
-        ModuleDataSetupInterface $moduleDataSetup
+        ModuleDataSetupInterface $moduleDataSetup,
+        AddressFactory $addressFactory
     )
     {
         $this->combineFactory = $combineFactory;
@@ -32,6 +38,7 @@ class CreateCartRule implements DataPatchInterface
         $this->rule = $rule;
         $this->ruleFactory = $ruleFactory;
         $this->moduleDataSetup = $moduleDataSetup;
+        $this->addressFactory = $addressFactory;
     }
 
     public function apply()
@@ -41,10 +48,20 @@ class CreateCartRule implements DataPatchInterface
         $wine = $this->websiteRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE);
 
         $condition = $this->combineFactory->create();
-        $condition->setData('attribute', 'total_qty')
+        $conditionAddress = $this->addressFactory->create();
+
+        $conditionAddress->settype(Address::class)
+            ->setData('attribute', 'total_qty')
             ->setData('operator', '>=')
             ->setData('value', '5')
-            ->setData('is_value_processed', 'false');
+            ->setData("is_value_processed", "false");
+
+        $condition ->setData('attribute', null)
+            ->setData('operator', null)
+            ->setData('value', '1')
+            ->setData('is_value_processed', null)
+            ->setData('aggregator', 'all')
+            ->setConditions([$conditionAddress]);
 
         $ruleCart = $this->ruleFactory->create(['setup' => $this->moduleDataSetup]);
         $ruleCart->setName('10% discount for both stores and all customer groups')

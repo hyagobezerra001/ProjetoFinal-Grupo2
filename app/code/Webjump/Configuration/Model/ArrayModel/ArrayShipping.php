@@ -1,6 +1,6 @@
 <?php
 
-namespace Webjump\Configuration\Setup\Functions;
+namespace Webjump\Configuration\Model\ArrayModel;
 
 class ArrayShipping
 {
@@ -27,7 +27,7 @@ class ArrayShipping
             'dest_region_id' => [$array_region_ids,$array_region_ids_us],
             'dest_zip' => ['*'],
             'condition_name' => ['package_value_with_discount'],
-            'condition_value' => ['5.0000','10.0000','15.000','25.000'],
+            'condition_value' => ['5.0000','10.0000','15.000','0.000'],
             'price' => ['5','10', '15', '20','35', '50','200'],
             'cost' => ['0']
         ];

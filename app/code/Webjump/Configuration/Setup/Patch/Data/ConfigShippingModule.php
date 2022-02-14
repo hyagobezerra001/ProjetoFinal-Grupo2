@@ -1,18 +1,19 @@
 <?php
 
-namespace Webjump\Configuration\Setup\Patch\Data;
+declare(strict_types = 1);
 
+namespace Webjump\Configuration\Setup\Patch\Data;
 
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Api\WebsiteRepositoryInterface;
-use Webjump\Configuration\Setup\Functions\ArrayShipping;
+use Webjump\Configuration\Model\ArrayModel\ArrayShipping;
 use Magento\Setup\Module\Setup;
 
 class ConfigShippingModule implements DataPatchInterface
 {
-    CONST TABLE_SHIPPING = 'shipping_tablerate';
+    private const TABLE_SHIPPING = 'shipping_tablerate';
 
     private $websiteRepository;
     private $moduleaDataSetup;
@@ -46,8 +47,7 @@ class ConfigShippingModule implements DataPatchInterface
         $dataUs = $this->arrayShipping->dataBalanceUs();
 
         $arrayMerge = array_merge($data, $dataUs);
-        $this->setup->getConnection()->insertArray(self::TABLE_SHIPPING, $keysColuns, $arrayMerge);
-       //$this->setup->getConnection()->insertArray(self::TABLE_SHIPPING, $keysColuns, $dataUs);
+        $this->setup->getConnection()->insertArray(static::TABLE_SHIPPING, $keysColuns, $arrayMerge);
 
         $configuration = $this->arrayShipping->arrayConfiguration();
         foreach ($configuration as $config){

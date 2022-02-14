@@ -55,11 +55,11 @@ class ConfigLocale implements DataPatchInterface
             0
         );
 
-//        $this->setup->getConnection()->insertArray(
-//            'directory_currency_rate',
-//            ['currency_from', 'currency_to', 'rate'],
-//            [['BRL', 'USD', 0.19104321]]
-//        );
+        $this->setup->getConnection()->insertArray(
+            'directory_currency_rate',
+            ['currency_from', 'currency_to', 'rate'],
+            [['BRL', 'USD', 0.19104321]]
+        );
 
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
 
@@ -70,12 +70,13 @@ class ConfigLocale implements DataPatchInterface
             $fashionEN
         );
 
-//        $this->config->saveConfig(
-//            'general/country/allow',
-//            'BR,US',
-//            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
-//            0
-//        );
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
+            ScopeInterface::SCOPE_STORES,
+            $fashionEN
+
+        );
 
         $this->config->saveConfig(
             'currency/options/allow',
@@ -103,6 +104,13 @@ class ConfigLocale implements DataPatchInterface
         $this->config->saveConfig(
             'currency/options/allow',
             'USD',
+            ScopeInterface::SCOPE_STORES,
+            $wineEN
+        );
+
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
             ScopeInterface::SCOPE_STORES,
             $wineEN
         );

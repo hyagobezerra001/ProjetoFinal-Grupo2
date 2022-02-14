@@ -15,14 +15,14 @@
     </referenceBlock>
 
     <referenceContainer name="footer-container"> 
-        <container name="footer-links" htmlTag="div" htmlClass="footer-links">
-            <block class="Magento\Cms\Block\Block" name="link1" before="-">
+        <container name="footer-links1" htmlTag="div" htmlClass="main-footer">
+            <block class="Magento\Cms\Block\Block" name="link1">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">footer-link1</argument>
+                    <argument name="block_id" xsi:type="string">footer_links_block</argument>
                 </arguments>    
             </block>        
         </container>
-
     </referenceContainer>
+
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

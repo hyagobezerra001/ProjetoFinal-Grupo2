@@ -41,9 +41,15 @@ module.exports = {
         ],
         dsl: 'less'
     },
+
     themewine: {
         area: 'frontend',
         name: 'Webjump/theme-wine',
+
+    themefashion: {
+        area: 'frontend',
+        name: 'Webjump/theme-fashion',
+
         locale: 'pt_BR',
         files: [
             'css/styles-m',

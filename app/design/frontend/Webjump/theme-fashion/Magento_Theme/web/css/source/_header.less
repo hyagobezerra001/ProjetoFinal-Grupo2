@@ -1,3 +1,8 @@
+@panel-background:#eaeaea;
+@panel-font:#666666;
+@color-nav:#40015f;
+
+
 //Home
 body {
     overflow-x: hidden; 
@@ -15,11 +20,33 @@ body {
     display: none;
 }
 .panel, .wrapper{
-    background-color: #eaeaea;;
+    background-color: @panel-background;
 };
 
+// links do header
+.header.panel {
+    .header.links {
+        .authorization-link:after{
+            color: @panel-font;
+            font-size: 14px;
+            font-family: 'Raleway-Regular';
+        }
+    }
+}
+
+// input do header
+.block-search input{
+    height: 32px;
+    width: 261px;
+    border: 1px solid #a6a6a6;
+
+    &::placeholder{
+        color: @panel-font;
+    }
+}
+
 .header.panel > .header.links > li > a{
-    color: #666666;
+    color: @panel-font;
     font-family: 'Raleway-Regular';
     font-size: 14px;
     transition: 0.2s;
@@ -27,12 +54,6 @@ body {
     &:hover{
         color:#000000;
     }
-}
-
-.header.panel > .header.links > .authorization-link:after {
-    color: #666666;
-    font-size: 14px;
-    font-family: 'Raleway-Regular';
 }
 
 // Alteração da lupa do input
@@ -49,7 +70,7 @@ body {
                 display: block;
                 width: 16px;
                 height: 16px;
-                background-color: #666666;
+                background-color: @panel-font;
                 background: url('@{baseDir}images/search.png');
             }
 
@@ -62,6 +83,7 @@ body {
         display: inline-block;
         position: relative;
         top: 3px;   
+
             &::before {
                 content: '';
                 display: block;
@@ -75,24 +97,22 @@ body {
 }
 //nav 
 .navigation{
-    background-color: #40015f;
+    background-color: @color-nav;
+         ul{
+            height: 50px;
+        }
+        span{
+            height: 19px;
+            color: #f3f3f3;
+            font-family: 'Raleway-Regular';
+            font-size: 20px;
+            font-style: normal;
+            letter-spacing: 0.8px;
+            line-height: normal;
+            text-align: center; 
+        }  
 }
 
-.naviagtion ul{
-    height: 50px;
- }
-        
-
-.navigation span{
-    height: 19px;
-    color: #f3f3f3;
-    font-family: 'Raleway-Regular';
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: 0.8px;
-    line-height: normal;
-    text-align: center; 
-}
  // Botão de Promoção
 .nav-5 a span{
     font-family: 'Raleway-SemiBold';
@@ -105,14 +125,5 @@ body {
 }
 
 
-.block-search input{
-    height: 32px;
-    width: 261px;
-    border: 1px solid #a6a6a6;
-
-    &::placeholder{
-        color: #666666;
-    }
-}
 
 

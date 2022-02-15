@@ -9,10 +9,8 @@ use Magento\Store\Api\StoreRepositoryInterface;
 
 class SetBlocksWine implements DataPatchInterface
 {
-    const BLOCK_IDENTIFIER = 'footer_links_block1';
 
     protected $blockFactory;
-
 
     public function __construct(
         BlockFactory $blockFactory,

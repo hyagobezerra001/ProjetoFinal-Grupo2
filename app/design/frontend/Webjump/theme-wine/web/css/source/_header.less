@@ -1,0 +1,133 @@
+//Removendo mensagem padrão
+.not-logged-in {
+    display: none;
+}
+
+//Alterando cor do Entre e Cadastre-se
+.page-header .panel.wrapper {
+    height: 45px; 
+    background-color: @panel-background;
+} 
+ 
+//Alterando panel
+.header.panel > .header.links, span {
+    line-height: 28px;
+
+    li > a { 
+        color: @panel-font;
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.2s;  
+    
+        &:hover {
+            color: @panel-hover;
+            text-decoration: none;
+        }  
+    }
+    
+}
+
+.authorization-link:after {
+    color: @panel-font;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.view-wine span {
+    color: @panel-font;
+}
+
+//Alterando campo de pesquisa
+.block-search {
+    margin-right: 75px;
+
+    input { 
+        height: 38px; 
+        border: 1px solid #a6a6a6;
+        height: 38px;
+        width: 310px;
+    
+        &::placeholder {
+            color: @panel-font;
+            font-family: 'Urbane-thin';
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+}
+
+
+//Substituindo icone da lupa
+.block-search {
+    .block-content {
+        .action.search {
+            right: -35px;
+            top: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: @panel-font;
+                background: url('@{baseDir}images/search.png') no-repeat 50% 50%;
+            }
+        }
+    }
+} 
+
+
+//Alterando icone do carrinho
+.minicart-wrapper {
+    .action.showcart {
+        display: inline-block;
+        position: relative;
+        top: 5px;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 19px;
+            height: 25px;
+            background-color: #000000;
+            background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+        }
+    }
+}
+
+//Estilizando Nav
+.nav-sections {
+    background-color: @white;
+}
+
+.navigation {
+    background-color: @white;
+    width: 1642px;
+    height: 50px;
+
+    span {
+        color: @li-color;
+        font-family: 'Urbane';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        transition: 0.2s;
+        &:hover {
+            color: @li-hover; 
+        }
+    }
+}
+
+//Tirando setas da nav
+.navigation {
+    .level0.parent {
+        .level-top {
+            .ui-menu-icon:after {
+                content: '';
+            }
+        }
+    }
+}   

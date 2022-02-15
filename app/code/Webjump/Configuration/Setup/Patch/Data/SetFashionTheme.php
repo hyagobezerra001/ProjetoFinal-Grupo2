@@ -35,7 +35,7 @@ class SetFashionTheme implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
 
-        $theme = $this->themeProvider->getThemeByFullPath('frontend/webjump_themes/theme-fashion');
+        $theme = $this->themeProvider->getThemeByFullPath('frontend/Webjump/theme-fashion');
 
         $storeId = $this->storeManager->getStore(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
         $storeIdEN = $this->storeManager->getStore(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();

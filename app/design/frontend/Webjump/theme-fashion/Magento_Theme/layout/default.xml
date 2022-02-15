@@ -15,25 +15,14 @@
     </referenceBlock>
 
     <referenceContainer name="footer-container"> 
-        <container name="footer-links1" htmlTag="div" htmlClass="main-footer">
-            <block class="Magento\Cms\Block\Block" name="institutional">
+        <container name="footer-links" htmlTag="div" htmlClass="footer-links">
+            <block class="Magento\Cms\Block\Block" name="link1" before="-">
                 <arguments>
-                    <argument name="block_id" xsi:type="string">footer_links_block</argument>
+                    <argument name="block_id" xsi:type="string">footer-link1</argument>
                 </arguments>    
-            </block>   
-             <block class="Magento\Cms\Block\Block" name="help">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">help-links</argument>
-                </arguments>    
-            </block>     
-             <block class="Magento\Cms\Block\Block" name="stay-on">
-                <arguments>
-                    <argument name="block_id" xsi:type="string">stay-on-links</argument>
-                </arguments>    
-            </block> 
+            </block>        
         </container>
 
     </referenceContainer>
-
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

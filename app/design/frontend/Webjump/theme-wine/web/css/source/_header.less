@@ -6,29 +6,30 @@
 //Alterando cor do Entre e Cadastre-se
 .page-header .panel.wrapper {
     height: 45px; 
-    background-color: #eaeaea;
+    background-color: @panel-background;
 } 
-
+ 
 //Alterando panel
 .header.panel > .header.links, span {
     line-height: 28px;
 
     li > a { 
-        color: #666666;
+        color: @panel-font;
         font-family: 'Raleway';
         font-weight: 500;
         font-size: 14px;
         transition: 0.2s;  
     
         &:hover {
-            color: #000;
+            color: @panel-hover;
+            text-decoration: none;
         }  
     }
     
 }
 
 .authorization-link:after {
-    color: #666666;
+    color: @panel-font;
     font-family: 'Raleway';
     font-size: 14px;
     font-weight: 500;
@@ -36,11 +37,7 @@
 
 
 .view-wine span {
-    color: #666666;
-}
-
-.action.toggle:after {
-    color: red;
+    color: @panel-font;
 }
 
 //Alterando campo de pesquisa
@@ -54,7 +51,7 @@
         width: 310px;
     
         &::placeholder {
-            color: #666666;
+            color: @panel-font;
             font-family: 'Urbane-thin';
             font-size: 15px;
             font-weight: 400;
@@ -75,7 +72,7 @@
                 display: block;
                 width: 16px;
                 height: 16px;
-                background-color: #666666;
+                background-color: @panel-font;
                 background: url('@{baseDir}images/search.png') no-repeat 50% 50%;
             }
         }
@@ -103,23 +100,23 @@
 
 //Estilizando Nav
 .nav-sections {
-    background-color: #ffffff;
+    background-color: @white;
 }
 
 .navigation {
-    background-color: #ffffff;
+    background-color: @white;
     width: 1642px;
     height: 50px;
 
     span {
-        color: #c59c3f;
+        color: @li-color;
         font-family: 'Urbane';
         font-weight: 300;
         font-size: 16px;
         letter-spacing: -0.16px;
         transition: 0.2s;
         &:hover {
-            color: #dfb147; 
+            color: @li-hover; 
         }
     }
 }

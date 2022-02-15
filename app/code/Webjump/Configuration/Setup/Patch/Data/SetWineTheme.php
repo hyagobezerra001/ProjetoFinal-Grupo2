@@ -50,6 +50,7 @@ class SetWineTheme implements DataPatchInterface
             $theme->getId(),
             ScopeInterface::SCOPE_STORES,
             $storeIdEN
+
         );
 
         $this->moduleDataSetup->getConnection()->endSetup();

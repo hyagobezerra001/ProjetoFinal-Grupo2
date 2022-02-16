@@ -49,7 +49,8 @@ class SetWineTheme implements DataPatchInterface
             'design/theme/theme_id',
             $theme->getId(),
             ScopeInterface::SCOPE_STORES,
-            $storeId
+            $storeIdEN
+
         );
 
         $this->moduleDataSetup->getConnection()->endSetup();

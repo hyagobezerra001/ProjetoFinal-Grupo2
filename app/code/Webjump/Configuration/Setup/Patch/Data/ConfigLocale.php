@@ -71,6 +71,14 @@ class ConfigLocale implements DataPatchInterface
         );
 
         $this->config->saveConfig(
+            'general/country/allow',
+            'US',
+            ScopeInterface::SCOPE_STORES,
+            $fashionEN
+
+        );
+
+        $this->config->saveConfig(
             'currency/options/allow',
             'USD',
             ScopeInterface::SCOPE_STORES,
@@ -96,6 +104,13 @@ class ConfigLocale implements DataPatchInterface
         $this->config->saveConfig(
             'currency/options/allow',
             'USD',
+            ScopeInterface::SCOPE_STORES,
+            $wineEN
+        );
+
+        $this->config->saveConfig(
+            'general/country/allow',
+            'US',
             ScopeInterface::SCOPE_STORES,
             $wineEN
         );

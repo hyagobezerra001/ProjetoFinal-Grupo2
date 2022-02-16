@@ -34,6 +34,5 @@
         </container>
 
     </referenceContainer>
-
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

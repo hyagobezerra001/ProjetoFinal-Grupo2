@@ -22,7 +22,7 @@
                 </arguments>    
             </block>  
         </container>
-
+    <!-- <referenceContainer name="minicart" remove="true"/> -->
     </referenceContainer>
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

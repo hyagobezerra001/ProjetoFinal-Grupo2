@@ -31,7 +31,8 @@ class SetBlocksFashion implements DataPatchInterface
                 'title' => 'Footer Links1_Fashion',
                 'identifier' => 'footer-links1_Fashion',
                 'content' =>
-                    '<div class="link1">
+                    '<div class="main-footer">
+                        <div class="link1">
                         <h3>INSTITUCIONAL</h3>
                         <ul>
                             <li><a>A Marca</a></li>
@@ -39,15 +40,8 @@ class SetBlocksFashion implements DataPatchInterface
                             <li><a>Trabalhe Conosco</a></li>
                             <li><a>Politica de Privacidade</a></li>
                         </ul>
-                    </div>',
-                'stores' => [$fashionEn->getId(),$fashion->getId()],
-                'is_active' => 1,
-            ],
-            [
-                'title' => 'Footer Links2_Fashion',
-                'identifier' => 'footer-links2_Fashion',
-                'content' =>
-                    '<div class="link2">
+                        </div>
+                        <div class="link2">
                         <h3>AJUDA</h3>
                         <ul>
                             <li><a>Frente e Entrega</a></li>
@@ -56,24 +50,17 @@ class SetBlocksFashion implements DataPatchInterface
                             <li><a>Central de Atendimento</a></li>
                             <li><a>Perguntas Frequentes</a></li>
                         </ul>
-                    </div>',
-                'stores' => [$fashionEn->getId(),$fashion->getId()],
-                'is_active' => 1,
-            ],
-            [
-                'title' => 'Footer links3_Fashion',
-                'identifier' => 'footer-links3_Fashion',
-                'content' =>
-                    '<div class="link3">
+                        <div class="link3">
                         <h3>FIQUE POR DENTRO</h3>
                         <ul>
                             <li><a>Assine a nossa Newletter para não perder nenhuma das promoções !</a></li>
                         </ul>
+                    </div>
+                    </div>
                     </div>',
                 'stores' => [$fashionEn->getId(),$fashion->getId()],
                 'is_active' => 1,
             ],
-
         ];
     }
 
@@ -87,14 +74,13 @@ class SetBlocksFashion implements DataPatchInterface
 
         foreach ($footerData as $data){
             $headerBlock = $this->blockFactory->create()->load($data['identifier'], 'identifier');
-
+        
             if (!$headerBlock->getId()) {
                 $headerBlock->setData($data)->save();
             } else {
                 $headerBlock->setContent($data['content'])->save();
             }
         }
-
     }
 
 

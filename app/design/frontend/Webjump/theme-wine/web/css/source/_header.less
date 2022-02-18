@@ -44,6 +44,10 @@
 .block-search {
     margin-right: 75px;
 
+    .label:before {
+        margin: 0px -22px 0px 0px;
+    }
+
     input { 
         height: 38px; 
         border: 1px solid #a6a6a6;
@@ -59,6 +63,32 @@
     }
 }
 
+@media (max-width:768px){
+
+    .block-search .label{
+        margin: -0.6rem;
+        padding: 0rem;
+
+    }
+
+    .page-header .panel.wrapper {
+        height: 0;
+    } 
+
+    .minicart-wrapper {
+        margin-top: 0;
+
+        .action.showcart {
+            top: 0;
+        }
+    }
+
+    .logo img {
+        margin: 0 5rem;
+;
+    }
+
+}
 
 //Substituindo icone da lupa
 .block-search {
@@ -83,9 +113,10 @@
 //Alterando icone do carrinho
 .minicart-wrapper {
     .action.showcart {
-        display: inline-block;
+        display: inline-flex;
         position: relative;
         top: 5px;
+        content: '';
 
         &::before {
             content: '';
@@ -96,6 +127,91 @@
             background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
         }
     }
+}
+
+.minicart-wrapper .action.showcart.active:before {
+    content: '';
+}
+
+.block-minicart .block-content > .actions > .primary .action.primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+.minicart-wrapper .action.showcart .counter.qty{
+    background: #9a1e51;
+    margin-left: 5px;
+}
+
+.action.tocart.primary{
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+
+}
+
+.button.action.continue.primary {
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.product-item .price-box {
+    width: 98px;
+    height: 22px;
+    color: #8b6722;
+    font-family: Urbane;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24.97px;
+    text-align: left;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: -0.24px;
+    line-height: normal;
 }
 
 //Estilizando Nav

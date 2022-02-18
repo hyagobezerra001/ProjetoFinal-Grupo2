@@ -1,11 +1,10 @@
 //Home
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
     max-width: 100%;
     min-height: 100vh;
     margin-top: 0px;
 }
-
 .content{
     margin-top: 0px;
 }
@@ -14,25 +13,55 @@ body {
 .not-logged-in{
     display: none;
 }
+
+.page-header {
+    .panel.wrapper {
+        height: 45px;
+        background-color: @panel-background;
+    }
+} 
+
 .panel, .wrapper{
-    background-color: #eaeaea;;
+        .switcher-options {
+            color: @panel-font;
+        }
+    background-color: @panel-background;
 };
 
-.header.panel > .header.links > li > a{
-    color: #666666;
+// links do header
+.header.panel {
+    .header.links {
+        .authorization-link:after{
+            color: @panel-font;
+            font-size: 14px;
+            font-family: 'Raleway-Regular';
+        }
+    }
+} 
+
+// input do header
+.block-search input{
+    width: 261px;
+    height: 32px;
+    border: 1px solid @border-color;
+
+    &::placeholder{
+        color: @panel-font;
+        font-size: 15px;
+        font-family: 'Raleway-Regular';
+        font-weight: 300;
+    }
+}
+
+.header.panel > .header.links > li > a {
+    color: @panel-font;
     font-family: 'Raleway-Regular';
     font-size: 14px;
     transition: 0.2s;
 
     &:hover{
-        color:#000000;
+        color: @black;
     }
-}
-
-.header.panel > .header.links > .authorization-link:after {
-    color: #666666;
-    font-size: 14px;
-    font-family: 'Raleway-Regular';
 }
 
 // Alteração da lupa do input
@@ -43,90 +72,104 @@ body {
         .action.search{
             right: -15px;
             top: 9px;
-
             &::before {
                 content: '';
                 display: block;
                 width: 16px;
                 height: 16px;
-                background-color: #666666;
+                background-color: @panel-font;
                 background: url('@{baseDir}images/search.png');
             }
-
         }
     }
 }
+
 // Alteração do Carrinho de compras
-.minicart-wrapper{
-    .action.showcart{
+.minicart-wrapper {
+    .action.showcart {
         display: inline-block;
         position: relative;
-        top: 3px;   
+        top: 3px;
             &::before {
                 content: '';
                 display: block;
                 width: 19px;
                 height: 25px;
-                background-color: #000000;
+                background-color: @black;
                 background: url('@{baseDir}images/bag.png');
-
         }
     }
 }
 
-//nav 
+.minicart-wrapper .action.showcart.active:before {
+    content: '';
+}
+
+.minicart-wrapper {
+    .action.showcart {
+        display: inline-flex;
+        position: relative;
+        top: 5px;
+
+        .active:before {
+            content: '';
+        }
+    }
+}
+
+.minicart-wrapper .action.showcart .counter.qty{
+    background: #6e01a5;
+    margin: 0 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-sections {
+    background-color: @color-nav;
+}
+
+//nav
 .navigation{
-    background-color: #40015f;
-}
-
-.naviagtion ul{
+    background-color: @color-nav;
     height: 50px;
- }
-        
+    width: 1642px;    
 
-.navigation span{
-    height: 19px;
-    color: #f3f3f3;
-    font-family: 'Raleway-Regular';
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: 0.8px;
-    line-height: normal;
-    text-align: center; 
+        span {
+            height: 190px;
+            color: @nav-span;
+            font-family: 'Raleway-SemiBold';
+            font-size: 20px;
+            font-style: normal;
+            letter-spacing: 0.8px;
+            line-height: normal;
+            text-align: center;
+        }
+
+        .level0 .submenu a {
+            transition: 0.2s;
+        }
+
+        .level0 .submenu a:hover{
+            background-color: @dropdown-hover;
+        }
 }
+
  // Botão de Promoção
 .nav-5 a span{
     font-family: 'Raleway-Regular';
-    color: #fee95f;
+    color: @li-desktop;
     font-weight: 700;
-
-
 }
-
 
 .navigation .level0.parent > .level-top > .ui-menu-icon:after {
     content: '';
 }
 
 .ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all{
-    background-color: #40015f;
-
+    background-color: @color-nav;
 }
-    
-.navigation .level0 .submenu a:hover{
-    background-color: #4B0082   ;
-}
-    
 
 
-.block-search input{
-    height: 32px;
-    width: 261px;
-    border: 1px solid #a6a6a6;
 
-    &::placeholder{
-        color: #666666;
-    }
-}
 
 

@@ -14,7 +14,7 @@
         </arguments>
     </referenceBlock>
 
-    <referenceContainer name="footer-container"> 
+    <referenceContainer name="footer-container">
         <container name="footer-links" htmlTag="div" htmlClass="footer-links">
             <block class="Magento\Cms\Block\Block" name="link1" before="-">
                 <arguments>
@@ -22,7 +22,7 @@
                 </arguments>    
             </block>  
         </container>
-
     </referenceContainer>
+    <move element="form.subscribe" destination="footer-container" after="-" />
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

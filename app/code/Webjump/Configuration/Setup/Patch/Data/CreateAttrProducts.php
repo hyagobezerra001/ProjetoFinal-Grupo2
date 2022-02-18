@@ -91,7 +91,7 @@ class CreateAttrProducts implements DataPatchInterface {
                 'label' => $label,
                 'input' => 'text',
                 'required' => false,
-                'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
+                'global' => ScopedAttributeInterface::SCOPE_STORE,
                 'used_in_product_listing' => true,
                 'system' => false,
                 'visible_on_front' => true,

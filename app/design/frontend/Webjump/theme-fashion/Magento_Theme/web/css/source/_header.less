@@ -1,3 +1,72 @@
+@panel-background:#eaeaea;
+@panel-font:#666666;
+@color-nav:#40015f;
+@li-color: #F3F3F3;
+@li-desktop: #FEE95F;
+
+
+@media only screen and (max-width: 896px) {
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 13px
+    }
+    
+    .minicart-wrapper {
+        margin-top: 4px;
+    }
+
+    .block-search .label:before {
+        line-height: 20px;
+    }
+
+    .navigation {
+        // height: 100%;
+        
+        a span {
+            font-size: 16px; 
+            
+        }
+
+        a {
+            color: @li-desktop;
+            font-family: 'Raleway-Regular';
+        }
+
+            .parent {
+                .level-top {
+                    &::after {
+                        color: @li-desktop;
+                    }
+                }
+            }
+
+        }
+
+        .logo img {
+            margin: 0 35px;
+        }
+    
+        .navigation .submenu:not(:first-child) {
+            line-height: 30px;
+            color: @li-color;
+        }  
+        
+        a, .alink {
+            color: #F3F3F3;
+            font-family: 'Raleway-Regular';
+            font-size: 16px;
+        }
+    
+    }
+
+
+
+
+
+
+
 //Home
 body {
     overflow-x: hidden;
@@ -8,62 +77,50 @@ body {
 .content{
     margin-top: 0px;
 }
-
 // welcome padrão
 .not-logged-in{
     display: none;
 }
 
-.page-header {
-    .panel.wrapper {
-        height: 45px;
-        background-color: @panel-background;
-    }
-} 
+.page-header .panel.wrapper {
+    background-color: @panel-background;
+}
 
 .panel, .wrapper{
         .switcher-options {
             color: @panel-font;
         }
     background-color: @panel-background;
-};
+}
 
 // links do header
 .header.panel {
     .header.links {
         .authorization-link:after{
             color: @panel-font;
-            font-size: 14px;
+            font-size: 14spx;
             font-family: 'Raleway-Regular';
         }
     }
-} 
-
+}
 // input do header
 .block-search input{
-    width: 261px;
     height: 32px;
-    border: 1px solid @border-color;
-
+    width: 261px;
+    border: 1px solid #A6A6A6;
     &::placeholder{
         color: @panel-font;
-        font-size: 15px;
-        font-family: 'Raleway-Regular';
-        font-weight: 300;
     }
 }
-
-.header.panel > .header.links > li > a {
+.header.panel > .header.links > li > a{
     color: @panel-font;
     font-family: 'Raleway-Regular';
     font-size: 14px;
     transition: 0.2s;
-
     &:hover{
         color: @black;
     }
 }
-
 // Alteração da lupa do input
 .block-search{
     margin-right: 30px;
@@ -100,76 +157,50 @@ body {
         }
     }
 }
-
-.minicart-wrapper .action.showcart.active:before {
-    content: '';
-}
-
-.minicart-wrapper {
-    .action.showcart {
-        display: inline-flex;
-        position: relative;
-        top: 5px;
-
-        .active:before {
-            content: '';
-        }
-    }
-}
-
-.minicart-wrapper .action.showcart .counter.qty{
-    background: #6e01a5;
-    margin: 0 10px;
-    width: 24px;
-    height: 24px;
-}
-
-.nav-sections {
+//nav
+.section-items {
     background-color: @color-nav;
 }
 
-//nav
 .navigation{
     background-color: @color-nav;
-    height: 50px;
-    width: 1642px;    
 
-        span {
-            height: 190px;
-            color: @nav-span;
-            font-family: 'Raleway-SemiBold';
-            font-size: 20px;
-            font-style: normal;
-            letter-spacing: 0.8px;
-            line-height: normal;
-            text-align: center;
-        }
+    ul {
+        height: 50px;
+    }
 
-        .level0 .submenu a {
-            transition: 0.2s;
-        }
+    span {
+        color: @li-color;
+        font-family: 'Raleway-Regular';
+        font-size: 20px;
+        font-style: normal;
+        letter-spacing: 0.8px;
+        line-height: normal;
+        text-align: center;
+    }
 
-        .level0 .submenu a:hover{
-            background-color: @dropdown-hover;
+    .level0.active { 
+        .level-top {
+            .navigation {
+                .level0.has-active {
+                    .level-top {
+                        border-color: #FEE95F;
+                    }
+                }
+            }
         }
+    }  
 }
 
- // Botão de Promoção
+// Botão de Promoção
 .nav-5 a span{
-    font-family: 'Raleway-Regular';
-    color: @li-desktop;
-    font-weight: 700;
+    font-family: 'Raleway-SemiBold';
+    color: #FEE95F;
 }
-
 .navigation .level0.parent > .level-top > .ui-menu-icon:after {
     content: '';
 }
 
 .ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all{
-    background-color: @color-nav;
+    background-color: #40015F;
 }
-
-
-
-
-

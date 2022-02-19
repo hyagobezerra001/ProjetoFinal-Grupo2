@@ -174,7 +174,7 @@ body {
 }
 
 .img-banner{
-    width: 1642px;  
+    width: 100%;  
     
 
 }
@@ -232,26 +232,29 @@ body {
     
 }
 
-
+// propriedade agrupada deixar as demais divs flex 
 .divflex {
     display: flex;
-
 }
+
+// div pai 
 .main_banner{
     flex-direction: column;
-    padding: 30px 10px;
 }
+
+//div first child
 .sub_banner_top{
     justify-content: space-between;
-    margin-bottom: 10px;
-    gap: 8px;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 0px 20px;
 }
+.sub_banner_bottom{
+    padding: 0px 23px;
+}
+
+//div filha de banner_bottom
 .banner-footer3{
-    flex-basis:644px;
+    flex-basis: 629px;
+    justify-content: flex-start;
 }
-
-.text-car{
-    width: 226px;
-    height: 43px;   
-}
-

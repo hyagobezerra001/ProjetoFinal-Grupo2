@@ -45,7 +45,6 @@ class SetPageFashion implements DataPatchInterface
             'meta_keywords' => 'Banner Fashion Loja1',
             'meta_description' => 'Banner para loja Fashion',
             'identifier' => 'banner',
-            'content_heading' => 'Rohan Custom CMS Page',
             'content' =>
             '<div class="banner">
                 <h1 class="titulo-banner">Descontos Progressivos

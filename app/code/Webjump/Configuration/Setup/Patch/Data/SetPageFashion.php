@@ -39,50 +39,8 @@ class SetPageFashion implements DataPatchInterface
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
 
-        $pageData = [
-            'title' => 'Banner-Fashion',
-            'page_layout' => '1column',
-            'meta_keywords' => 'Banner Fashion Loja1',
-            'meta_description' => 'Banner para loja Fashion',
-            'identifier' => 'banner',
-            'content_heading' => 'Rohan Custom CMS Page',
-            'content' =>
-            '<div class="banner">
-                <h1 class="titulo-banner">Descontos Progressivos
-                    <span class="subtitulo">em todas as peças</span>
-                </h1>
-                <button class="button-banner" type="name">Comprar Agora</button>
-                <img class="img-banner" src="{{media url="wysiwyg/banner.png"}}" alt="">
-            </div>
+        $pageData = $this->setPageFashion($fashionEN, $fashion);
 
-            <div class="car">
-                <span class="text-car">frente grátis para todas as compras acima de R$100</span>
-            </div>
-            <div class="main_banner divflex">
-                <div class="sub_banner_top divflex">
-                    <img class="banner-footer2" src="{{media url="wysiwyg/garotas.png"}}" alt="imagem-banner2" />
-                    <img class="outline" src="{{media url="wysiwyg/saiapena.png"}}" alt="imagem-banner1" />
-                </div>
-
-                <div class="sub_banner_bottom divflex">
-                    <div class="banner-footer3 divflex">
-                        <a href="#">
-                            <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="imagem-banner3" />
-                        </a>
-                    </div>
-                    <div class="banner-footer4 divflex">
-                        <a href="#">
-                            <img src="{{media url="wysiwyg/mulher-onca.png"}}"alt="imagem-banner4" />
-                        </a>
-                    </div>
-                </div>
-            </div>',
-            'layout_update_xml' => '',
-            'url_key' => 'banner',
-            'is_active' => 1,
-            'stores' => [$fashionEN, $fashion],
-            'sort_order' => 0,
-        ];
         $this->moduleDataSetup->startSetup();
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
@@ -90,6 +48,51 @@ class SetPageFashion implements DataPatchInterface
         $this->config->saveConfig('web/default/cms_home_page','banner', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $fashion);
 
         $this->moduleDataSetup->getConnection()->endSetup();
+    }
+
+    public function setPageFashion($fashionEN, $fashion)
+    {
+           return [
+               'title' => 'Banner-Fashion',
+               'page_layout' => '1column',
+               'meta_keywords' => 'Banner Fashion Loja1',
+               'meta_description' => 'Banner para loja Fashion',
+               'identifier' => 'banner',
+               'content' =>
+                    '<div class="banner">
+                        <h1 class="titulo-banner">Descontos Progressivos
+                            <span class="subtitulo">em todas as peças</span>
+                        </h1>
+                        <button class="button-banner" type="name">Comprar Agora</button>
+                        <img class="img-banner" src="{{media url="wysiwyg/banner.png"}}" alt="banner main" />
+                    </div>
+                    <div class="car">
+                        <span class="text-car">frente grátis para todas as compras acima de R$100</span>
+                    </div>
+                    <div class="main_banner divflex">
+                        <div class="sub_banner_top divflex">
+                            <img class="banner-footer2" src="{{media url="wysiwyg/garotas.png"}}" alt="imagem-banner2" />
+                            <img class="outline" src="{{media url="wysiwyg/saiapena.png"}}" alt="imagem-banner1" />
+                        </div>
+                        <div class="sub_banner_bottom divflex">
+                            <div class="banner-footer3 divflex">
+                                <a href="#">
+                                    <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="imagem-banner3" />
+                                </a>
+                            </div>
+                            <div class="banner-footer4 divflex">
+                                <a href="#">
+                                    <img src="{{media url="wysiwyg/mulher-onca.png"}}"alt="imagem-banner4" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>',
+               'layout_update_xml' => '',
+               'url_key' => 'banner',
+               'is_active' => 1,
+               'stores' => [$fashionEN, $fashion],
+               'sort_order' => 0,
+           ];
     }
 
     public static function getDependencies():array

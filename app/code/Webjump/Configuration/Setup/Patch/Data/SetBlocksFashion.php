@@ -51,15 +51,6 @@ class SetBlocksFashion implements DataPatchInterface
                             <li><a>Perguntas Frequentes</a></li>
                         </ul>
                         </div>
-                        <div class="link3">
-                        <h3>FIQUE POR DENTRO</h3>
-                        <ul>
-                            <li><a>Assine a nossa Newletter para não perder nenhuma das promoções !</a></li>
-                        </ul>
-                        <div class="icons">
-                        <a href="https://pt-br.facebook.com" target="_blank"><img src="{{media url="wysiwyg/facebook.png"}}" alt="Icone do Facebook" width="37" height="37"> &nbsp;</a><a href="https://www.instagram.com/" target="_blank"><img src="{{media url="wysiwyg/instagram.png"}}" alt="Icone do Instagram" width="38" height="38"> &nbsp;</a><a href="https://www.youtube.com/" target="_blank"><img src="{{media url="wysiwyg/youtube.png"}}" alt="Icone do YouTube" width="44" height="31"> &nbsp;</a><a href="https://br.pinterest.com/" target="_blank"><img src="{{media url="wysiwyg/pinterest.png"}}" alt="Icone do Pinterest" width="41" height="41"> &nbsp;</a>
-                        </div>
-                        </div>
                     </div>',
                 'stores' => [$fashionEn->getId(),$fashion->getId()],
                 'is_active' => 1,

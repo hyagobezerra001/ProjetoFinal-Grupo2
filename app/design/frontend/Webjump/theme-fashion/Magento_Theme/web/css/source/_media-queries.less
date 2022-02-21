@@ -1,4 +1,4 @@
-@media only screen and (max-width: 896px) {
+@media only screen and (max-width: 767px) {
     .page-header {
         .panel.wrapper {
             display: none;
@@ -18,15 +18,27 @@
 
     .block-search .label:before {
         line-height: 20px;
+        position: relative;
+        left: 15px;
     }
 
     .minicart-wrapper {
         .action.showcart {
             .counter.qty {
+                left: 25px;
+            }
 
+            &::before {
+                position: relative;
+                left: 22px;
             }
         }
     } 
+
+    .minicart-wrapper .block-minicart {
+        width: 320px;
+        right: 24px;
+    }
 
     .nav-sections { 
         a {
@@ -50,6 +62,19 @@
         .nav-sections-item-switch {
             font-weight: 700;
             font-size: 16px;
+        }
+
+        .nav-sections-item-title {
+            background: #4d0183;
+        }    
+
+        .nav-sections-item-title.active {
+            background: @color-nav;
+        }
+
+        .nav-sections-item-content {
+            height: 100vh;
+            padding: 0;
         }
     }
 

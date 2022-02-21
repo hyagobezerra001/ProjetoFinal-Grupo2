@@ -13,7 +13,7 @@
 //estilizando os blocos do footer
  .main-footer {
     display: flex; 
-    gap: 100px;
+    gap: 150px;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
@@ -61,7 +61,7 @@
 .icons {
     display: flex;
     gap: 34px;
-    margin-top: 50px;
+    margin-top: 150px;
 
     a {
         height: 38px;
@@ -83,15 +83,21 @@
         padding: 0 0 0 25px;
         background: none;
         border: 1px solid @black;
+        box-shadow: 0 0 0 0;
+        outline: 0;
     
         &::placeholder {
             font-family: 'Raleway-Regular';
             font-size: 15px;
+            font-weight: 300;
         }
     }
 
     .form.subscribe {
-        margin-left: 875px;
+        position: relative;
+        
+        left: 67px;
+        bottom: 200px;
     }
 } 
 
@@ -151,6 +157,7 @@ button.action.continue.primary {
     transition: 0.2s;
     font-family: 'Raleway-Regular';
     font-size: 18px;
+    border-radius: 3px;
 
     &:hover {
         background-color: @button-hover;
@@ -169,6 +176,29 @@ button.action.continue.primary {
     }
 }
 
+.action.login.primary {
+    background-color: @button;
+    border: none;
+    transition: 0.2s;
+    font-family: 'Raleway-Regular';
+    border-radius: 3px;
+
+    &:hover {
+        background-color: @button-hover;
+    }
+}
+
+.action.primary{
+    background-color: @button;
+    border: none;
+    transition: 0.2s;
+    font-family: 'Raleway-Regular';
+    border-radius: 3px;
+
+    &:hover {
+        background-color: @button-hover;
+    }
+}
 
 //copyrigth footer
 .copyright {

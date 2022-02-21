@@ -39,9 +39,9 @@
          ],
          dsl: 'less'
      },
-     themefashion: {
+     themewine: {
          area: 'frontend',
-         name: 'Webjump/theme-fashion',
+         name: 'Webjump/theme-wine',
          locale: 'pt_BR',
          files: [
              'css/styles-m',

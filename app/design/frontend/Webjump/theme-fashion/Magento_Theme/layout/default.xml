@@ -22,7 +22,7 @@
                 </arguments>    
             </block>  
 
-            <block class="Magento\Newsletter\Block\Subscribe" name="link3" before="link1">
+            <block class="Magento\Newsletter\Block\Subscribe" name="link3" after="form.subscribe">
                 <arguments>
                     <argument name="block_id" xsi:type="string">form.subscribe</argument>
                 </arguments>    

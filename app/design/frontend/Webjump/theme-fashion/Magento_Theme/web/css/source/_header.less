@@ -239,29 +239,66 @@ body {
     
 }
 
-// propriedade agrupada deixar as demais divs flex 
-.divflex {
-    display: flex;
-}
-
-// div pai 
-.main_banner{
-    flex-direction: column;
-}
-
-//div first child
-.sub_banner_top{
-    justify-content: space-between;
+//div pai dos icons 
+.message{
+    display: flex;    
     align-items: center;
-    margin-bottom: 50px;
-    padding: 0px 20px;
-}
-.sub_banner_bottom{
-    padding: 0px 23px;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
 }
 
-//div filha de banner_bottom
-.banner-footer3{
-    flex-basis: 629px;
-    justify-content: flex-start;
+.car, .card, .return{
+    display: flex;
+    vertical-align: middle;
 }
+
+// imagem do caminhão de compras
+.text-car{
+    padding-left: 10px;
+    width: 226px;
+    height: 43px;     
+    color: #000000;   
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+}
+
+// imagem do cartão de crédito
+.text-card{
+    padding-left: 10px;
+    width: 235px;
+    height: 44px;
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+}
+
+// imagem do botão de retorno
+.text-return{
+    padding-left: 10px;
+    width: 218px;
+    height: 40px;
+    color: #000000;
+    font-size: 16px;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+}
+
+//grid 
+.main_banner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 95vh 50vh;
+    grid-column-gap: 30px;
+    grid-row-gap: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+

@@ -58,31 +58,62 @@ class SetPageFashion implements DataPatchInterface
                'meta_description' => 'Banner para loja Fashion',
                'identifier' => 'banner_fashion',
                'content' =>
-                    '<div class="banner">
-                        <h1 class="titulo-banner">Descontos Progressivos
-                            <span class="subtitulo">em todas as peças</span>
-                        </h1>
-                        <button class="button-banner" type="name">Comprar Agora</button>
-                        <img class="img-banner" src="{{media url="wysiwyg/banner.png"}}" alt="banner main" />
-                    </div>
-                    <div class="car">
-                        <span class="text-car">frente grátis para todas as compras acima de R$100</span>
-                    </div>
-                    <div class="main_banner divflex">
-                        <div class="sub_banner_top divflex">
-                            <img class="banner-footer2" src="{{media url="wysiwyg/garotas.png"}}" alt="imagem-banner2" />
-                            <img class="outline" src="{{media url="wysiwyg/saiapena.png"}}" alt="imagem-banner1" />
+                    '<p>
+                        <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                    </p>
+                    <div class="message">
+                        <div class="car">
+                            <img class="image-car" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
+                            <span class="text-car">grátis para todas as<br>compras acima de R$100</span>
                         </div>
-                        <div class="sub_banner_bottom divflex">
-                            <div class="banner-footer3 divflex">
-                                <a href="#">
-                                    <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="imagem-banner3" />
-                                </a>
+                        <div class="card">
+                            <img src="{{media url="wysiwyg/cartao.png"}}" alt="img2">
+                            <span class="text-card">pague em até 5x sem <br>juros no cartão de crédito</span>
+                        </div>
+                        <div class="return">
+                            <img src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
+                            <span class="text-return">primeira troca reservada
+                            <br>sem custos adicionais</span>
+                        </div>
+                    </div>
+                    <div class="main_banner">
+                        <div class="img1">
+                            <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        </div>
+                        <div class="img2">
+                            <img src="{{media url="wysiwyg/banner_saias.jpg"}}" alt="img5">
+                        </div>
+                        <div class="img3">
+                            <a href="#">
+                                <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="img6">
+                            </a>
+                        </div>
+                        <div class="img4">
+                            <a href="#">
+                                <img src="{{media url="wysiwyg/mulher-onca.png"}}" alt="img7">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="maincontainer">
+                        <div class="about-magnolia">
+                            <div class="div1"></div>
+                            <div>
+                                <h3 class="about-magnolia-text">
+                                    sobre a magnolia
+                                </h3>
                             </div>
-                            <div class="banner-footer4 divflex">
-                                <a href="#">
-                                    <img src="{{media url="wysiwyg/mulher-onca.png"}}"alt="imagem-banner4" />
-                                </a>
+                            <div class="div2"></div>
+                        </div>
+                        <div class="content-text">
+                            <div class="magnolia">
+                                <span class="part1">Magnolia L. é um género de plantas com flor, da ordem Magnoliales</span>
+
+                                <span class="part2">Agrupa as espécies maioritariamente arbóreas conhecidas pelo nome comum de magnólias. Na sua presente circunscrição taxonómica o género foi alargado para incluir as espécies que se encontravam dispersas pelos géneros Magnolia, Manglietia, Michelia, Talauma, Aromadendron, Kmeria, Pachylarnax e Alcimandra (todos da antiga subfamília Magnolioideae), resultando num género monofilético com cerca de 297 espécies.[2] O género distribui-se pelas regiões subtropicais e tropicais do leste e sueste da Ásia (incluindo a Malésia) e pelas Américas, com centros de diversidade no Sueste Asiático e no norte da América do Sul. O género inclui diversas espécies amplamente utilizadas como árvore ornamental nas regiões subtropicais e temperadas de ambos os hemisférios.</span>
+                            </div>
+
+                            <div class="decriptionlow">
+                                <span class="part3">Descrição da Marca</span>
+                                <span class="part4">O género Magnolia tem como epónimo o nome de Pierre Magnol, um botânico de Montpellier (França). A primeira espécie identificada deste género foi Magnolia virginiana, encontrada por missionários enviados à América do Norte na década de 1680. Já em pleno século XVIII foi descrita, também a partir de amostras norte-americanas, a espécie Magnolia grandiflora, hoje a espéci mais conhecida do género dado ser amplamente utilizada como árvore ornamental nas regiões subtropicais e temperadas de clima moderado de todo o mundo.</span>
                             </div>
                         </div>
                     </div>',

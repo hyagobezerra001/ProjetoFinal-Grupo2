@@ -735,7 +735,7 @@ button:focus {
   font-size: 22px;
   line-height: 22px;
   color: inherit;
-  /*content: '\e611';*/
+  content: '\e611';
   font-family: 'icons-blank-theme';
   margin: 0;
   vertical-align: top;
@@ -807,7 +807,7 @@ fieldset[disabled] .example-button-10 {
   font-size: 22px;
   line-height: 22px;
   color: inherit;
-  /*content: '\e611';*/
+  content: '\e611';
   font-family: 'icons-blank-theme';
   margin: 0;
   vertical-align: top;
@@ -864,7 +864,7 @@ fieldset[disabled] .example-button-11 {
   font-size: 22px;
   line-height: 22px;
   color: inherit;
-  /*content: '\e611';*/
+  content: '\e611';
   font-family: 'icons-blank-theme';
   margin: 0;
   vertical-align: top;

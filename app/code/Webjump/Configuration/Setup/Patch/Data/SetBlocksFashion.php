@@ -50,13 +50,8 @@ class SetBlocksFashion implements DataPatchInterface
                             <li><a>Central de Atendimento</a></li>
                             <li><a>Perguntas Frequentes</a></li>
                         </ul>
-                        <div class="link3">
-                        <h3>FIQUE POR DENTRO</h3>
-                        <ul>
-                            <li><a>Assine a nossa Newletter para não perder nenhuma das promoções !</a></li>
-                        </ul>
-                    </div>
-                    </div>
+                        </div>
+                    
                     </div>',
                 'stores' => [$fashionEn->getId(),$fashion->getId()],
                 'is_active' => 1,

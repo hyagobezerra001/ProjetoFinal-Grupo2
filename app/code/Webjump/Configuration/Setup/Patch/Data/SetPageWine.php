@@ -87,4 +87,6 @@ class SetPageWine implements DataPatchInterface
     {
         return [];
     }
+
 }
+

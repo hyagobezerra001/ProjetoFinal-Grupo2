@@ -53,13 +53,21 @@ class SetPageWine implements DataPatchInterface
     public function setPageFashion($wineEN, $wine)
     {
         return [
-            'title' => 'Banner-Wine',
+            'title' => 'Wine Store',
             'page_layout' => '1column',
             'meta_keywords' => 'Banner Wine Loja1',
             'meta_description' => 'Banner para loja Wine',
             'identifier' => 'banner_wine',
             'content' =>
-                'pagina 100%',
+                '<p>
+                    <img src="{{media url="wysiwyg/banner-principal.jpg"}}" alt="">
+                </p>
+                <div class="container">
+                    <div class="img1"><img src="{{media url="wysiwyg/010.png"}}" alt=""></div>
+                    <div class="img2"><img src="{{media url="wysiwyg/img2.png"}}" alt=""></div>
+                    <div class="img3"><img src="{{media url="wysiwyg/img3.png"}}" alt=""></div>
+                    <div class="img4"><img src="{{media url="wysiwyg/img4.png"}}" alt=""></div>
+                </div>',
             'layout_update_xml' => '',
             'url_key' => 'banner_wine',
             'is_active' => 1,
@@ -79,4 +87,6 @@ class SetPageWine implements DataPatchInterface
     {
         return [];
     }
+
 }
+

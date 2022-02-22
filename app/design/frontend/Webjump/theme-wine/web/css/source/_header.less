@@ -3,17 +3,18 @@
     display: none;
 }
 
-//Alterando cor do Entre e Cadastre-se
+//Alterando cor do "Wine pt_br ^ "
 .page-header .panel.wrapper {
     height: 45px; 
     background-color: @panel-background;
+    color: #666;
 } 
- 
-//Alterando panel
-.header.panel > .header.links, span {
+
+//Alterando cor e estilização do "Entre" "Cadastra-se"
+
+.page-header > .panel.wrapper > .panel.header ul li a{
     line-height: 20px;
 
-    li > a { 
         color: @panel-font;
         font-family: 'Raleway';
         font-weight: 500;
@@ -24,8 +25,6 @@
             color: @panel-hover;
             text-decoration: none;
         }  
-    }
-    
 }
 
 .authorization-link:after {
@@ -38,6 +37,7 @@
 
 .view-wine span {
     color: @panel-font;
+    font-family: 'Raleway';
 }
 
 //Alterando campo de pesquisa
@@ -195,6 +195,84 @@
     letter-spacing: normal;
     margin-top: 25px;
     border-radius: 10px;
+}
+
+    //botão "Finalizar Pedido"
+
+.checkout-payment-method .payment-method-content > .actions-toolbar > .primary .action.primary {
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px; 
+}
+
+//botão "continuar comprando"
+.actions-toolbar > .primary .action:last-child, .actions-toolbar > .secondary .action:last-child {
+    display: block;
+    width: 156px;
+    text-align: center;
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    border: none;
+    height: 56px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding-top: 3px;
+}
+
+//botao "adicionar avaliação"
+
+.review-form .action.submit.primary:hover {
+    background: #9a1e51;
+    color: #fff;
+}
+
+a.action.primary {
+    display: block;
+    width: 156px;
+    text-align: center;
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+    padding-top: 3px;
+
+    &:hover {
+        background-color: #9a1e51;
+        border: none;
+    }
 }
 
 .product-item .price-box {

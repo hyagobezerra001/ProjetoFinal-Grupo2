@@ -10,6 +10,8 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
+use Magento\Store\Model\ScopeInterface;
+
 
 class SetPageWine implements DataPatchInterface
 {
@@ -45,7 +47,7 @@ class SetPageWine implements DataPatchInterface
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
 
-        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeConfigInterface::SCOPE_TYPE_DEFAULT, $wine);
+        $this->config->saveConfig('web/default/cms_home_page','banner_wine', ScopeInterface::SCOPE_STORES, $wine);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

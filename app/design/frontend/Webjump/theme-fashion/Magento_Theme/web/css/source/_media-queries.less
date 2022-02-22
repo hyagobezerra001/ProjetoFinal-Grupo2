@@ -1,4 +1,8 @@
-@media only screen and (max-width: 767px) {
+@media (min-width: 375px) and (max-width: 767px) {
+    body {
+        width: 100%;
+    }
+    
     .page-header {
         .panel.wrapper {
             display: none;
@@ -19,7 +23,6 @@
     .block-search .label:before {
         line-height: 20px;
         position: relative;
-        left: 15px;
     }
 
     .minicart-wrapper {
@@ -30,14 +33,13 @@
 
             &::before {
                 position: relative;
-                left: 22px;
             }
         }
     } 
 
     .minicart-wrapper .block-minicart {
         width: 320px;
-        right: 24px;
+        top: 30px;
     }
 
     .nav-sections { 
@@ -103,9 +105,9 @@
 
         }
 
-        .logo img {
-            margin: 0 35px;
-        }
+        // .logo img {
+        //     margin: 0 35px;
+        // }
     
         .navigation .submenu:not(:first-child) {
             line-height: 30px;
@@ -163,8 +165,7 @@
             }
 
             .form.subscribe {
-                display: flex;
-                margin: 0px 15px;
+                margin: 0 auto;
             }
         }
 

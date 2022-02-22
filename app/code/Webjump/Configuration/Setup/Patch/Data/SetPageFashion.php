@@ -14,7 +14,6 @@ use Magento\Store\Model\ScopeInterface;
 
 class SetPageFashion implements DataPatchInterface
 {
-
     private $moduleDataSetup;
     private $pageFactory;
     private $storeRepository;
@@ -34,7 +33,6 @@ class SetPageFashion implements DataPatchInterface
 
     public function apply()
     {
-
         $this->moduleDataSetup->getConnection()->startSetup();
 
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
@@ -54,11 +52,11 @@ class SetPageFashion implements DataPatchInterface
     public function setPageFashion($fashionEN, $fashion)
     {
            return [
-               'title' => 'Fashion store',
+               'title' => 'Fashion Store',
                'page_layout' => '1column',
                'meta_keywords' => 'Banner Fashion Loja1',
                'meta_description' => 'Banner para loja Fashion',
-               'identifier' => 'banner',
+               'identifier' => 'banner_fashion',
                'content' =>
                     '<div class="banner">
                         <h1 class="titulo-banner">Descontos Progressivos
@@ -89,7 +87,7 @@ class SetPageFashion implements DataPatchInterface
                         </div>
                     </div>',
                'layout_update_xml' => '',
-               'url_key' => 'banner',
+               'url_key' => 'banner_fashion',
                'is_active' => 1,
                'stores' => [$fashionEN, $fashion],
                'sort_order' => 0,

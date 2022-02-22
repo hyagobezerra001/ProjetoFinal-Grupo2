@@ -59,7 +59,15 @@ class SetPageWine implements DataPatchInterface
             'meta_description' => 'Banner para loja Wine',
             'identifier' => 'banner_fashion',
             'content' =>
-                '<h1>Hello</h1>',
+                '<p>
+                    <img src="{{media url="wysiwyg/banner-principal.jpg"}}" alt="">
+                </p>
+                <div class="container">
+                    <div class="img1"><img src="{{media url="wysiwyg/010.png"}}" alt=""></div>
+                    <div class="img2"><img src="{{media url="wysiwyg/img2.png"}}" alt=""></div>
+                    <div class="img3"><img src="{{media url="wysiwyg/img3.png"}}" alt=""></div>
+                    <div class="img4"><img src="{{media url="wysiwyg/img4.png"}}" alt=""></div>
+                </div>',
             'layout_update_xml' => '',
             'url_key' => 'banner_fashion',
             'is_active' => 1,

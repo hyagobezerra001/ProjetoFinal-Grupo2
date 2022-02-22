@@ -53,7 +53,7 @@ class SetPageFashion implements DataPatchInterface
     public function setPageFashion($fashionEN, $fashion)
     {
            return [
-               'title' => 'Banner-Fashion',
+               'title' => 'Fashion store',
                'page_layout' => '1column',
                'meta_keywords' => 'Banner Fashion Loja1',
                'meta_description' => 'Banner para loja Fashion',

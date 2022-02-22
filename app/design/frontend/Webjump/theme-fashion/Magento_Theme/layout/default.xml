@@ -14,15 +14,20 @@
         </arguments>
     </referenceBlock>
 
-    <referenceContainer name="footer-container"> 
+    <referenceContainer name="footer-container">
         <container name="footer-links" htmlTag="div" htmlClass="footer-links">
             <block class="Magento\Cms\Block\Block" name="link1" before="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer-links1_Fashion</argument>
                 </arguments>    
             </block>  
+            <block class="Magento\Newsletter\Block\Subscribe" name="link3" after="form.subscribe">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">form.subscribe</argument>
+                </arguments>    
+            </block>  
         </container>
-    <!-- <referenceContainer name="minicart" remove="true"/> -->
     </referenceContainer>
+    <!-- <move element="form.subscribe" destination="footer-container" after="-" /> -->
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
 </page>

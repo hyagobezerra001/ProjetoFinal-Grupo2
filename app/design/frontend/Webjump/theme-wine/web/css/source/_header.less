@@ -1,0 +1,249 @@
+//Removendo mensagem padrão
+.not-logged-in {
+    display: none;
+}
+
+//Alterando cor do Entre e Cadastre-se
+.page-header .panel.wrapper {
+    height: 45px; 
+    background-color: @panel-background;
+} 
+ 
+//Alterando panel
+.header.panel > .header.links, span {
+    line-height: 20px;
+
+    li > a { 
+        color: @panel-font;
+        font-family: 'Raleway';
+        font-weight: 500;
+        font-size: 14px;
+        transition: 0.2s;  
+    
+        &:hover {
+            color: @panel-hover;
+            text-decoration: none;
+        }  
+    }
+    
+}
+
+.authorization-link:after {
+    color: @panel-font;
+    font-family: 'Raleway';
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+.view-wine span {
+    color: @panel-font;
+}
+
+//Alterando campo de pesquisa
+.block-search {
+    margin-right: 75px;
+
+    .label:before {
+        margin: 0px -22px 0px 0px;
+    }
+
+    input { 
+        height: 38px; 
+        border: 1px solid #a6a6a6;
+        height: 38px;
+        width: 310px;
+    
+        &::placeholder {
+            color: @panel-font;
+            font-family: 'Urbane-thin';
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media (max-width:768px){
+
+    .block-search .label{
+        margin: -0.6rem;
+        padding: 0rem;
+
+    }
+
+    .page-header .panel.wrapper {
+        height: 0;
+    } 
+
+    .minicart-wrapper {
+        margin-top: 0;
+
+        .action.showcart {
+            top: 0;
+        }
+    }
+
+    .logo img {
+        margin: 0 5rem;
+;
+    }
+
+}
+
+//Substituindo icone da lupa
+.block-search {
+    .block-content {
+        .action.search {
+            right: -35px;
+            top: 10px;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 16px;
+                height: 16px;
+                background-color: @panel-font;
+                background: url('@{baseDir}images/search.png') no-repeat 50% 50%;
+            }
+        }
+    }
+} 
+
+
+//Alterando icone do carrinho
+.minicart-wrapper {
+    .action.showcart {
+        display: inline-flex;
+        position: relative;
+        top: 5px;
+        content: '';
+
+        &::before {
+            content: '';
+            display: block;
+            width: 19px;
+            height: 25px;
+            background-color: #000000;
+            background: url('@{baseDir}images/bag.png') no-repeat 50% 50%;
+        }
+    }
+}
+
+.minicart-wrapper .action.showcart.active:before {
+    content: '';
+}
+
+.block-minicart .block-content > .actions > .primary .action.primary {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+.minicart-wrapper .action.showcart .counter.qty{
+    background: #9a1e51;
+    margin-left: 5px;
+}
+
+.action.tocart.primary{
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+
+}
+
+.button.action.continue.primary {
+    margin-bottom: 0;
+    background: #9a1e51;
+    color: #fff;
+    padding: 0 10px;
+    text-transform: initial;
+    font-weight: 500;
+    border: none;
+    height: 35px;
+    transition: 0.2s;
+    font-family: 'Urbane';
+    font-size: 17px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.product-item .price-box {
+    width: 98px;
+    height: 22px;
+    color: #8b6722;
+    font-family: Urbane;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: 24.97px;
+    text-align: left;
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: -0.24px;
+    line-height: normal;
+}
+
+//Estilizando Nav
+.nav-sections {
+    background-color: @white;
+}
+
+.navigation {
+    background-color: @white;
+    width: 1642px;
+    height: 50px;
+
+    span {
+        color: @li-color;
+        font-family: 'Urbane';
+        font-weight: 300;
+        font-size: 16px;
+        letter-spacing: -0.16px;
+        transition: 0.2s;
+        &:hover {
+            color: @li-hover; 
+        }
+    }
+}
+
+//Tirando setas da nav
+.navigation {
+    .level0.parent {
+        .level-top {
+            .ui-menu-icon:after {
+                content: '';
+            }
+        }
+    }
+}   

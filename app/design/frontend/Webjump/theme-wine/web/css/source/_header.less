@@ -63,9 +63,16 @@
     }
 }
 
-.sections.nav-sections {
-    margin-bottom: 0;
+//Cor do sublinhado no menu
+.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
+    border-color: #9a1e51;
+    border-width: 0 0 3px;
 }
+
+//Margin entre o menu e o banner
+/*.sections.nav-sections {
+    margin-bottom: 0;
+}*/
 
 @media (max-width:768px){
 
@@ -89,10 +96,39 @@
 
     .logo img {
         margin: 0 5rem;
-;
     }
 
 }
+
+    // Ajustando menu hamburguer 
+
+    .section-item-title.nav-sections-item-title.active{
+        background-color: #9a1e51;
+
+        a, .alink {
+            color: #fff;
+            font-family: 'Urbane';
+            font-weight: 500;
+        }
+    }
+
+    .section-item-title.nav-sections-item-title {
+        background-color: #9a1e51;
+
+        a, .alink {
+            color: #fff;
+            font-family: 'Urbane';
+            font-weight: 500;    
+        }
+    }
+
+    .view-wine.switcher-option a, .alink {
+        color: #333;
+    }
+    
+        .column.main p {
+            margin-top: -2rem;
+        }
 
 //Substituindo icone da lupa
 .block-search {
@@ -299,6 +335,7 @@ a.action.primary {
 //Estilizando Nav
 .nav-sections {
     background-color: @white;
+    margin-bottom: 20px;
 }
 
 .navigation {

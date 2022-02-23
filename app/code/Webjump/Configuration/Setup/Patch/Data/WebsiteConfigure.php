@@ -128,13 +128,13 @@ class WebsiteConfigure implements DataPatchInterface
                 'store' => [
                     'pt' => [
                         'code' => self::WEBSITE_FASHION_CODE,
-                        'name' => 'Fashion Store View',
+                        'name' => 'Fashion pt_br',
                         'sort_order' => '1',
                         'is_active' => '1'
                     ],
                     'en' => [
                         'code' => self::WEBSITE_FASHION_STORE_CODE_EN,
-                        'name' => 'Fashion Store View en',
+                        'name' => 'Fashion en_us',
                         'sort_order' => '2',
                         'is_active' => '1'
                     ]
@@ -156,13 +156,13 @@ class WebsiteConfigure implements DataPatchInterface
                 'store' => [
                     'pt' => [
                         'code' => self::WEBSITE_WINE_CODE,
-                        'name' => 'Wine Store View',
+                        'name' => 'Wine pt_br',
                         'sort_order' => '2',
                         'is_active' => '1'
                     ],
                     'en' => [
                         'code' => self::WEBSITE_WINE_STORE_CODE_EN,
-                        'name' => 'Wine Store View en',
+                        'name' => 'Wine en_us',
                         'sort_order' => '2',
                         'is_active' => '1'
                     ]

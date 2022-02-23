@@ -22,9 +22,7 @@ body {
 }
 
 //logo magnolia
-.logo {
-    left: 202px;
-}
+
 
 .sections.nav-sections{
     margin-bottom: 0;
@@ -136,7 +134,7 @@ body {
     
          ul{
             height: 50px;
-            margin-left: 201px;
+            // margin-left: 201px;
             
         }       
 }
@@ -200,71 +198,71 @@ body {
 }
 
 
-.banner {
-    position: relative;
-    min-width: 100vw;
-    margin-top: -25px;
-    height: 561px;
-}
+// .banner {
+//     position: relative;
+//     min-width: 100vw;
+//     margin-top: -25px;
+//     height: 561px;
+// }
 
-.img-banner{
-    width: 100%;
-}
+// .img-banner{
+//     width: 100%;
+// }
 
-.titulo-banner{
-    position: absolute;
-    margin: 100px 543px 219px 600px;
-    color: #6e01a5;
-    font-size: 64px;
-    font-weight: 400;
-    text-align: left;
-    font-family: "Raleway-ExtraBold";
+// .titulo-banner{
+//     position: absolute;
+//     margin: 100px 543px 219px 600px;
+//     color: #6e01a5;
+//     font-size: 64px;
+//     font-weight: 400;
+//     text-align: left;
+//     font-family: "Raleway-ExtraBold";
 
-}
+// }
 
-.subtitulo{
-        position: absolute;
-        display:block;
-        color: #ffffff;
-        font-family: 'Raleway-Regular';
-        font-size: 50px;
-        font-weight: 700;
-        font-style: normal;
-        min-width: 600px;
-    }
+// .subtitulo{
+//         position: absolute;
+//         display:block;
+//         color: #ffffff;
+//         font-family: 'Raleway-Regular';
+//         font-size: 50px;
+//         font-weight: 700;
+//         font-style: normal;
+//         min-width: 600px;
+//     }
 
 
-.button-banner{
-    all:unset;
-    box-sizing: border-box;
-    position: absolute;
-    width: 225px;
-    height: 55px;
-    background-color: #6e01a5;
-    margin: 320px 678px 128px 600px;
-    color: #ffffff;
-    font-family: 'Raleway-Bold';
-    font-size: 20px;
-    font-weight: 700;
-    font-style: normal;
-    text-align: left;
-    text-transform: uppercase;
-    /* Text style for "COMPRAR AG" */
-    font-style: normal;
-    letter-spacing: 0.24px;
-    line-height: normal;
-    padding-left: 25px;
-    box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0) !important;
-    border:none!important;
-    transition: 0.2s;
-    cursor: pointer;
+// .button-banner{
+//     all:unset;
+//     box-sizing: border-box;
+//     position: absolute;
+//     width: 225px;
+//     height: 55px;
+//     background-color: #6e01a5;
+//     margin: 320px 678px 128px 600px;
+//     color: #ffffff;
+//     font-family: 'Raleway-Bold';
+//     font-size: 20px;
+//     font-weight: 700;
+//     font-style: normal;
+//     text-align: left;
+//     text-transform: uppercase;
+//     /* Text style for "COMPRAR AG" */
+//     font-style: normal;
+//     letter-spacing: 0.24px;
+//     line-height: normal;
+//     padding-left: 25px;
+//     box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0) !important;
+//     border:none!important;
+//     transition: 0.2s;
+//     cursor: pointer;
 
-    &:hover{
-        background-color: #4B0082;
-        color: #ffffff;
-    }
+//     &:hover{
+//         background-color: #4B0082;
+//         color: #ffffff;
+//     }
     
-}
+// }
 
 //div pai dos icons 
 
@@ -320,6 +318,10 @@ body {
     text-align: left;
 }
 
+.hr-top{
+    border: 1px solid red;
+}
+
 //grid 
 .main_banner{
     display: grid;
@@ -338,17 +340,14 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 27px;
+    width: 100%;
 }
-.div1,.div2{
-    min-width: 35em;
-    height: 1px;
-    border: 0px;
-    border-top: 1px solid #000000;
+.about-magnolia hr {
+    border-top: 1px solid @black;
+    width: 100%;
 }
 .about-magnolia-text{
     all:unset;
-    width: 100%;
-    height: 14px;
     color: #000000;
     font-family: "Open Sans",sans-serif;
     font-size: 16px;
@@ -356,18 +355,15 @@ body {
     font-style: normal;
     letter-spacing: normal;
     line-height: normal;
-    text-align: center;
     text-transform: uppercase;
     font-style: normal;
     letter-spacing: 0.19px;
     line-height: normal;
-    padding: 0 22px;
 }
 .maincontainer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1237px;
     padding: 0 30px;
 }
 .magnolia, .decriptionlow{
@@ -376,7 +372,7 @@ body {
     flex-wrap: wrap;
 }
 .part1, .part3{
-    font-family: "Open Sans";
+    font-family: 'OpenSans-SemiBold';
     font-weight: 600;
     font-style: normal;
     letter-spacing: 0.56px;
@@ -387,13 +383,15 @@ body {
     margin-bottom: 20px;
 }
 .part2,.part4{
-    font-family: "Open Sans";
+    font-family: 'OpenSans-Light';
     font-weight: 300;
     font-style: normal;
     letter-spacing: 0.56px;
     line-height: normal;
 }
-
-#maincontent.page-main {
-    max-width: 100%;
+.div-text{
+    width: 400px;
+    text-align: center;
+    padding: 0 20px;
 }
+

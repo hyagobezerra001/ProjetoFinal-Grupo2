@@ -11,11 +11,13 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Api\WebsiteRepositoryInterface;
 
 
 class SetPageWine implements DataPatchInterface
 {
 
+    private $websiteRepository;
     private $moduleDataSetup;
     private $pageFactory;
     private $storeRepository;
@@ -25,12 +27,14 @@ class SetPageWine implements DataPatchInterface
         ModuleDataSetupInterface $moduleDataSetup,
         PageFactory $pageFactory,
         StoreRepositoryInterface $storeRepository,
-        ConfigInterface $config
+        ConfigInterface $config,
+        WebsiteRepositoryInterface $websiteRepository
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->pageFactory = $pageFactory;
         $this->storeRepository = $storeRepository;
         $this->config = $config;
+        $this->websiteRepository = $websiteRepository;
     }
 
     public function apply()
@@ -41,14 +45,15 @@ class SetPageWine implements DataPatchInterface
         $wineEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_STORE_CODE_EN)->getId();
         $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
 
+        $wineWebsite = $this->websiteRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
         $pageData = $this->setPageFashion($wineEN, $wine);
 
         $this->moduleDataSetup->startSetup();
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
 
-        $this->config->saveConfig('web/default/cms_home_page','banner_wine', ScopeInterface::SCOPE_STORES, $wine);
-        $this->config->saveConfig('web/default/cms_home_page','banner_wine_en', ScopeInterface::SCOPE_STORES, $wineEN);
+        $this->config->saveConfig('web/default/cms_home_page','banner_wine', ScopeInterface::SCOPE_WEBSITES, $wineWebsite);
+
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

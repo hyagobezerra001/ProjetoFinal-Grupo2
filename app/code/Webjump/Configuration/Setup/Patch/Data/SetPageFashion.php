@@ -11,6 +11,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Api\WebsiteRepositoryInterface;
 
 class SetPageFashion implements DataPatchInterface
 {
@@ -18,17 +19,20 @@ class SetPageFashion implements DataPatchInterface
     private $pageFactory;
     private $storeRepository;
     private $config;
+    private $websiteRepository;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         PageFactory $pageFactory,
         StoreRepositoryInterface $storeRepository,
-        ConfigInterface $config
+        ConfigInterface $config,
+        WebsiteRepositoryInterface $websiteRepository
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->pageFactory = $pageFactory;
         $this->storeRepository = $storeRepository;
         $this->config = $config;
+        $this->websiteRepository = $websiteRepository;
     }
 
     public function apply()
@@ -38,13 +42,14 @@ class SetPageFashion implements DataPatchInterface
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
 
+
         $pageData = $this->setPageFashion($fashionEN, $fashion);
 
         $this->moduleDataSetup->startSetup();
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
 
-        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_STORES, $fashion);
+        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_WEBSITES, $fashion);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

@@ -1,7 +1,6 @@
 <?php
 
 namespace Webjump\Configuration\Setup\Patch\Data;
-
 use Magento\Catalog\Model\CategoryRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
@@ -32,39 +31,26 @@ class CreateUrlCategories implements DataPatchInterface
     public function apply()
     {
         $this->moduleDataSetup->getConnection()->startSetup();
-
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
-        $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
+        $categoryData = $this->dataFashion();
 
-        $urlFashion = $this->categoriesFashion();
-        $urlWine = $this->categoriesWine();
-
-        foreach ($urlFashion as $url){
-            $id = $this->getCategoryId($url['name']);
+        foreach ($categoryData as $data){
+            $id = $this->getCategoryId($data['name']);
 
             $category = $this->categoryRepository->get($id,$fashion);
-            $category->setUrlKey($url['url'])->save();
+            $category->setUrlKey($data['url'])->save();
         }
 
-        foreach ($urlWine as $url){
-            $id = $this->getCategoryId($url['name']);
-
-            $category = $this->categoryRepository->get($id,$wine);
-            $category->setUrlKey($url['url'])->save();
-
-        }
-
-        $this->moduleDataSetup->getConnection()->endSetup();
     }
-    public function categoriesFashion():array
+    public function dataFashion()
     {
         return [
             [
-            'name' => 'Roupas',
-            'url' => 'roupasmoda'
+                'name' => 'roupas',
+                'url' => 'roupasmoda'
             ],
             [
-                'name' => 'Lingerie',
+                'name' => 'lingerie',
                 'url' => 'lingeriemoda'
             ],
             [
@@ -77,30 +63,30 @@ class CreateUrlCategories implements DataPatchInterface
             ],
             [
                 'name' => 'Promoções',
-                'url' => 'promocoesmoda'
+                'url' => 'Promocoesmoda'
             ],
         ];
     }
 
-    public function categoriesWine():array
+    public function dataAutomotive()
     {
         return [
             [
-                'name' => 'Vinhos',
-                'url' => 'vinhowine'
+                'original-name' => 'Vinhos',
+                'url' => 'volt-3-en'
             ],
             [
-                'name' => 'Espumantes',
-                'url' => 'espumanteswine'
+                'original-name' => 'Espumantes',
+                'url' => 'volt-sx-en'
             ],
             [
-                'name' => 'Premium',
-                'url' => 'premiumwine'
+                'original-name' => 'Premium',
+                'url' => 'roadmaster-en'
             ],
             [
-                'name' => 'Kits',
-                'url' => 'kitswine'
-            ],
+                'original-name' => 'Kits',
+                'url' => 'acessories-en'
+            ]
         ];
     }
 
@@ -109,6 +95,7 @@ class CreateUrlCategories implements DataPatchInterface
         return [
             CreateCategories:: class,
             WebsiteConfigure::class,
+
         ];
     }
 

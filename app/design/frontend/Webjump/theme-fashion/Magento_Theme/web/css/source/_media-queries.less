@@ -175,20 +175,46 @@
         
         // itens do grid
         .message {
-            flex-direction: column;        
+            flex-direction: column;       
+            
        
             .car{
                 padding: 35px;
+                    .image-car{
+                        height: 100%;
+                }
             }
         
             .card {
                 padding: 35px;
+                .image-card{
+                    height: 100%;
+                }
             }
-        
+      
             .return{
                 padding: 35px;
+                .image-card{
+                    height: 100%;
+                }
+                
             }
+            
+            .text-car{
+                font-size: 18px;
+            }
+
+            .text-card{
+                font-size: 18px;
+            }
+
+            .text-return{
+                font-size: 18px;
+            }
+
         }
+
+
 
         .div-text{
             padding: 10px;
@@ -202,11 +228,17 @@
         .page-header {
             margin-bottom: 0;
         }
+
+        .main_banner{
+            grid-template-rows: 0fr 0fr;
+            grid-row-gap: 0px;
+        }
+
     }
 
 
-@media (min-width: 768px){
-    max-width: 100%;
+@media (max-width: 375px){
+
 }
     
 

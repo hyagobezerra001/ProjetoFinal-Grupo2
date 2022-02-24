@@ -39,9 +39,9 @@
          ],
          dsl: 'less'
      },
-     themefashion: {
+     themewine: {
          area: 'frontend',
-         name: 'Webjump/theme-fashion',
+         name: 'Webjump/theme-wine',
          locale: 'pt_BR',
          files: [
              'css/styles-m',
@@ -49,6 +49,26 @@
          ],
          dsl: 'less'
      },
+     themewine: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+    themefashion: {
+        area: 'frontend',
+        name: 'Webjump/theme-fashion',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
      backend: {
          area: 'adminhtml',
          name: 'Magento/backend',

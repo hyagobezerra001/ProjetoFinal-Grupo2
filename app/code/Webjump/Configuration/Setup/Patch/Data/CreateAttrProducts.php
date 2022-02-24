@@ -14,15 +14,15 @@ use Magento\Catalog\Api\AttributeSetManagementInterface;
 
 class CreateAttrProducts implements DataPatchInterface {
 
-    const ATTRIBUTE_WINE1 = 'ml';
-    const ATTRIBUTE_WINE2 = 'tipo_vinho';
-    const ATTRIBUTE_WINE3 = 'importado'; //bool
+    const ATTRIBUTE_WINE1 = 'Ml';
+    const ATTRIBUTE_WINE2 = 'Tipo_do_vinho';
+    const ATTRIBUTE_WINE3 = 'Importado'; //bool
     const SET_ATTRIBUTE_WINE = 'Wine';
 
 
     const SET_ATTRIBUTE_FASHION = 'Fashion';
-    const ATTRIBUTE_FASHION1 = 'tecido';
-    const ATTRIBUTE_FASHION2 = 'tamanho';
+    const ATTRIBUTE_FASHION1 = 'Tecido';
+    const ATTRIBUTE_FASHION2 = 'Tamanho';
     const ATTRIBUTE_FASHION3 = 'moda_verao';
 
 

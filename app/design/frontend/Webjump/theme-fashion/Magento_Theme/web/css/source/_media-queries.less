@@ -1,0 +1,216 @@
+@media (max-width: 767px){
+    body {
+        width: 100%;
+    }
+    
+    .page-header {
+        .panel.wrapper {
+            display: none;
+        }
+    } 
+
+    .nav-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 13px
+    }
+    
+    .minicart-wrapper {
+        margin-top: 4px;
+    }
+
+    .block-search .label:before {
+        line-height: 20px;
+        position: relative;
+    }
+
+    .minicart-wrapper {
+        .action.showcart {
+            .counter.qty {
+                left: 25px;
+            }
+
+            &::before {
+                position: relative;
+            }
+        }
+    } 
+
+    .minicart-wrapper .block-minicart {
+        width: 320px;
+        top: 30px;
+    }
+
+    .nav-sections { 
+        a {
+            color: white;
+            font-family: 'Raleway-Regular';  
+        } 
+
+        strong {
+            color: @nav-span;
+            font-family: 'Raleway-Regular';
+        }
+
+        .header.links li > a {
+            color: @nav-span;
+        }
+
+        .header.links li.greet.welcome {
+            display: none;
+        }
+
+        .nav-sections-item-switch {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .nav-sections-item-title {
+            background: #4d0183;
+        }    
+
+        .nav-sections-item-title.active {
+            background: @color-nav;
+        }
+
+        .nav-sections-item-content {
+            height: 100vh;
+            padding: 0;
+        }
+    }
+
+
+    .navigation {
+        height: 100%;
+        
+        a span {
+            font-size: 16px; 
+            
+        }
+
+        a {
+            color: @li-desktop;
+            font-family: 'Raleway-Regular';
+            font-weight: 700;
+        }
+
+            .parent {
+                .level-top {
+                    &::after {
+                        color: @li-desktop;
+                    }
+                }
+            }
+
+        }
+
+        // .logo img {
+        //     margin: 0 35px;
+        // }
+    
+        .navigation .submenu:not(:first-child) {
+            line-height: 30px;
+            color: @li-color;
+        }  
+        
+        a, .alink {
+            color: #F3F3F3;
+            font-family: 'Raleway-Regular';
+            font-size: 16px;
+        }
+
+        //Footer
+        .main-footer {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+
+            h3 {
+                font-size: 18px;
+            }
+
+            ul, a {
+                color: #000000;
+                font-family: 'Raleway-Regular';
+                font-size: 16px;
+                font-weight: 400;
+                text-decoration: none;  
+            }
+        }
+
+        .icons {
+            display: flex;
+            gap: 34px;
+            margin-top: 50px;
+            justify-content: center;
+        
+            a {
+                height: 38px;
+                align-self: baseline;
+            }
+        }
+
+        .link3 {
+            flex-grow: 0;
+            flex-basis: 250px;
+        }
+
+        .block.newsletter {
+            
+            input {
+                width: 250px;
+                margin-right: 0;
+            }
+
+            .form.subscribe {
+                margin: 0 auto;
+            }
+        }
+
+        .action.primary {
+            width: 100px;
+        }
+        
+        // itens do grid
+        .message {
+            flex-direction: column;        
+       
+            .car{
+                padding: 35px;
+            }
+        
+            .card {
+                padding: 35px;
+            }
+        
+            .return{
+                padding: 35px;
+            }
+        }
+
+        .div-text{
+            padding: 10px;
+            width: 500px;
+        }
+
+        .maincontainer {
+            max-width: 100%;
+        }
+
+        .page-header {
+            margin-bottom: 0;
+        }
+    }
+
+
+@media (min-width: 768px){
+    max-width: 100%;
+}
+    
+
+    
+
+
+    

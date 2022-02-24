@@ -96,15 +96,13 @@ class SetPageFashion implements DataPatchInterface
                     </div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
-                            <div class="div1"></div>
-                            <div>
-                                <h3 class="about-magnolia-text">
-                                    sobre a magnolia
-                                </h3>
-                            </div>
-                            <div class="div2"></div>
+                            <hr /> 
+                        <div class="div-text">
+                            <h3 class="about-magnolia-text">sobre a magnolia</h3>
                         </div>
-                        <div class="content-text">
+                            <hr /> 
+                    </div>
+                          <div class="content-text">
                             <div class="magnolia">
                                 <span class="part1">Magnolia L. é um género de plantas com flor, da ordem Magnoliales</span>
 

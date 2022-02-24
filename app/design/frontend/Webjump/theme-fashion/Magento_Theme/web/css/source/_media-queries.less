@@ -120,11 +120,19 @@
         .navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active) {
             border-color: @li-desktop;
         }
+
+        .navigation .submenu:not(:first-child) .active > a {
+            border-color: @li-desktop;
+        }
         
         a, .alink {
-            color: #F3F3F3;
+            color: @nav-span;
             font-family: 'Raleway';
             font-size: 16px;
+        }
+
+        .navigation .submenu:not(:first-child) > li > a {
+            color: @li-desktop;
         }
 
         //Footer

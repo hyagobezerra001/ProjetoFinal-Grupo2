@@ -28,17 +28,14 @@ class FindCategories
         $this->groupFactory = $groupFactory;
     }
 
-    public function getId(string $name, $parentId)
+    public function getId(string $name)
     {
         $nameFilter = $this->filter->create()
             ->setField(CategoryInterface::KEY_NAME)
             ->setValue($name)
             ->setConditionType('like');
-        $parentFilter = $this->filter->create()
-            ->setField(CategoryInterface::KEY_PARENT_ID)
-            ->setValue($parentId)
-            ->setConditionType('like');
-        $groupFactory= $this->groupFactory->setFilters([$nameFilter,$parentFilter]);
+
+        $groupFactory= $this->groupFactory->setFilters([$nameFilter]);
 
         $searchCriteria = $this->search->create()->setFilterGroups([$groupFactory]);
 

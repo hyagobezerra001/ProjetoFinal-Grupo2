@@ -5,7 +5,7 @@ use Magento\Catalog\Model\CategoryRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
-use Webjump\Configuration\app\FindCategories;
+use Webjump\Configuration\App\FindCategories;
 
 class TranslateCategoriesNamesFashion implements DataPatchInterface
 {

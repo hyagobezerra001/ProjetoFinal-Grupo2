@@ -5,7 +5,7 @@ use Magento\Catalog\Model\CategoryRepository;
 use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
-use Webjump\Configuration\app\FindCategories;
+use Webjump\Configuration\App\FindCategories;
 
 class TranslateCategoriesNamesWine implements DataPatchInterface
 {
@@ -38,9 +38,7 @@ class TranslateCategoriesNamesWine implements DataPatchInterface
 
         foreach ($datas as $data){
             $id =$this->category->getId($data['original-name'],$data['parent']);
-            // var_dump($id, $data['original-name'],$data['name']);
             $category = $this->categoryRepository->get($id,$wineEN);
-            //  var_dump($category->getData());
             $category-> setName($data['name'])
                 -> setMetaTitle($data['meta'])
                 -> setUrlKey($data['url'])
@@ -67,48 +65,21 @@ class TranslateCategoriesNamesWine implements DataPatchInterface
             ],
             /*SUBCATEGORIES OF WINES*/
             [
-                'original-name' => 'País',
-                'name' => 'Country',
+                'original-name' => 'Branco',
+                'name' => 'White',
                 'parent' => 65,
                 'meta' => 'WineClub | Country',
                 'url' => 'country'
             ],
+
             [
-                'original-name' => 'Tipo',
-                'name' => 'Type',
-                'parent' => 0,
-                'meta' => 'WineClub | Type',
-                'url' => 'type'
-            ],
-            [
-                'original-name' => 'Uva',
-                'name' => 'Grape',
+                'original-name' => 'Tinto',
+                'name' => 'Red',
                 'parent' => 0,
                 'meta' => 'WineClub | Grape',
                 'url' => 'grape'
             ],
-            /*SUBCATEGORIES OF SPARKLING WINES*/
-            [
-                'original-name' => 'País',
-                'name' => 'Country',
-                'parent' => 1,
-                'meta' => 'WineClub | Country',
-                'url' => 'country'
-            ],
-            [
-                'original-name' => 'Tipo',
-                'name' => 'Type',
-                'parent' => 1,
-                'meta' => 'WineClub | Type',
-                'url' => 'type'
-            ],
-            [
-                'original-name' => 'Uva',
-                'name' => 'Grape',
-                'parent' => 1,
-                'meta' => 'WineClub | Grape',
-                'url' => 'grape'
-            ],
+
             /*SUBCATEGORIES OF PREMIUM */
             [
                 'original-name' => 'Escolhidos dos Enólogos',
@@ -127,8 +98,8 @@ class TranslateCategoriesNamesWine implements DataPatchInterface
             ],
 
             [
-                'original-name' => 'Promoções',
-                'name' => 'Promotions',
+                'original-name' => 'Variados',
+                'name' => 'Sundry',
                 'parent' => 3,
                 'meta' => 'WineClub | Promotions',
                 'url' => 'promotion'

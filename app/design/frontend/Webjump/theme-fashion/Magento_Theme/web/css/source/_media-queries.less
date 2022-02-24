@@ -45,12 +45,12 @@
     .nav-sections { 
         a {
             color: white;
-            font-family: 'Raleway-Regular';  
+            font-family: 'Raleway';  
         } 
 
         strong {
             color: @nav-span;
-            font-family: 'Raleway-Regular';
+            font-family: 'Raleway';
         }
 
         .header.links li > a {
@@ -75,25 +75,23 @@
         }
 
         .nav-sections-item-content {
-            height: 100vh;
+            // height: 100vh;
             padding: 0;
         }
     }
 
 
-    .navigation {
-        height: 100%;
-        
-        a span {
-            font-size: 16px; 
-            
-        }
+    .navigation {   
+            a span {
+                font-size: 16px; 
+                
+            }
 
-        a {
-            color: @li-desktop;
-            font-family: 'Raleway-Regular';
-            font-weight: 700;
-        }
+            a {
+                color: @li-desktop;
+                font-family: 'Raleway';
+                font-weight: 700;
+            }
 
             .parent {
                 .level-top {
@@ -103,21 +101,38 @@
                 }
             }
 
+            .level0.active .all-category .ui-state-focus {
+                display: block;
+            }
         }
-
-        // .logo img {
-        //     margin: 0 35px;
-        // }
     
         .navigation .submenu:not(:first-child) {
+            height: 100%;
             line-height: 30px;
             color: @li-color;
         }  
+
+        .navigation .level0.active .all-category .ui-state-focus {
+            color: @nav-span;
+            border-color: @li-desktop;
+        }
+
+        .navigation .level0.active > a:not(.ui-state-active), .navigation .level0.has-active > a:not(.ui-state-active) {
+            border-color: @li-desktop;
+        }
+
+        .navigation .submenu:not(:first-child) .active > a {
+            border-color: @li-desktop;
+        }
         
         a, .alink {
-            color: #F3F3F3;
-            font-family: 'Raleway-Regular';
+            color: @nav-span;
+            font-family: 'Raleway';
             font-size: 16px;
+        }
+
+        .navigation .submenu:not(:first-child) > li > a {
+            color: @li-desktop;
         }
 
         //Footer
@@ -133,7 +148,7 @@
 
             ul, a {
                 color: #000000;
-                font-family: 'Raleway-Regular';
+                font-family: 'Raleway';
                 font-size: 16px;
                 font-weight: 400;
                 text-decoration: none;  

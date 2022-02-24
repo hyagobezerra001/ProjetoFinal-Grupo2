@@ -59,7 +59,9 @@ class SetPageFashion implements DataPatchInterface
                'identifier' => 'banner_fashion',
                'content' =>
                     '<p>
-                        <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                        <a href="http://fashion.develop.com.br/promocoesmoda.html">
+                          <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                        </a>
                     </p>
                     <div class="message">
                         <div class="car">
@@ -78,29 +80,34 @@ class SetPageFashion implements DataPatchInterface
                     </div>
                     <div class="main_banner">
                         <div class="img1">
-                            <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        <a href="http://fashion.develop.com.br/roupasmoda/blusas.html">
+                             <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        </a>
+
                         </div>
                         <div class="img2">
+                        <a href="http://fashion.develop.com.br/roupasmoda/saias.html">
                             <img src="{{media url="wysiwyg/banner_saias.jpg"}}" alt="img5">
+                        </a>
                         </div>
                         <div class="img3">
-                            <a href="#">
+                            <a href="http://fashion.develop.com.br/roupasmoda.html">
                                 <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="img6">
                             </a>
                         </div>
                         <div class="img4">
-                            <a href="#">
+                            <a href="http://fashion.develop.com.br/roupasmoda/vestidos.html">
                                 <img src="{{media url="wysiwyg/mulher-onca.png"}}" alt="img7">
                             </a>
                         </div>
                     </div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
-                            <hr /> 
+                            <hr />
                         <div class="div-text">
                             <h3 class="about-magnolia-text">sobre a magnolia</h3>
                         </div>
-                            <hr /> 
+                            <hr />
                     </div>
                           <div class="content-text">
                             <div class="magnolia">

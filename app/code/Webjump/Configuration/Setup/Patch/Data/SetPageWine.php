@@ -48,6 +48,7 @@ class SetPageWine implements DataPatchInterface
         $this->moduleDataSetup->endSetup();
 
         $this->config->saveConfig('web/default/cms_home_page','banner_wine', ScopeInterface::SCOPE_STORES, $wine);
+        $this->config->saveConfig('web/default/cms_home_page','banner_wine_en', ScopeInterface::SCOPE_STORES, $wineEN);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

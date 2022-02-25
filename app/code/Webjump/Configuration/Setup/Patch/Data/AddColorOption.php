@@ -240,7 +240,8 @@ class AddColorOption implements DataPatchInterface
     public static function getDependencies()
     {
         return [
-            WebsiteConfigure::class
+            WebsiteConfigure::class,
+            CreateAttrProducts::class
         ];
     }
 

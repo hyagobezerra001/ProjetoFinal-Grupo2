@@ -11,7 +11,7 @@
 
 //Home
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 .page-main{
@@ -65,7 +65,7 @@ body {
         font-size: 15px;
         font-family: 'Raleway';
         font-weight: 300;
-                
+
     }
 }
 
@@ -129,16 +129,16 @@ body {
     background-color: @color-nav;
 }
 
-//nav 
+//nav
 .navigation{
     background-color: @color-nav;
-    
+
          ul{
             height: 50px;
             // margin-left: 201px;
-            
-        }  
-        
+
+        }
+
         .level0.parent > .level-top {
             line-height: 50px;
         }
@@ -171,7 +171,7 @@ body {
         font-weight: 400;
     }
 
-    .level0.active { 
+    .level0.active {
         .level-top {
             .navigation {
                 .level0.has-active {
@@ -181,7 +181,7 @@ body {
                 }
             }
         }
-    }  
+    }
 }
 
 // Botão de Promoção
@@ -266,13 +266,13 @@ body {
 //         background-color: #4B0082;
 //         color: #ffffff;
 //     }
-    
+
 // }
 
-//div pai dos icons 
+//div pai dos icons
 
 .message{
-    display: flex;    
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-bottom: 30px;
@@ -286,50 +286,37 @@ body {
     margin: auto;
 }
 
-// imagem do caminhão de compras
-.text-car{
-    padding-left: 10px;
-    // width: 226px;
-    // height: 43px;     
-    color: #000000;   
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+.message{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-// imagem do cartão de crédito
-.text-card{
-    padding-left: 10px;
-    // width: 235px;
-    // height: 44px;
+.text_message{
+    width: 226px;
+    height: 43px;
     color: #000000;
     font-size: 20px;
+    font-family: 'Raleway-Regular';
+    font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
     line-height: normal;
     text-align: left;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    line-height: normal;
 }
 
-// imagem do botão de retorno
-.text-return{
-    padding-left: 10px;
-    // width: 218px;
-    // height: 40px;
-    color: #000000;
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+.image_message{
+    margin-right: 20px;
 }
 
 .hr-top{
     border: 1px solid red;
 }
 
-//grid 
+//grid
 .main_banner{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -341,7 +328,7 @@ body {
     padding-left: 10px;
 }
 
-// Estilização dos parágrafos 
+// Estilização dos parágrafos
 
 .about-magnolia{
     display: flex;

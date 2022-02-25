@@ -80,8 +80,8 @@ class SetPageFashion implements DataPatchInterface
                         </div>
                         <div class="return">
                             <img class=" image-return image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
-                            <span class="text-return text_message">Primeira troca reservada
-                            sem custos adicionais</span>
+                            <span class="text-return text_message">Primeira troca garantida sem custos adicionais</span>
+                            
                         </div>
                     </div>
                     <hr class="hr-top">

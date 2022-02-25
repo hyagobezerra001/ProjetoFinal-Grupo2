@@ -30,10 +30,13 @@ class FindCategories
 
     public function getId(string $name)
     {
+        \Magento\Framework\App\ObjectManager::getInstance()
+    ->get(\Psr\Log\LoggerInterface::class)->debug($name);
+
         $nameFilter = $this->filter->create()
             ->setField(CategoryInterface::KEY_NAME)
             ->setValue($name)
-            ->setConditionType('like');
+            ->setConditionType('eq');
 
         $groupFactory= $this->groupFactory->setFilters([$nameFilter]);
 
@@ -41,9 +44,6 @@ class FindCategories
 
         $list = $this->categoryList->getList($searchCriteria)->getItems();
 
-        if(count($list) == 0){
-            return 0;
-        }
         foreach ($list as $category){
             $id = $category->getId();
         }

@@ -109,7 +109,7 @@ class CreateCategories implements DataPatchInterface
         $this->createCategories('Escolhidos dos Enólogos', $premium->getID());
 
         $this->createCategories('Harmonização', $kits->getID());
-        $this->createCategories('Promoções', $kits->getID());
+        $this->createCategories('Variados', $kits->getID());
 
         $this->moduleDataSetup->getConnection()->startSetup();
     }

@@ -11,6 +11,7 @@ use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Store\Api\StoreRepositoryInterface;
 use Magento\Framework\App\Config\ConfigResource\ConfigInterface;
 use Magento\Store\Model\ScopeInterface;
+use Magento\Store\Api\WebsiteRepositoryInterface;
 
 class SetPageFashion implements DataPatchInterface
 {
@@ -18,17 +19,20 @@ class SetPageFashion implements DataPatchInterface
     private $pageFactory;
     private $storeRepository;
     private $config;
+    private $websiteRepository;
 
     public function __construct(
         ModuleDataSetupInterface $moduleDataSetup,
         PageFactory $pageFactory,
         StoreRepositoryInterface $storeRepository,
-        ConfigInterface $config
+        ConfigInterface $config,
+        WebsiteRepositoryInterface $websiteRepository
     ) {
         $this->moduleDataSetup = $moduleDataSetup;
         $this->pageFactory = $pageFactory;
         $this->storeRepository = $storeRepository;
         $this->config = $config;
+        $this->websiteRepository = $websiteRepository;
     }
 
     public function apply()
@@ -38,13 +42,14 @@ class SetPageFashion implements DataPatchInterface
         $fashionEN = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN)->getId();
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
 
+
         $pageData = $this->setPageFashion($fashionEN, $fashion);
 
         $this->moduleDataSetup->startSetup();
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
 
-        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_STORES, $fashion);
+        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_WEBSITES, $fashion);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
@@ -59,7 +64,9 @@ class SetPageFashion implements DataPatchInterface
                'identifier' => 'banner_fashion',
                'content' =>
                     '<p>
-                        <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                        <a href="http://fashion.develop.com.br/promocoesmoda.html">
+                          <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                        </a>
                     </p>
                     <div class="message">
                         <div class="car">
@@ -78,29 +85,34 @@ class SetPageFashion implements DataPatchInterface
                     </div>
                     <div class="main_banner">
                         <div class="img1">
-                            <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        <a href="http://fashion.develop.com.br/roupasmoda/blusas.html">
+                             <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        </a>
+
                         </div>
                         <div class="img2">
+                        <a href="http://fashion.develop.com.br/roupasmoda/saias.html">
                             <img src="{{media url="wysiwyg/banner_saias.jpg"}}" alt="img5">
+                        </a>
                         </div>
                         <div class="img3">
-                            <a href="#">
+                            <a href="http://fashion.develop.com.br/roupasmoda.html">
                                 <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="img6">
                             </a>
                         </div>
                         <div class="img4">
-                            <a href="#">
+                            <a href="http://fashion.develop.com.br/roupasmoda/vestidos.html">
                                 <img src="{{media url="wysiwyg/mulher-onca.png"}}" alt="img7">
                             </a>
                         </div>
                     </div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
-                            <hr /> 
+                            <hr />
                         <div class="div-text">
                             <h3 class="about-magnolia-text">sobre a magnolia</h3>
                         </div>
-                            <hr /> 
+                            <hr />
                     </div>
                           <div class="content-text">
                             <div class="magnolia">

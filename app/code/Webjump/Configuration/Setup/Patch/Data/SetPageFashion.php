@@ -45,6 +45,7 @@ class SetPageFashion implements DataPatchInterface
         $this->moduleDataSetup->endSetup();
 
         $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_STORES, $fashion);
+        $this->config->saveConfig('web/default/cms_home_page','banner_fashion-en', ScopeInterface::SCOPE_STORES, $fashionEN);
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
@@ -76,6 +77,7 @@ class SetPageFashion implements DataPatchInterface
                             <br>sem custos adicionais</span>
                         </div>
                     </div>
+                    <hr class="hr-top">
                     <div class="main_banner">
                         <div class="img1">
                             <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">

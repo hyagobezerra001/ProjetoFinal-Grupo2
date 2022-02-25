@@ -43,6 +43,23 @@ class TranslateAttributeProduct implements DataPatchInterface {
         $this->translateLabel(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN, CreateAttrProducts::ATTRIBUTE_FASHION2, 'Size');
         $this->translateLabel(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN, CreateAttrProducts::ATTRIBUTE_FASHION3, 'Summer fashion');
 
+
+        $fashionId = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
+        $wineId = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
+        $attr = $this->productAttributeRepository->get('color');
+
+        $frontendLabels = [
+            $this->attributeFrontendLabelInterfaceFactory->create()
+                ->setStoreId($fashionId)
+                ->setLabel('Cor'),
+            $this->attributeFrontendLabelInterfaceFactory->create()
+                ->setStoreId($wineId)
+                ->setLabel('Cor'),
+        ];
+
+        $attr->setFrontendLabels($frontendLabels);
+        $this->productAttributeRepository->save($attr);
+
         $this->moduleDataSetup->getConnection()->endSetup();
     }
 

@@ -37,13 +37,14 @@ class TranslateCategoriesNamesWine implements DataPatchInterface
         $datas = $this->data();
 
         foreach ($datas as $data){
-            $id =$this->category->getId($data['original-name'],$data['parent']);
+            $id =$this->category->getId($data['original-name']);
             $category = $this->categoryRepository->get($id,$wineEN);
             $category-> setName($data['name'])
                 -> setMetaTitle($data['meta'])
                 -> setUrlKey($data['url'])
                 -> save();
         }
+        $this->moduleDataSetup->getConnection()->endSetup();
     }
     public function data()
     {
@@ -67,7 +68,7 @@ class TranslateCategoriesNamesWine implements DataPatchInterface
             [
                 'original-name' => 'Branco',
                 'name' => 'White',
-                'parent' => 65,
+                'parent' => 0,
                 'meta' => 'WineClub | Country',
                 'url' => 'country'
             ],

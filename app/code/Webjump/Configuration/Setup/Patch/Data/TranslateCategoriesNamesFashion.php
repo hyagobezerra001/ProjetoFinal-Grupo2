@@ -46,6 +46,7 @@ class TranslateCategoriesNamesFashion implements DataPatchInterface
                 -> save();
 
         }
+        $this->moduleDataSetup->getConnection()->endSetup();
     }
     public function data()
     {

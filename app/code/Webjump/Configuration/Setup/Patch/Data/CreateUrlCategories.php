@@ -32,14 +32,26 @@ class CreateUrlCategories implements DataPatchInterface
     {
         $this->moduleDataSetup->getConnection()->startSetup();
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
-        $categoryData = $this->dataFashion();
+        $categoryDataFashion = $this->dataFashion();
 
-        foreach ($categoryData as $data){
+        foreach ($categoryDataFashion as $data){
             $id = $this->getCategoryId($data['name']);
 
             $category = $this->categoryRepository->get($id,$fashion);
             $category->setUrlKey($data['url'])->save();
         }
+
+        $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE)->getId();
+        $categoryDataWine = $this->dataWine();
+
+        foreach ($categoryDataWine as $data){
+            $id = $this->getCategoryId($data['name']);
+
+            $category = $this->categoryRepository->get($id,$wine);
+            $category->setUrlKey($data['url'])->save();
+        }
+
+        $this->moduleDataSetup->getConnection()->endSetup();
 
     }
     public function dataFashion()
@@ -68,25 +80,25 @@ class CreateUrlCategories implements DataPatchInterface
         ];
     }
 
-    public function dataAutomotive()
+    public function dataWine()
     {
         return [
             [
-                'original-name' => 'Vinhos',
-                'url' => 'volt-3-en'
+                'name' => 'Vinhos',
+                'url' => 'vinhoswine'
             ],
             [
-                'original-name' => 'Espumantes',
-                'url' => 'volt-sx-en'
+                'name' => 'Espumantes',
+                'url' => 'espumanteswine'
             ],
             [
-                'original-name' => 'Premium',
-                'url' => 'roadmaster-en'
+                'name' => 'Premium',
+                'url' => 'premiumwine'
             ],
             [
-                'original-name' => 'Kits',
-                'url' => 'acessories-en'
-            ]
+                'name' => 'Kits',
+                'url' => 'kitswine'
+            ],
         ];
     }
 

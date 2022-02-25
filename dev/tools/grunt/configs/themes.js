@@ -69,6 +69,16 @@
         ],
         dsl: 'less'
     },
+    themefashion_us: {
+        area: 'frontend',
+        name: 'Webjump/theme-fashion',
+        locale: 'us_EN',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
      backend: {
          area: 'adminhtml',
          name: 'Magento/backend',

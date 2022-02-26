@@ -49,6 +49,7 @@ class SetPageFashion implements DataPatchInterface
         $this->pageFactory->create()->setData($pageData)->save();
         $this->moduleDataSetup->endSetup();
 
+
         $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_WEBSITES, $fashion);
 
         $this->moduleDataSetup->getConnection()->endSetup();
@@ -70,18 +71,19 @@ class SetPageFashion implements DataPatchInterface
                     </p>
                     <div class="message">
                         <div class="car">
-                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
-                            <span class="text-car text_message">grátis para todas as compras acima de R$100</span>
+                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1"> 
+                            <span class="text-car text_message" >Frete grátis para todas as compras acima de R$100</span>
                         </div>
                         <div class="card">
-                            <img class="image_message" src="{{media url="wysiwyg/cartao.png"}}" alt="img2">
-                            <span class="text-card text_message">pague em até 5x sem juros no cartão de crédito</span>
+                            <img class="image-card image_message" src="{{media url="wysiwyg/cartao.png"}}" alt="img2">
+                            <span class="text-card text_message">Pague em até 5x sem juros no cartão de crédito</span>
                         </div>
                         <div class="return">
-                            <img class="image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
-                            <span class="text-return text_message">primeira troca reservada sem custos adicionais</span>
+                            <img class=" image-return image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
+                            <span class="text-return text_message">Primeira troca garantida sem custos adicionais</span>
                         </div>
                     </div>
+                    <hr class="hr-top">
                     <div class="main_banner">
                         <div class="img1">
                         <a href="http://fashion.develop.com.br/roupasmoda/blusas.html">

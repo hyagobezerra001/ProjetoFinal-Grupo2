@@ -12,6 +12,7 @@
 //Home
 body {
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .page-main{
@@ -195,81 +196,20 @@ body {
     content: '';
 }
 
-.ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all{
+.navigation .level0.parent > .level-top{
+    line-height: 50px;
+}
+
+.ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all,.action.tocart.primary{
     background-color: #40015F;
+}
+
+.action.tocart.primary:hover{
+    background-color: #4B0082;
 }
 .navigation .level0 .submenu a:hover {
     background-color: #4B0082;
 }
-
-
-// .banner {
-//     position: relative;
-//     min-width: 100vw;
-//     margin-top: -25px;
-//     height: 561px;
-// }
-
-// .img-banner{
-//     width: 100%;
-// }
-
-// .titulo-banner{
-//     position: absolute;
-//     margin: 100px 543px 219px 600px;
-//     color: #6e01a5;
-//     font-size: 64px;
-//     font-weight: 400;
-//     text-align: left;
-//     font-family: "Raleway-ExtraBold";
-
-// }
-
-// .subtitulo{
-//         position: absolute;
-//         display:block;
-//         color: #ffffff;
-//         font-family: 'Raleway-Regular';
-//         font-size: 50px;
-//         font-weight: 700;
-//         font-style: normal;
-//         min-width: 600px;
-//     }
-
-
-// .button-banner{
-//     all:unset;
-//     box-sizing: border-box;
-//     position: absolute;
-//     width: 225px;
-//     height: 55px;
-//     background-color: #6e01a5;
-//     margin: 320px 678px 128px 600px;
-//     color: #ffffff;
-//     font-family: 'Raleway-Bold';
-//     font-size: 20px;
-//     font-weight: 700;
-//     font-style: normal;
-//     text-align: left;
-//     text-transform: uppercase;
-//     /* Text style for "COMPRAR AG" */
-//     font-style: normal;
-//     letter-spacing: 0.24px;
-//     line-height: normal;
-//     padding-left: 25px;
-//     box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0) !important;
-//     border:none!important;
-//     transition: 0.2s;
-//     cursor: pointer;
-
-//     &:hover{
-//         background-color: #4B0082;
-//         color: #ffffff;
-//     }
-
-// }
-
-//div pai dos icons
 
 .message{
     display: flex;
@@ -313,7 +253,10 @@ body {
 }
 
 .hr-top{
-    border: 1px solid red;
+    height: 1px;
+    border: 1px solid #c0bebe;
+    background-color: #c0bebe;
+    margin-bottom: 40px;
 }
 
 //grid
@@ -388,4 +331,40 @@ body {
     text-align: center;
     padding: 0 20px;
 }
+
+
+.page-products .products-grid .product-items{
+    background-color: #fff;
+
+}
+
+.page-products .product-item-info{
+    width: 260px;
+}
+
+.product-item-info{
+    padding: 0;
+    max-width: 260px;
+    //width: 250px;
+}
+
+.action.tocart.primary{
+    width: 240px;
+    border-radius: 5px;
+}
+
+//De Por
+
+.product-item .price-box .price-label{
+    font-size: 14px;
+}
+
+.special-price .price-label{
+    font-weight: 600;
+}
+
+.old-price, .special-price{
+    display: block;
+}
+
 

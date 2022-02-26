@@ -71,7 +71,7 @@ class SetPageFashion implements DataPatchInterface
                     </p>
                     <div class="message">
                         <div class="car">
-                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
+                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1"> 
                             <span class="text-car text_message" >Frete grátis para todas as compras acima de R$100</span>
                         </div>
                         <div class="card">
@@ -81,7 +81,6 @@ class SetPageFashion implements DataPatchInterface
                         <div class="return">
                             <img class=" image-return image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
                             <span class="text-return text_message">Primeira troca garantida sem custos adicionais</span>
-                            
                         </div>
                     </div>
                     <hr class="hr-top">

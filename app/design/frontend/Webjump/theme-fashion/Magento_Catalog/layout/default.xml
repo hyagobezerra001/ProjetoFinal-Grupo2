@@ -10,7 +10,7 @@
     <referenceContainer name="product.info.main">
         <block class="Magento\Cms\Block\Block" name="payment-En">
             <arguments>
-                <argument name="block_id" xsi:type="string">payment-wine-en</argument>
+                <argument name="block_id" xsi:type="string">payment-fashion-en</argument>
             </arguments>
         </block>
     </referenceContainer>
@@ -18,7 +18,7 @@
     <referenceContainer name="product.info.main">
         <block class="Magento\Cms\Block\Block" name="payment" after="default_render_template">
             <arguments>
-                <argument name="block_id" xsi:type="string">payment-wine</argument>
+                <argument name="block_id" xsi:type="string">payment-fashion</argument>
             </arguments>
         </block>
     </referenceContainer>

@@ -12,10 +12,14 @@ use Magento\Store\Api\StoreRepositoryInterface;
 
 class SetBlockPayment implements DataPatchInterface
 {
-    const ID = 'payment';
-    const TITTLE = 'Payment';
-    const IDEn = 'payment-En';
-    const TITTLEEn = 'Payment En';
+    const IDFashion = 'payment-fashion';
+    const TITTLEFashion = 'Payment Fashion';
+    const IDFashionEn = 'payment-fashion-en';
+    const TITTLEFashionEn = 'Payment Fashion En';
+    const IDWineEn = 'payment-wine-en';
+    const TITTLEWineEn = 'Payment Wine En';
+    const IDWine = 'payment-wine';
+    const TITTLEWine = 'Payment Wine';
 
     private $moduleDataSetup;
     private $blockFactory;
@@ -35,33 +39,57 @@ class SetBlockPayment implements DataPatchInterface
         $this->blockRepository = $blockRepository;
     }
 
-    public function content($fashion, $wine)
+    public function contentFashion($fashion)
     {
         return [
-
-                'title' => self::TITTLE,
-                'identifier' => self::ID,
+                'title' => self::TITTLEFashion,
+                'identifier' => self::IDFashion,
                 'content'=>
-                    '<div class="payment-info-block">
+                    '<div class="payment-info-blockFashion">
                         <h3>Parcele em até 12x, sem juros, com parcela mínima de R$50,00.</h3>
                     </div>',
-                'stores' => [$fashion->getId(),$wine->getId()],
+                'stores' => [$fashion->getId()],
                 'is_active' => 1,
-
         ];
     }
-
-    public function contentEn($fashionEn, $wineEn)
+    public function contentWine($wine)
+    {
+        return [
+            'title' => self::TITTLEWine,
+            'identifier' => self::IDWine,
+            'content'=>
+                '<div class="payment-info-blockWine">
+                        <h3>Parcele em até 12x, sem juros, com parcela mínima de R$50,00.</h3>
+                    </div>',
+            'stores' => [$wine->getId()],
+            'is_active' => 1,
+        ];
+    }
+    public function contentFashionEn($fashionEn)
     {
         return [
 
-            'title' => self::TITTLEEn,
-            'identifier' => self::IDEn,
+            'title' => self::TITTLEFashionEn,
+            'identifier' => self::IDFashionEn,
             'content'=>
-                '<div class="payment-info-block">
+                '<div class="payment-info-blockFashion">
                         <h3>Payment in up to 12x, interest-free, with a minimum installment of $50.00.</h3>
                     </div>',
-            'stores' => [$fashionEn->getId(),$wineEn->getId()],
+            'stores' => [$fashionEn->getId()],
+            'is_active' => 1,
+        ];
+    }
+    public function contentWineEn($wineEn)
+    {
+        return [
+
+            'title' => self::TITTLEWineEn,
+            'identifier' => self::IDWineEn,
+            'content'=>
+                '<div class="payment-info-blockWine">
+                        <h3>Payment in up to 12x, interest-free, with a minimum installment of $50.00.</h3>
+                    </div>',
+            'stores' => [$wineEn->getId()],
             'is_active' => 1,
         ];
     }
@@ -75,13 +103,19 @@ class SetBlockPayment implements DataPatchInterface
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE);
         $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE);
 
-        $setContent = $this->content($fashion,$wine);
-        $setContentEn = $this->contentEn($fashionEn,$wineEn);
+        $setContentFashion = $this->contentFashion($fashion);
+        $setContentFashionEn = $this->contentFashionEn($fashionEn);
+
+        $setContentWine = $this->contentWine($wine);
+        $setContentWineEn = $this->contentWineEn($wineEn);
 
         $block = $this->blockFactory->create();
 
-        $block->setData($setContent)->save();
-        $block->setData($setContentEn)->save();
+        $block->setData($setContentFashion)->save();
+        $block->setData($setContentFashionEn)->save();
+
+        $block->setData($setContentWine)->save();
+        $block->setData($setContentWineEn)->save();
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

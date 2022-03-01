@@ -64,14 +64,14 @@ class SetPageFashion implements DataPatchInterface
                'meta_description' => 'Banner para loja Fashion',
                'identifier' => 'banner_fashion',
                'content' =>
-                    '<p>
+                    '<div class="page-main-image">
                         <a href="http://fashion.develop.com.br/promocoesmoda.html">
                           <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
                         </a>
-                    </p>
+                    </div>
                     <div class="message">
                         <div class="car">
-                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1"> 
+                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
                             <span class="text-car text_message" >Frete grátis para todas as compras acima de R$100</span>
                         </div>
                         <div class="card">

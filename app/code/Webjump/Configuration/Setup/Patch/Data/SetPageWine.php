@@ -67,14 +67,30 @@ class SetPageWine implements DataPatchInterface
             'meta_description' => 'Banner para loja Wine',
             'identifier' => 'banner_wine',
             'content' =>
-                '<p>
-                    <img src="{{media url="wysiwyg/banner-principal.jpg"}}" alt="">
-                </p>
+                '<div class="page-main-image-wine">
+                    <a href="http://wine.develop.com.br/kitswine/variados.html">
+                        <img src="{{media url="wysiwyg/banner-principal.jpg"}}" alt="">
+                    </a>
+                </div>
                 <div class="container">
-                    <div class="img1"><img src="{{media url="wysiwyg/010.png"}}" alt=""></div>
-                    <div class="img2"><img src="{{media url="wysiwyg/img2.png"}}" alt=""></div>
-                    <div class="img3"><img src="{{media url="wysiwyg/img3.png"}}" alt=""></div>
-                    <div class="img4"><img src="{{media url="wysiwyg/img4.png"}}" alt=""></div>
+                    <div class="img1">
+                        <a href="http://wine.develop.com.br/premiumwine/escolhidos-dos-enologos.html">
+                            <img src="{{media url="wysiwyg/010.png"}}" alt="">
+                        </a>
+                    </div>
+                    <div class="img2">
+                        <a href="http://wine.develop.com.br/vinhoswine.html">
+                            <img src="{{media url="wysiwyg/img2.png"}}" alt="">
+                        </a>
+                    </div>
+                    <div class="img3">
+                        <a href="http://wine.develop.com.br/espumanteswine.html">
+                            <img src="{{media url="wysiwyg/img3.png"}}" alt="">
+                        </a>
+                    </div>
+                    <div class="img4">
+                        <img src="{{media url="wysiwyg/img4.png"}}" alt="">
+                    </div>
                 </div>',
             'layout_update_xml' => '',
             'url_key' => 'banner_wine',

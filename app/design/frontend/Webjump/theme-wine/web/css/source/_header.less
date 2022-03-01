@@ -5,10 +5,10 @@
 
 //Alterando cor do "Wine pt_br ^ "
 .page-header .panel.wrapper {
-    height: 45px; 
+    height: 45px;
     background-color: @panel-background;
     color: #666;
-} 
+}
 
 //Alterando cor e estilização do "Entre" "Cadastra-se"
 
@@ -19,12 +19,12 @@
         font-family: 'Raleway';
         font-weight: 500;
         font-size: 14px;
-        transition: 0.2s;  
-    
+        transition: 0.2s;
+
         &:hover {
             color: @panel-hover;
             text-decoration: none;
-        }  
+        }
 }
 
 .authorization-link:after {
@@ -48,12 +48,12 @@
         margin: 0px -22px 0px 0px;
     }
 
-    input { 
-        height: 38px; 
+    input {
+        height: 38px;
         border: 1px solid #a6a6a6;
         height: 38px;
         width: 310px;
-    
+
         &::placeholder {
             color: @panel-font;
             font-family: 'Urbane-thin';
@@ -84,7 +84,7 @@
 
     .page-header .panel.wrapper {
         height: 0;
-    } 
+    }
 
     .minicart-wrapper {
         margin-top: 0;
@@ -100,7 +100,7 @@
 
 }
 
-    // Ajustando menu hamburguer 
+    // Ajustando menu hamburguer
 
     .section-item-title.nav-sections-item-title.active{
         background-color: #9a1e51;
@@ -118,14 +118,14 @@
         a, .alink {
             color: #fff;
             font-family: 'Urbane';
-            font-weight: 500;    
+            font-weight: 500;
         }
     }
 
     .view-wine.switcher-option a, .alink {
         color: #333;
     }
-    
+
         .column.main p {
             margin-top: -2rem;
         }
@@ -147,7 +147,7 @@
             }
         }
     }
-} 
+}
 
 
 //Alterando icone do carrinho
@@ -255,7 +255,7 @@
     font-style: normal;
     letter-spacing: normal;
     margin-top: 25px;
-    border-radius: 10px; 
+    border-radius: 10px;
 }
 
 //botão "continuar comprando"
@@ -351,7 +351,7 @@ a.action.primary {
         letter-spacing: -0.16px;
         transition: 0.2s;
         &:hover {
-            color: @li-hover; 
+            color: @li-hover;
         }
     }
 }
@@ -365,4 +365,57 @@ a.action.primary {
             }
         }
     }
-}   
+}
+
+
+//correcao de bug no hover de produto Inicio
+.page-products .product-item-info{
+    width: 260px;
+}
+
+.product-item-info{
+    padding: 0;
+    max-width: 260px;
+}
+
+.action.tocart.primary{
+    width: 240px;
+    border-radius: 5px;
+}
+
+
+.column, .main{
+    padding: 0px 0px 40px 0px;
+}
+
+//Fim
+
+//resolvendo problema do page-main max-width 100% Inicio
+
+//comparar produtos
+.page-layout-2columns-left .sidebar-additional,.base {
+    padding-left: 20px;
+}
+
+//em estoque
+.page-layout-2columns-left .sidebar-additional, .base, .page-layout-1column .product-info-main{
+    padding-right: 20px;
+}
+
+//form checkout
+.opc-wrapper .step-content{
+    padding-left: 20px;
+}
+
+//entre
+.action-auth-toggle span{
+    padding-right: 20px;
+}
+
+//entre ou cadastre-se form
+.form.password.reset, .form.send.confirmation, .form.password.forget, .form.create.account, .form.search.advanced, .form.form-orders-search{
+    padding-left: 20px;
+}
+
+
+//Fim

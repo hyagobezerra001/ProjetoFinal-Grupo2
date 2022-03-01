@@ -46,6 +46,7 @@ class TranslateCategoriesNamesFashion implements DataPatchInterface
                 -> save();
 
         }
+        $this->moduleDataSetup->getConnection()->endSetup();
     }
     public function data()
     {
@@ -75,7 +76,7 @@ class TranslateCategoriesNamesFashion implements DataPatchInterface
                 'original-name' => 'Promoções',
                 'name' => 'Promotions',
                 'parent' => null,
-                'meta' => 'WineClub | Promotions',
+                'meta' => 'Magnolia | Promotions',
                 'url' => 'promotion'
             ],
             /* SUBCATEGORIES of Blouses */

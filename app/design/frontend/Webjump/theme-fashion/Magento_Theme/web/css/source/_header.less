@@ -10,7 +10,8 @@
 
 //Home
 body {
-    overflow-x: hidden; 
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .page-main{
@@ -77,7 +78,6 @@ body {
         font-style: normal;
         letter-spacing: 0.38px;
         line-height: normal;
-                
     }
 }
 
@@ -151,10 +151,10 @@ body {
     background-color: @color-nav;
 }
 
-//nav 
+//nav
 .navigation{
     background-color: @color-nav;
-    
+   
         ul {
             height: 50px;
             
@@ -188,7 +188,7 @@ body {
         font-weight: 400;
     }
 
-    .level0.active { 
+    .level0.active {
         .level-top {
             .navigation {
                 .level0.has-active {
@@ -198,7 +198,7 @@ body {
                 }
             }
         }
-    }  
+    }
 }
 
 // Botão de Promoção
@@ -214,138 +214,74 @@ body {
     content: '';
 }
 
-.ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all{
+.navigation .level0.parent > .level-top{
+    line-height: 50px;
+}
+
+.ui-menu, .ui-widget, .ui-widget-content, .ui-corner-all,.action.tocart.primary{
     background-color: #40015F;
+}
+
+.action.tocart.primary:hover{
+    background-color: #4B0082;
 }
 .navigation .level0 .submenu a:hover {
     background-color: #4B0082;
 }
-
-.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
-    border-color: @li-desktop;
-}
-
-
-// .banner {
-//     position: relative;
-//     min-width: 100vw;
-//     margin-top: -25px;
-//     height: 561px;
-// }
-
-// .img-banner{
-//     width: 100%;
-// }
-
-// .titulo-banner{
-//     position: absolute;
-//     margin: 100px 543px 219px 600px;
-//     color: #6e01a5;
-//     font-size: 64px;
-//     font-weight: 400;
-//     text-align: left;
-//     font-family: "Raleway-ExtraBold";
-
-// }
-
-// .subtitulo{
-//         position: absolute;
-//         display:block;
-//         color: #ffffff;
-//         font-family: 'Raleway-Regular';
-//         font-size: 50px;
-//         font-weight: 700;
-//         font-style: normal;
-//         min-width: 600px;
-//     }
-
-
-// .button-banner{
-//     all:unset;
-//     box-sizing: border-box;
-//     position: absolute;
-//     width: 225px;
-//     height: 55px;
-//     background-color: #6e01a5;
-//     margin: 320px 678px 128px 600px;
-//     color: #ffffff;
-//     font-family: 'Raleway-Bold';
-//     font-size: 20px;
-//     font-weight: 700;
-//     font-style: normal;
-//     text-align: left;
-//     text-transform: uppercase;
-//     /* Text style for "COMPRAR AG" */
-//     font-style: normal;
-//     letter-spacing: 0.24px;
-//     line-height: normal;
-//     padding-left: 25px;
-//     box-shadow: 0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0) !important;
-//     border:none!important;
-//     transition: 0.2s;
-//     cursor: pointer;
-
-//     &:hover{
-//         background-color: #4B0082;
-//         color: #ffffff;
-//     }
-    
-// }
-
-//div pai dos icons 
-
 .message{
-    display: flex;    
+    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin-bottom: 5px;
+    padding: 0 23px;
 }
 
+
+.image-car{
+    width: 68px;
+    height: 45px;
+}
+
+.image-card{
+    width: 69px;
+    height: 47px;
+}
+
+.image-return{
+    width: 56px;
+    height: 46px;
+}
 
 .car, .card, .return{
     display: flex;
     vertical-align: middle;
-    // padding: 20px;
-    margin: auto;
+   
 }
 
-// imagem do caminhão de compras
-.text-car{
-    padding-left: 10px;
-    // width: 226px;
-    // height: 43px;     
-    color: #000000;   
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+.message{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
-// imagem do cartão de crédito
-.text-card{
-    padding-left: 10px;
-    // width: 235px;
-    // height: 44px;
+.text_message{
+    width: 226px;
+    height: 43px;
     color: #000000;
     font-size: 20px;
+    font-family: 'Raleway-Regular';
+    font-weight: 400;
     font-style: normal;
     letter-spacing: normal;
     line-height: normal;
     text-align: left;
+    font-style: normal;
+    letter-spacing: 0.8px;
+    line-height: normal;
 }
 
-// imagem do botão de retorno
-.text-return{
-    padding-left: 10px;
-    // width: 218px;
-    // height: 40px;
-    color: #000000;
-    font-size: 20px;
-    font-style: normal;
-    letter-spacing: normal;
-    line-height: normal;
-    text-align: left;
+.image_message{
+    margin-right: 20px;
 }
 
 .hr-top{
@@ -354,7 +290,7 @@ body {
     margin-bottom: 40px;
 }
 
-//grid 
+//grid
 .main_banner{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -366,7 +302,7 @@ body {
     padding-left: 10px;
 }
 
-// Estilização dos parágrafos 
+// Estilização dos parágrafos
 
 .about-magnolia{
     display: flex;
@@ -426,4 +362,40 @@ body {
     text-align: center;
     padding: 0 20px;
 }
+
+
+.page-products .products-grid .product-items{
+    background-color: #fff;
+
+}
+
+.page-products .product-item-info{
+    width: 260px;
+}
+
+.product-item-info{
+    padding: 0;
+    max-width: 260px;
+    //width: 250px;
+}
+
+.action.tocart.primary{
+    width: 240px;
+    border-radius: 5px;
+}
+
+//De Por
+
+.product-item .price-box .price-label{
+    font-size: 14px;
+}
+
+.special-price .price-label{
+    font-weight: 600;
+}
+
+.old-price, .special-price{
+    display: block;
+}
+
 

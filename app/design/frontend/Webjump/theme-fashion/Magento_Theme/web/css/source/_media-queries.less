@@ -132,7 +132,8 @@
         }
 
         .navigation .submenu:not(:first-child) > li > a {
-            color: @li-desktop;
+            color: @nav-span;
+            font-size: 16px;
         }
 
         //Footer
@@ -249,6 +250,19 @@
         }
 
     }
+
+@media (min-width: 767px) and (max-width: 1100px) {
+
+    .block.newsletter {
+        input {
+            max-width: 230px;
+        }
+
+        .action.subscribe {
+            max-width: 100px;
+        }
+    }
+}
 
 
 

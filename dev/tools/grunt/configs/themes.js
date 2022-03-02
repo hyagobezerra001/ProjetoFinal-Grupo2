@@ -2,38 +2,34 @@
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-
 'use strict';
-
 /**
- * Define Themes
- *
- * area: area, one of (frontend|adminhtml|doc),
- * name: theme name in format Vendor/theme-name,
- * locale: locale,
- * files: [
- * 'css/styles-m',
- * 'css/styles-l'
- * ],
- * dsl: dynamic stylesheet language (less|sass)
- *
- */
+* Define Themes
+*
+* area: area, one of (frontend|adminhtml|doc),
+* name: theme name in format Vendor/theme-name,
+* locale: locale,
+* files: [
+* 'css/styles-m',
+* 'css/styles-l'
+* ],
+* dsl: dynamic stylesheet language (less|sass)
+*
+*/
 module.exports = {
-    blank: {
+    themefashion: {
         area: 'frontend',
-        name: 'Magento/blank',
-        locale: 'en_US',
+        name: 'Webjump/theme-fashion',
+        locale: 'pt_BR',
         files: [
             'css/styles-m',
-            'css/styles-l',
-            'css/email',
-            'css/email-inline'
+            'css/styles-l'
         ],
         dsl: 'less'
     },
-    luma: {
+    themefashion_us: {
         area: 'frontend',
-        name: 'Magento/luma',
+        name: 'Webjump/theme-fashion',
         locale: 'en_US',
         files: [
             'css/styles-m',
@@ -41,14 +37,24 @@ module.exports = {
         ],
         dsl: 'less'
     },
-    backend: {
-        area: 'adminhtml',
-        name: 'Magento/backend',
-        locale: 'en_US',
+    themewine: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'pt_BR',
         files: [
-            'css/styles-old',
-            'css/styles'
+            'css/styles-m',
+            'css/styles-l'
         ],
         dsl: 'less'
-    }
+    },
+    themewine_us: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
 };

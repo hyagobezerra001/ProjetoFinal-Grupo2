@@ -14,15 +14,15 @@ use Magento\Catalog\Api\AttributeSetManagementInterface;
 
 class CreateAttrProducts implements DataPatchInterface {
 
-    const ATTRIBUTE_WINE1 = 'ml';
-    const ATTRIBUTE_WINE2 = 'tipo_vinho';
-    const ATTRIBUTE_WINE3 = 'importado'; //bool
+    const ATTRIBUTE_WINE1 = 'Ml';
+    const ATTRIBUTE_WINE2 = 'Tipo_do_vinho';
+    const ATTRIBUTE_WINE3 = 'Importado'; //bool
     const SET_ATTRIBUTE_WINE = 'Wine';
 
 
     const SET_ATTRIBUTE_FASHION = 'Fashion';
-    const ATTRIBUTE_FASHION1 = 'tecido';
-    const ATTRIBUTE_FASHION2 = 'tamanho';
+    const ATTRIBUTE_FASHION1 = 'Tecido';
+    const ATTRIBUTE_FASHION2 = 'Tamanho';
     const ATTRIBUTE_FASHION3 = 'moda_verao';
 
 
@@ -58,16 +58,17 @@ class CreateAttrProducts implements DataPatchInterface {
         $this->moduleDataSetup->getConnection()->startSetup();
 
         $this->setAtribute(static::SET_ATTRIBUTE_WINE);
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'Ml', static::ATTRIBUTE_WINE1, 'text');
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'tipo_vinho', static::ATTRIBUTE_WINE2, 'text');
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'importado', static::ATTRIBUTE_WINE3, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'Ml', static::ATTRIBUTE_WINE1, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'tipo_vinho', static::ATTRIBUTE_WINE2, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'importado', static::ATTRIBUTE_WINE3, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_WINE, 'color', 'Color', 'text', ScopedAttributeInterface::SCOPE_GLOBAL,'select');
+
 
         $this->setAtribute(static::SET_ATTRIBUTE_FASHION);
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'tecido', static::ATTRIBUTE_FASHION1, 'text');
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'tamanho', static::ATTRIBUTE_FASHION2, 'text');
-        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'moda_verao', static::ATTRIBUTE_FASHION3, 'text');
-
-
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'tecido', static::ATTRIBUTE_FASHION1, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'tamanho', static::ATTRIBUTE_FASHION2, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'moda_verao', static::ATTRIBUTE_FASHION3, 'text',ScopedAttributeInterface::SCOPE_STORE, 'text');
+        $this->setAtributeProduct($this->moduleDataSetup, static::SET_ATTRIBUTE_FASHION, 'color', 'Color', 'text', ScopedAttributeInterface::SCOPE_GLOBAL,'select');
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }
@@ -79,7 +80,7 @@ class CreateAttrProducts implements DataPatchInterface {
         $this->attributeSetManagement->create($attributeSet, $defaultAttributeSetId);
     }
 
-    public function setAtributeProduct($moduleSetup, $attrName, $label, $code, $type){
+    public function setAtributeProduct($moduleSetup, $attrName, $label, $code, $type, $scope,$input){
         $eavSetup = $this->eavSetupFactory->create(['setup' => $moduleSetup]);
         $eavSetup->addAttribute(
             Product::ENTITY,
@@ -89,9 +90,9 @@ class CreateAttrProducts implements DataPatchInterface {
                 'user_defined' => true,
                 'type' => $type,
                 'label' => $label,
-                'input' => 'text',
+                'input' => $input,
                 'required' => false,
-                'global' => ScopedAttributeInterface::SCOPE_WEBSITE,
+                'global' => $scope,
                 'used_in_product_listing' => true,
                 'system' => false,
                 'visible_on_front' => true,

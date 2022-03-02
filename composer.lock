@@ -422,16 +422,16 @@
         },
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.209.15",
+            "version": "3.209.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "8656babb2e58ea3e7c9a40724e8a545ce40bb622"
+                "reference": "9f1ae9b3efd1261b7205d79484fc3a3802328667"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/8656babb2e58ea3e7c9a40724e8a545ce40bb622",
-                "reference": "8656babb2e58ea3e7c9a40724e8a545ce40bb622",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/9f1ae9b3efd1261b7205d79484fc3a3802328667",
+                "reference": "9f1ae9b3efd1261b7205d79484fc3a3802328667",
                 "shasum": ""
             },
             "require": {
@@ -475,12 +475,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Aws\\": "src/"
-                },
                 "files": [
                     "src/functions.php"
-                ]
+                ],
+                "psr-4": {
+                    "Aws\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -504,20 +504,20 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2022-01-28T19:14:57+00:00"
+            "time": "2022-02-16T19:18:09+00:00"
         },
         {
             "name": "bacon/bacon-qr-code",
-            "version": "2.0.4",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Bacon/BaconQrCode.git",
-                "reference": "f73543ac4e1def05f1a70bcd1525c8a157a1ad09"
+                "reference": "0069435e2a01a57193b25790f105a5d3168653c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/f73543ac4e1def05f1a70bcd1525c8a157a1ad09",
-                "reference": "f73543ac4e1def05f1a70bcd1525c8a157a1ad09",
+                "url": "https://api.github.com/repos/Bacon/BaconQrCode/zipball/0069435e2a01a57193b25790f105a5d3168653c1",
+                "reference": "0069435e2a01a57193b25790f105a5d3168653c1",
                 "shasum": ""
             },
             "require": {
@@ -526,8 +526,9 @@
                 "php": "^7.1 || ^8.0"
             },
             "require-dev": {
-                "phly/keep-a-changelog": "^1.4",
+                "phly/keep-a-changelog": "^2.1",
                 "phpunit/phpunit": "^7 | ^8 | ^9",
+                "spatie/phpunit-snapshot-assertions": "^4.2.9",
                 "squizlabs/php_codesniffer": "^3.4"
             },
             "suggest": {
@@ -553,7 +554,7 @@
             ],
             "description": "BaconQrCode is a QR code generator for PHP.",
             "homepage": "https://github.com/Bacon/BaconQrCode",
-            "time": "2021-06-18T13:26:35+00:00"
+            "time": "2022-02-04T20:16:05+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -781,16 +782,16 @@
         },
         {
             "name": "codeception/codeception",
-            "version": "4.1.28",
+            "version": "4.1.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Codeception/Codeception.git",
-                "reference": "e9bc22a3819f9d356068c0e372193ebcc9b06014"
+                "reference": "f8dec8f2bf5347cc596aaf141753f4fb2504c17c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/e9bc22a3819f9d356068c0e372193ebcc9b06014",
-                "reference": "e9bc22a3819f9d356068c0e372193ebcc9b06014",
+                "url": "https://api.github.com/repos/Codeception/Codeception/zipball/f8dec8f2bf5347cc596aaf141753f4fb2504c17c",
+                "reference": "f8dec8f2bf5347cc596aaf141753f4fb2504c17c",
                 "shasum": ""
             },
             "require": {
@@ -837,13 +838,13 @@
                 "branch-alias": []
             },
             "autoload": {
+                "files": [
+                    "functions.php"
+                ],
                 "psr-4": {
                     "Codeception\\": "src/Codeception",
                     "Codeception\\Extension\\": "ext"
-                },
-                "files": [
-                    "functions.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -871,7 +872,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-01-05T16:41:25+00:00"
+            "time": "2022-01-29T16:56:03+00:00"
         },
         {
             "name": "codeception/lib-asserts",
@@ -1700,26 +1701,25 @@
         },
         {
             "name": "csharpru/vault-php",
-            "version": "4.2.1",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CSharpRU/vault-php.git",
-                "reference": "89b393ecf65f61a44d3a1872547f65085982b481"
+                "reference": "4e473ef5e112aab9341637106a2f5628e3b80efd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CSharpRU/vault-php/zipball/89b393ecf65f61a44d3a1872547f65085982b481",
-                "reference": "89b393ecf65f61a44d3a1872547f65085982b481",
+                "url": "https://api.github.com/repos/CSharpRU/vault-php/zipball/4e473ef5e112aab9341637106a2f5628e3b80efd",
+                "reference": "4e473ef5e112aab9341637106a2f5628e3b80efd",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "php": "^7.2 || ^8.0",
-                "psr/cache": "^1.0",
+                "psr/cache": "^1.0|^2.0|^3.0",
                 "psr/http-client": "^1.0",
                 "psr/http-factory": "^1.0",
-                "psr/log": "^1.0",
-                "weew/helpers-array": "^1.3"
+                "psr/log": "^1.0|^2.0|^3.0"
             },
             "require-dev": {
                 "alextartan/guzzle-psr18-adapter": "^1.2 || ^2.0",
@@ -1755,7 +1755,7 @@
                 "secrets",
                 "vault"
             ],
-            "time": "2021-05-21T06:39:35+00:00"
+            "time": "2022-02-07T06:54:13+00:00"
         },
         {
             "name": "csharpru/vault-php-guzzle6-transport",
@@ -5682,16 +5682,16 @@
         },
         {
             "name": "laminas/laminas-session",
-            "version": "2.12.0",
+            "version": "2.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laminas/laminas-session.git",
-                "reference": "fc538bba5196e3b5937ae7db3c713fc7c0829881"
+                "reference": "888c6a344e9a4c9f34ab6e09346640eac9be3fcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laminas/laminas-session/zipball/fc538bba5196e3b5937ae7db3c713fc7c0829881",
-                "reference": "fc538bba5196e3b5937ae7db3c713fc7c0829881",
+                "url": "https://api.github.com/repos/laminas/laminas-session/zipball/888c6a344e9a4c9f34ab6e09346640eac9be3fcf",
+                "reference": "888c6a344e9a4c9f34ab6e09346640eac9be3fcf",
                 "shasum": ""
             },
             "require": {
@@ -5752,7 +5752,7 @@
                     "type": "community_bridge"
                 }
             ],
-            "time": "2021-09-21T19:25:14+00:00"
+            "time": "2022-02-15T16:38:29+00:00"
         },
         {
             "name": "laminas/laminas-soap",
@@ -18453,16 +18453,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.35",
+            "version": "2.0.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "4e16cf3f5f927a7d3f5317820af795c0366c0420"
+                "reference": "a97547126396548c224703a267a30af1592be146"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/4e16cf3f5f927a7d3f5317820af795c0366c0420",
-                "reference": "4e16cf3f5f927a7d3f5317820af795c0366c0420",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/a97547126396548c224703a267a30af1592be146",
+                "reference": "a97547126396548c224703a267a30af1592be146",
                 "shasum": ""
             },
             "require": {
@@ -18554,7 +18554,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-28T23:30:39+00:00"
+            "time": "2022-01-30T08:48:36+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -19490,32 +19490,32 @@
         },
         {
             "name": "react/promise",
-            "version": "v2.8.0",
+            "version": "v2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/reactphp/promise.git",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4"
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/reactphp/promise/zipball/f3cff96a19736714524ca0dd1d4130de73dbbbc4",
-                "reference": "f3cff96a19736714524ca0dd1d4130de73dbbbc4",
+                "url": "https://api.github.com/repos/reactphp/promise/zipball/234f8fd1023c9158e2314fa9d7d0e6a83db42910",
+                "reference": "234f8fd1023c9158e2314fa9d7d0e6a83db42910",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^7.0 || ^6.5 || ^5.7 || ^4.8.36"
+                "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
             },
             "type": "library",
             "autoload": {
-                "psr-4": {
-                    "React\\Promise\\": "src/"
-                },
                 "files": [
                     "src/functions_include.php"
-                ]
+                ],
+                "psr-4": {
+                    "React\\Promise\\": "src/"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -19524,7 +19524,23 @@
             "authors": [
                 {
                     "name": "Jan Sorgalla",
-                    "email": "jsorgalla@gmail.com"
+                    "email": "jsorgalla@gmail.com",
+                    "homepage": "https://sorgalla.com/"
+                },
+                {
+                    "name": "Christian Lück",
+                    "email": "christian@clue.engineering",
+                    "homepage": "https://clue.engineering/"
+                },
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "reactphp@ceesjankiewiet.nl",
+                    "homepage": "https://wyrihaximus.net/"
+                },
+                {
+                    "name": "Chris Boden",
+                    "email": "cboden@gmail.com",
+                    "homepage": "https://cboden.dev/"
                 }
             ],
             "description": "A lightweight implementation of CommonJS Promises/A for PHP",
@@ -19532,7 +19548,17 @@
                 "promise",
                 "promises"
             ],
-            "time": "2020-05-12T15:16:56+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/WyriHaximus",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/clue",
+                    "type": "github"
+                }
+            ],
+            "time": "2022-02-11T10:27:51+00:00"
         },
         {
             "name": "sebastian/code-unit",
@@ -20375,16 +20401,16 @@
         },
         {
             "name": "spomky-labs/otphp",
-            "version": "v10.0.1",
+            "version": "v10.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/otphp.git",
-                "reference": "f44cce5a9db4b8da410215d992110482c931232f"
+                "reference": "cd6b57baf37e2551cfb6d8706201c153e5ac1a4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/f44cce5a9db4b8da410215d992110482c931232f",
-                "reference": "f44cce5a9db4b8da410215d992110482c931232f",
+                "url": "https://api.github.com/repos/Spomky-Labs/otphp/zipball/cd6b57baf37e2551cfb6d8706201c153e5ac1a4d",
+                "reference": "cd6b57baf37e2551cfb6d8706201c153e5ac1a4d",
                 "shasum": ""
             },
             "require": {
@@ -20392,7 +20418,7 @@
                 "ext-mbstring": "*",
                 "paragonie/constant_time_encoding": "^2.0",
                 "php": "^7.2|^8.0",
-                "thecodingmachine/safe": "^0.1.14|^1.0"
+                "thecodingmachine/safe": "^0.1.14|^1.0|^2.0"
             },
             "require-dev": {
                 "php-coveralls/php-coveralls": "^2.0",
@@ -20402,7 +20428,7 @@
                 "phpstan/phpstan-phpunit": "^0.12",
                 "phpstan/phpstan-strict-rules": "^0.12",
                 "phpunit/phpunit": "^8.0",
-                "thecodingmachine/phpstan-safe-rule": "^1.0"
+                "thecodingmachine/phpstan-safe-rule": "^1.0 || ^2.0"
             },
             "type": "library",
             "extra": {
@@ -20442,7 +20468,7 @@
                 "otp",
                 "totp"
             ],
-            "time": "2020-01-28T09:24:19+00:00"
+            "time": "2022-02-15T08:38:37+00:00"
         },
         {
             "name": "symfony/console",

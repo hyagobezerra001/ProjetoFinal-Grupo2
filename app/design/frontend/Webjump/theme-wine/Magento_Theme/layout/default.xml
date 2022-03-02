@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+        <referenceBlock name="logo">
+        <arguments>
+            <argument name="logo_width" xsi:type="number">142</argument>
+            <argument name="logo_height" xsi:type="number">74</argument>
+            <argument name="logo_file" xsi:type="string">images/wineclub.png</argument>
+        </arguments>
+    </referenceBlock>
+
+    <referenceContainer name="footer-container">
+        <container name="footer-links" htmlTag="div" htmlClass="footer-links">
+            <block class="Magento\Cms\Block\Block" name="link1" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links1</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link2" after="link1">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links2</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link3" after="link2">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links3</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link4" after="link3">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links4</argument>
+                </arguments>
+            </block>
+                                    <!--INICO EN-->
+            <block class="Magento\Cms\Block\Block" name="link5" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links1_en</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link6" after="link5">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links2_en</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link7" after="link6">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links3_en</argument>
+                </arguments>
+            </block>
+
+            <block class="Magento\Cms\Block\Block" name="link8" after="link7">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links4_en</argument>
+                </arguments>
+            </block>
+
+                                    <!--FIM EN-->
+        </container>
+    </referenceContainer>
+
+    <referenceBlock name= "footer_links" remove="true"></referenceBlock>
+    <referenceBlock name= "copyright" remove="true"></referenceBlock>
+</page>

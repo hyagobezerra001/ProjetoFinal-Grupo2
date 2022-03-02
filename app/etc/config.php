@@ -297,6 +297,7 @@ return [
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeGraphQl' => 1,
         'Temando_ShippingRemover' => 1,
+        'Ulmod_Productslider' => 1,
         'Vertex_Tax' => 1,
         'Vertex_AddressValidation' => 1,
         'Webjump_Carbono' => 1,
@@ -309,7 +310,7 @@ return [
         'Webjump_OrderStatus' => 0,
         'Webjump_PostCode' => 1,
         'Webjump_ProductIncrementButtons' => 1,
-        'Webjump_ViaCep' => 1,
+        'Webjump_ViaCep' => 0,
         'Yotpo_Yotpo' => 1
     ]
 ];

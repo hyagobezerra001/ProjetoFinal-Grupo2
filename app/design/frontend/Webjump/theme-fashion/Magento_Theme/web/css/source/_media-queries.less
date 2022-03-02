@@ -132,7 +132,7 @@
         }
 
         .navigation .submenu:not(:first-child) > li > a {
-            color: @li-desktop;
+            color: @nav-span;
         }
 
         //Footer
@@ -160,6 +160,10 @@
                 flex-basis: 100px;
                 margin-left: 0;
             }
+        }
+
+        .block.newsletter .form.subscribe {
+            justify-content: center;
         }
 
         .icons {
@@ -249,6 +253,24 @@
         }
 
     }
+
+@media (min-width:767px) and (max-width: 1100px) {
+    .main-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .block.newsletter {
+        input {
+            width: 250px;
+        }
+
+        .action.subscribe {
+            width: 100px;
+        }
+    } 
+}
 
 
 

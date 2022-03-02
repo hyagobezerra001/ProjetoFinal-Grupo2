@@ -9,9 +9,9 @@
 <div class="block newsletter">
     <div class="main-footer">
         <div class="link3">
-            <h3>STAY IN</h3>
+            <h3><?=__('STAY IN')?></h3>
             <ul>
-                <li><a>Subscribe to our Newsletter so you don't miss any of the promotions!</a></li>
+                <?=__("Subscribe to our Newsletter so you don't miss any of the promotions!")?>
             </ul>
 
             <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
@@ -37,10 +37,10 @@
                     </div>
                     <div class="actions">
                         <button class="action subscribe primary"
-                                title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
+                                title="<?= $block->escapeHtmlAttr(__('SUBSCRIBE')) ?>"
                                 type="submit"
                                 aria-label="Subscribe">
-                            <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                            <span><?= $block->escapeHtml(__('SUBSCRIBE')) ?></span>
                         </button>
                     </div>
                 </form>

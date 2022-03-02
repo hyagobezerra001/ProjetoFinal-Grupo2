@@ -26,6 +26,78 @@ class SetBlocksWine implements DataPatchInterface
     {
         return [
                 [
+                    'title' => 'Footer Links1_en',
+                    'identifier' => 'footer-links1_en',
+                    'content' =>
+                        '<div class="footer-links">
+                            <ul>
+                                <h3>Wines</h3>
+                                <li><a href="#">All wines</a></li>
+                                <li><a href="#">Reds</a></li>
+                                <li><a href="#">Whites</a></li>
+                                <li><a href="#">Rosé</a></li>
+                                <li><a href="#">Sparkling wines</a></li>
+                                <li><a href="#">Frizzers</a></li>
+                                <li><a href="#">Dessert</a></li>
+                            </ul>
+                        </div>',
+                    'stores' => [$wineEn->getId()],
+                    'is_active' => 1,
+                ],
+                [
+                    'title' => 'Footer Links2_en',
+                    'identifier' => 'footer-links2_en',
+                    'content' =>
+                        '<div class="footer-links block2">
+                            <div>
+                                <ul>
+                                    <h3>Other products</h3>
+                                    <li><a>All the products</a></li>
+                                    <li><a>Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div>
+                                 <ul>
+                                    <h3>Account</h3>
+                                    <li><a>My account</a></li>
+                                    <li><a>Requests</a></li>
+                                </ul>
+                            </div>
+                        </div>',
+                    'stores' => [$wineEn->getId()],
+                    'is_active' => 1,
+                ],
+                [
+                    'title' => 'Footer links3_en',
+                    'identifier' => 'footer-links3_en',
+                    'content' =>
+                        '<div class="footer-links">
+                            <ul>
+                                <h3>Support</h3>
+                                <li><a>Shipping policy</a></li>
+                                <li><a>Privacy Policy</a></li>
+                                <li><a>Terms and conditions</a></li>
+                            </ul>
+                        </div>',
+                    'stores' => [$wineEn->getId()],
+                    'is_active' => 1,
+                ],
+                [
+                    'title' => 'Footer links4_en',
+                    'identifier' => 'footer-links4_en',
+                    'content' =>
+                        '<div class="footer-links">
+                            <ul>
+                                <h3>WineClub</h3>
+                                <li><a>About Us</a></li>
+                                <li><a>Doubt Center</a></li>
+                            </ul>
+                        </div>',
+                    'stores' => [$wineEn->getId()],
+                    'is_active' => 1,
+                ],
+                //-------------------INICIO PT------------//
+                [
                     'title' => 'Footer Links1',
                     'identifier' => 'footer-links1',
                     'content' =>
@@ -41,7 +113,7 @@ class SetBlocksWine implements DataPatchInterface
                                 <li><a href="#">Sobremesa</a></li>
                             </ul>
                         </div>',
-                    'stores' => [$wineEn->getId(),$wine->getId()],
+                    'stores' => [$wine->getId()],
                     'is_active' => 1,
                 ],
                 [
@@ -64,7 +136,7 @@ class SetBlocksWine implements DataPatchInterface
                                 </ul>
                             </div>
                         </div>',
-                    'stores' => [$wineEn->getId(),$wine->getId()],
+                    'stores' => [$wine->getId()],
                     'is_active' => 1,
                 ],
                 [
@@ -79,7 +151,7 @@ class SetBlocksWine implements DataPatchInterface
                                 <li><a>Termos e condições</a></li>
                             </ul>
                         </div>',
-                    'stores' => [$wineEn->getId(),$wine->getId()],
+                    'stores' => [$wine->getId()],
                     'is_active' => 1,
                 ],
                 [
@@ -93,7 +165,7 @@ class SetBlocksWine implements DataPatchInterface
                                 <li><a>Central de dúvidas</a></li>
                             </ul>
                         </div>',
-                    'stores' => [$wineEn->getId(),$wine->getId()],
+                    'stores' => [$wine->getId()],
                     'is_active' => 1,
                 ],
 
@@ -103,10 +175,10 @@ class SetBlocksWine implements DataPatchInterface
     public function apply()
     {
 
-        $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_STORE_CODE_EN);
-        $wineEn = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE);
+        $wineEn = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_STORE_CODE_EN);
+        $wine = $this->storeRepository->get(WebsiteConfigure::WEBSITE_WINE_CODE);
 
-        $footerData = $this->footerBlock($wine, $wineEn);
+        $footerData = $this->footerBlock($wineEn,$wine);
 
         foreach ($footerData as $data){
             $headerBlock = $this->blockFactory->create()->load($data['identifier'], 'identifier');

@@ -8,19 +8,63 @@
     }
 }
 
-//Home
-body {
-    overflow-x: hidden;
+*{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-.page-main{
-    padding: 0;
-    max-width: 100%;
+//Home
+body {
+    overflow-x: hidden;
 }
+
+.page-main{
+    max-width: 100%;
+    padding: 0;
+}
+
 .content{
     margin-top: 0px;
 }
+
+
+.page-main-image{
+    margin-bottom: 10px;
+}
+
+//resolvendo problema do page-main max-width 100%
+.column, .main{
+    padding: 0px 0px 40px 0px;
+}
+
+//comparar produtos
+.page-layout-2columns-left .sidebar-additional,.base {
+    padding-left: 20px;
+}
+
+//em estoque
+.page-layout-2columns-left .sidebar-additional, .base, .page-layout-1column .product-info-main{
+    padding-right: 20px;
+}
+
+//form checkout
+.opc-wrapper .step-content{
+    padding-left: 20px;
+}
+
+//entre
+.action-auth-toggle span{
+    padding-right: 20px;
+}
+
+
+//entre ou cadastre-se form
+.form.password.reset, .form.send.confirmation, .form.password.forget, .form.create.account, .form.search.advanced, .form.form-orders-search{
+    padding-left: 20px;
+}
+
+//logo magnolia
 
 .sections.nav-sections{
     margin-bottom: 0;
@@ -188,17 +232,11 @@ body {
         font-weight: 400;
     }
 
-    .level0.active {
-        .level-top {
-            .navigation {
-                .level0.has-active {
-                    .level-top {
-                        border-color: #FEE95F;
-                    }
-                }
-            }
-        }
-    }
+ }
+
+.navigation .level0.active >.level-top, .navigation .level0.has-active>.level-top{
+    border-color: #f7e151;
+
 }
 
 // Botão de Promoção
@@ -255,7 +293,7 @@ body {
 .car, .card, .return{
     display: flex;
     vertical-align: middle;
-   
+
 }
 
 .message{
@@ -278,6 +316,15 @@ body {
     font-style: normal;
     letter-spacing: 0.8px;
     line-height: normal;
+}
+
+.return_en{
+    display: flex;
+    width: auto;
+}
+
+.text-return_en{
+    width: 240px;
 }
 
 .image_message{
@@ -397,5 +444,17 @@ body {
 .old-price, .special-price{
     display: block;
 }
+
+.price{
+    color:#40015f;
+}
+
+.step-title{
+    padding-left: 15px;
+}
+
+// .navigation .level0 .submenu {
+//     border: none;
+// }
 
 

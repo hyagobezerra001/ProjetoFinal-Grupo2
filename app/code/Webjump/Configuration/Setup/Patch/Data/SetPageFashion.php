@@ -43,35 +43,33 @@ class SetPageFashion implements DataPatchInterface
         $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE)->getId();
 
 
-        $pageData = $this->setPageFashion($fashionEN, $fashion);
+        $pageData = $this->setPageFashion($fashion,$fashionEN);
 
-        $this->moduleDataSetup->startSetup();
-        $this->pageFactory->create()->setData($pageData)->save();
-        $this->moduleDataSetup->endSetup();
-
-
-        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_WEBSITES, $fashion);
-
+        foreach($pageData as $page){
+            $this->pageFactory->create()->setData($page)->save();
+            $this->config->saveConfig('web/default/cms_home_page',$page['identifier'], ScopeInterface::SCOPE_STORES, $page['stores'][0]);
+        }
         $this->moduleDataSetup->getConnection()->endSetup();
     }
 
-    public function setPageFashion($fashionEN, $fashion)
+    public function setPageFashion($fashion,$fashionEN)
     {
            return [
-               'title' => 'Fashion Store',
-               'page_layout' => '1column',
-               'meta_keywords' => 'Banner Fashion Loja1',
-               'meta_description' => 'Banner para loja Fashion',
-               'identifier' => 'banner_fashion',
-               'content' =>
-                    '<p>
+               [
+                   'title' => 'Fashion Store',
+                   'page_layout' => '1column',
+                   'meta_keywords' => 'Banner Fashion Loja1',
+                   'meta_description' => 'Banner para loja Fashion',
+                   'identifier' => 'banner_fashion',
+                   'content' =>
+                       '<div class="page-main-image">
                         <a href="http://fashion.develop.com.br/promocoesmoda.html">
                           <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
                         </a>
-                    </p>
+                    </div>
                     <div class="message">
                         <div class="car">
-                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1"> 
+                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
                             <span class="text-car text_message" >Frete grátis para todas as compras acima de R$100</span>
                         </div>
                         <div class="card">
@@ -128,11 +126,91 @@ class SetPageFashion implements DataPatchInterface
                             </div>
                         </div>
                     </div>',
-               'layout_update_xml' => '',
-               'url_key' => 'banner_fashion',
-               'is_active' => 1,
-               'stores' => [$fashionEN, $fashion],
-               'sort_order' => 0,
+                   'layout_update_xml' => '',
+                   'url_key' => 'banner_fashion',
+                   'is_active' => 1,
+                   'stores' => [$fashion],
+                   'sort_order' => 0,
+               ],
+               //----------INICIO EN--------------//
+               [
+                   'title' => 'Fashion Store En',
+                   'page_layout' => '1column',
+                   'meta_keywords' => 'Banner Fashion Loja1 En',
+                   'meta_description' => 'Banner for store Fashion',
+                   'identifier' => 'banner_fashion_en',
+                   'content' =>
+                       '<div class="page-main-image">
+                        <a href="http://fashion.develop.com.br/promotion.html">
+                          <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
+                        </a>
+                    </div>
+                    <div class="message">
+                        <div class="car">
+                            <img class="image-car image_message" src="{{media url="wysiwyg/caminhão.png"}}" alt="icon1">
+                            <span class="text-car text_message" >Free shipping on all purchases over $100</span>
+                        </div>
+                        <div class="card">
+                            <img class="image-card image_message" src="{{media url="wysiwyg/cartao.png"}}" alt="img2">
+                            <span class="text-card text_message">Pay up to 5x interest free on your credit card</span>
+                        </div>
+                        <div class="return_en">
+                            <img class=" image-return image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
+                            <span class="text-return_en text_message">First exchange guaranteed at no extra cost</span>
+                        </div>
+                    </div>
+                    <hr class="hr-top">
+                    <div class="main_banner">
+                        <div class="img1">
+                        <a href="http://fashion.develop.com.br/clothes/blouse.html">
+                             <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
+                        </a>
+
+                        </div>
+                        <div class="img2">
+                        <a href="http://fashion.develop.com.br/clothes/skirt.html">
+                            <img src="{{media url="wysiwyg/banner_saias.jpg"}}" alt="img5">
+                        </a>
+                        </div>
+                        <div class="img3">
+                            <a href="http://fashion.develop.com.br/clothes.html">
+                                <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="img6">
+                            </a>
+                        </div>
+                        <div class="img4">
+                            <a href="http://fashion.develop.com.br/clothes/dress.html">
+                                <img src="{{media url="wysiwyg/mulher-onca.png"}}" alt="img7">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="maincontainer">
+                        <div class="about-magnolia">
+                            <hr />
+                        <div class="div-text">
+                            <h3 class="about-magnolia-text">about the magnolia</h3>
+                        </div>
+                            <hr />
+                    </div>
+                          <div class="content-text">
+                            <div class="magnolia">
+                                <span class="part1">Magnolia L. is a genus of flowering plants in the order Magnoliales</span>
+
+                                <span class="part2">It groups the mostly arboreal species known by the common name of magnolias. In its present taxonomic circumscription, the genus was extended to include species that were dispersed in the genera Magnolia, Manglietia, Michelia, Talauma, Aromadendron, Kmeria, Pachylarnax and Alcimandra (all of the former subfamily Magnolioideae), resulting in a monophyletic genus with about 297 species.[2] The genus is distributed in the subtropical and tropical regions of East and Southeast Asia (including Malesia) and the Americas, with centers of diversity in Southeast Asia and northern South America. The genus includes several species widely used as an ornamental tree. in the subtropical and temperate regions of both hemispheres.</span>
+                            </div>
+
+                            <div class="decriptionlow">
+                                <span class="part3">Brand Description</span>
+                                <span class="part4">The genus Magnolia is eponymous after Pierre Magnol, a botanist from Montpellier (France). The first identified species of this genus was Magnolia virginiana, found by missionaries sent to North America in the 1680s. As early as the 18th century, the species Magnolia grandiflora was described, also from North American samples, today the best known species. of the genus as it is widely used as an ornamental tree in subtropical and temperate regions of moderate climate around the world.</span>
+                            </div>
+                        </div>
+                    </div>',
+                   'layout_update_xml' => '',
+                   'url_key' => 'banner_fashion_en',
+                   'is_active' => 1,
+                   'stores' => [$fashionEN],
+                   'sort_order' => 1,
+               ]
+               //----------FIM EN--------------//
            ];
     }
 

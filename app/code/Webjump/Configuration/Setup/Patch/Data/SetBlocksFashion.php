@@ -24,7 +24,7 @@ class SetBlocksFashion implements DataPatchInterface
 
 
 
-    public function footerBlock($fashionEn, $fashion)
+    public function footerBlock($fashion,$fashionEn)
     {
         return [
             [
@@ -51,9 +51,37 @@ class SetBlocksFashion implements DataPatchInterface
                             <li><a>Perguntas Frequentes</a></li>
                         </ul>
                         </div>
-                    
+
                     </div>',
-                'stores' => [$fashionEn->getId(),$fashion->getId()],
+                'stores' => [$fashion->getId()],
+                'is_active' => 1,
+            ],
+            [
+                'title' => 'Footer Links1_Fashion_en',
+                'identifier' => 'footer-links1_Fashion_en',
+                'content' =>
+                    '<div class="main-footer">
+                        <div class="link1">
+                        <h3>INSTITUTIONAL</h3>
+                        <ul>
+                            <li><a>The Brand</a></li>
+                            <li><a>Our stores</a></li>
+                            <li><a>Work with us</a></li>
+                            <li><a>Privacy Policy</a></li>
+                        </ul>
+                        </div>
+                        <div class="link2">
+                        <h3>HELP</h3>
+                        <ul>
+                            <li><a>Front and Delivery</a></li>
+                            <li><a>Exchange and Return</a></li>
+                            <li><a>Safety</a></li>
+                            <li><a>Call center</a></li>
+                            <li><a>Common questions</a></li>
+                        </ul>
+                        </div>
+                    </div>',
+                'stores' => [$fashionEn->getId()],
                 'is_active' => 1,
             ],
         ];
@@ -62,14 +90,14 @@ class SetBlocksFashion implements DataPatchInterface
     public function apply()
     {
 
-        $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN);
-        $fashionEn = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE);
+        $fashionEn = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_STORE_CODE_EN);
+        $fashion = $this->storeRepository->get(WebsiteConfigure::WEBSITE_FASHION_CODE);
 
         $footerData = $this->footerBlock($fashion, $fashionEn);
 
         foreach ($footerData as $data){
             $headerBlock = $this->blockFactory->create()->load($data['identifier'], 'identifier');
-        
+
             if (!$headerBlock->getId()) {
                 $headerBlock->setData($data)->save();
             } else {
@@ -77,7 +105,6 @@ class SetBlocksFashion implements DataPatchInterface
             }
         }
     }
-
 
     public static function getDependencies():array
     {

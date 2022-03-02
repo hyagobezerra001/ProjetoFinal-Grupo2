@@ -10,9 +10,9 @@
     background-color: @nav-span;
 }
 
-//estilizando os blocos do footer 
+//estilizando os blocos do footer
  .main-footer {
-    display: flex; 
+    display: flex;
     gap: 150px;
     flex-direction: row;
     justify-content: center;
@@ -22,46 +22,46 @@
 
     .link1 {
         flex-grow:  0;
-        flex-basis: 200px;     
+        flex-basis: 200px;
     }
 
-    .link2 { 
+    .link2 {
         flex-grow: 0;
-        flex-basis: 200px;   
+        flex-basis: 200px;
     }
 
     .link3 {
         flex-grow: 0;
-        flex-basis: 350px;
+        flex-basis: 450px;
+        margin-left: 5%;
     }
-    
+
     h3 {
         margin-bottom: 15px;
-        font-family: 'Raleway-Medium';
+        font-family: 'Raleway';
         font-size: 20px;
     }
 
     ul, a {
         color: #000000;
         list-style: none;
-        font-family: 'Raleway-Regular';
+        font-family: 'Raleway';
         font-size: 18px;
         font-weight: 400;
-        text-decoration: none;  
-        cursor: pointer; 
+        text-decoration: none;
+        cursor: pointer;
         transition: 0.2s;
 
         &:hover {
             color: #444040;
         }
     }
-
 }
 
 .icons {
     display: flex;
     gap: 34px;
-    margin-top: 150px;
+    margin-top: 55px;
 
     a {
         height: 38px;
@@ -69,36 +69,44 @@
     }
 }
 
-// .block.newsletter  {
-//     .field {
-//         .control:before {
-//             content: '';
-//         }
-//     }
 
-//     input {
-//         height: 36px;
-//         width: 267px;
-//         margin-right: 0;
-//         padding: 0 0 0 25px;
-//         background: none;
-//         border: 1px solid @black;
-//         box-shadow: 0 0 0 0;
-//         outline: 0;
+.block.newsletter  {
+    .form.subscribe {
+        margin-top: 26px;
+        display: flex;
+    }
+
+    .field {
+        .control:before {
+            content: '';
+        }
+    }
+
+    input {
+        height: 36px;
+        width: 267px;
+        padding: 0 0 0 25px;
+        background: none;
+        margin-right: 0;
+        border: 1px solid @black;
+        box-shadow: 0 0 0 0;
+        outline: 0;
     
-//         &::placeholder {
-//             font-family: 'Raleway-Regular';
-//             font-size: 15px;
-//             font-weight: 300;
-//         }
-//     }
-
-//     // .form.subscribe {
-//     //     position: relative;
-//     //     bottom: 180px;
-//     //     margin: 5px 98px;
-//     // }
-// } 
+        &::placeholder {
+            color: @panel-font;
+            font-family: 'Raleway';
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            font-style: normal;
+            letter-spacing: 0.38px;
+            line-height: normal;
+        }
+    }
+} 
 
 .minicart-wrapper .action.showcart.active {
     display: grid;
@@ -113,20 +121,20 @@
         background: #6e01a5;
 }
 
-//Tirando carrinho 
+//Tirando carrinho
 .minicart-wrapper {
     .action.showcart.active:before {
         content: '';
     }
 }
 
-    
+
 //botão de assinar do footer
 .block-minicart .block-content > .actions > .primary .action.primary  {
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
 
     &:hover {
@@ -141,7 +149,7 @@ button.action.continue.primary {
     width: 150px;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
 
     &:hover {
@@ -154,7 +162,7 @@ button.action.continue.primary {
     padding: 10px 10px;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
     border-radius: 3px;
 
@@ -179,7 +187,7 @@ button.action.continue.primary {
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     border-radius: 3px;
 
     &:hover {
@@ -191,7 +199,7 @@ button.action.continue.primary {
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     border-radius: 3px;
 
     &:hover {

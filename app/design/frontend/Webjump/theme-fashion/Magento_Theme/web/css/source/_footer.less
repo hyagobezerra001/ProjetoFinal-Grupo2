@@ -32,7 +32,8 @@
 
     .link3 {
         flex-grow: 0;
-        flex-basis: 350px;
+        flex-basis: 450px;
+        margin-left: 5%;
     }
 
     h3 {
@@ -55,13 +56,12 @@
             color: #444040;
         }
     }
-
 }
 
 .icons {
     display: flex;
     gap: 34px;
-    margin-top: 150px;
+    margin-top: 55px;
 
     a {
         height: 38px;
@@ -69,36 +69,44 @@
     }
 }
 
-// .block.newsletter  {
-//     .field {
-//         .control:before {
-//             content: '';
-//         }
-//     }
 
-//     input {
-//         height: 36px;
-//         width: 267px;
-//         margin-right: 0;
-//         padding: 0 0 0 25px;
-//         background: none;
-//         border: 1px solid @black;
-//         box-shadow: 0 0 0 0;
-//         outline: 0;
+.block.newsletter  {
+    .form.subscribe {
+        margin-top: 26px;
+        display: flex;
+    }
 
-//         &::placeholder {
-//             font-family: 'Raleway-Regular';
-//             font-size: 15px;
-//             font-weight: 300;
-//         }
-//     }
+    .field {
+        .control:before {
+            content: '';
+        }
+    }
 
-//     // .form.subscribe {
-//     //     position: relative;
-//     //     bottom: 180px;
-//     //     margin: 5px 98px;
-//     // }
-// }
+    input {
+        height: 36px;
+        width: 267px;
+        padding: 0 0 0 25px;
+        background: none;
+        margin-right: 0;
+        border: 1px solid @black;
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    
+        &::placeholder {
+            color: @panel-font;
+            font-family: 'Raleway';
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            font-style: normal;
+            letter-spacing: 0.38px;
+            line-height: normal;
+        }
+    }
+} 
 
 .minicart-wrapper .action.showcart.active {
     display: grid;
@@ -126,7 +134,7 @@
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
 
     &:hover {

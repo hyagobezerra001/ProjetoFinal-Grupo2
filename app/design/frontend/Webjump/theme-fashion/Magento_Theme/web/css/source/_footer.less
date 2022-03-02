@@ -13,7 +13,7 @@
 //estilizando os blocos do footer 
  .main-footer {
     display: flex; 
-    gap: 150px;
+    gap: 100px;
     flex-direction: row;
     justify-content: center;
     align-items: stretch;
@@ -22,31 +22,47 @@
 
     .link1 {
         flex-grow:  0;
-        flex-basis: 200px;     
+        flex-basis: 200px;    
     }
 
     .link2 { 
         flex-grow: 0;
-        flex-basis: 200px;   
+        flex-basis: 250px;   
     }
 
     .link3 {
         flex-grow: 0;
-        flex-basis: 350px;
+        flex-basis: 450px;
+        margin-left: 5%;
     }
     
     h3 {
-        margin-bottom: 15px;
-        font-family: 'Raleway-Medium';
-        font-size: 20px;
+        margin-bottom: 28px;
+        color: #000000;
+        font-family: 'Raleway';
+        font-size: 22px;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: normal;
+        text-align: left;
+        text-transform: uppercase;
+        font-style: normal;
+        letter-spacing: 0.26px;
+        line-height: normal;
     }
 
     ul, a {
-        color: #000000;
-        list-style: none;
-        font-family: 'Raleway-Regular';
+        color: @black;
+        font-family: 'Raleway';
         font-size: 18px;
         font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        letter-spacing: normal;
+        line-height: 22px;
+        list-style: none;
+        letter-spacing: 0.22px;
         text-decoration: none;  
         cursor: pointer; 
         transition: 0.2s;
@@ -55,13 +71,12 @@
             color: #444040;
         }
     }
-
 }
 
 .icons {
     display: flex;
     gap: 34px;
-    margin-top: 150px;
+    margin-top: 55px;
 
     a {
         height: 38px;
@@ -69,36 +84,45 @@
     }
 }
 
-// .block.newsletter  {
-//     .field {
-//         .control:before {
-//             content: '';
-//         }
-//     }
+.block.newsletter  {
+    .form.subscribe {
+        margin-top: 26px;
+        display: flex;
+    }
 
-//     input {
-//         height: 36px;
-//         width: 267px;
-//         margin-right: 0;
-//         padding: 0 0 0 25px;
-//         background: none;
-//         border: 1px solid @black;
-//         box-shadow: 0 0 0 0;
-//         outline: 0;
+    .field {
+        .control:before {
+            content: '';
+        }
+    }
+
+    input {
+        height: 36px;
+        width: 267px;
+        padding: 0 0 0 25px;
+        background: none;
+        margin-right: 0;
+        border: 1px solid @black;
+        box-shadow: 0 0 0 0;
+        outline: 0;
     
-//         &::placeholder {
-//             font-family: 'Raleway-Regular';
-//             font-size: 15px;
-//             font-weight: 300;
-//         }
-//     }
+        &::placeholder {
+            color: @panel-font;
+            font-family: 'Raleway';
+            font-size: 15px;
+            font-weight: 300;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: left;
+            font-style: normal;
+            letter-spacing: 0.38px;
+            line-height: normal;
+        }
+    }
+} 
 
-//     // .form.subscribe {
-//     //     position: relative;
-//     //     bottom: 180px;
-//     //     margin: 5px 98px;
-//     // }
-// } 
+
 
 .minicart-wrapper .action.showcart.active {
     display: grid;
@@ -126,7 +150,7 @@
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
 
     &:hover {
@@ -141,7 +165,7 @@ button.action.continue.primary {
     width: 150px;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
 
     &:hover {
@@ -154,7 +178,7 @@ button.action.continue.primary {
     padding: 10px 10px;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     font-size: 18px;
     border-radius: 3px;
 
@@ -179,7 +203,7 @@ button.action.continue.primary {
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     border-radius: 3px;
 
     &:hover {
@@ -191,7 +215,7 @@ button.action.continue.primary {
     background-color: @button;
     border: none;
     transition: 0.2s;
-    font-family: 'Raleway-Regular';
+    font-family: 'Raleway';
     border-radius: 3px;
 
     &:hover {

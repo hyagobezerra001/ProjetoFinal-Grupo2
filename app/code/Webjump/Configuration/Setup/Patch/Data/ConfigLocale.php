@@ -51,7 +51,7 @@ class ConfigLocale implements DataPatchInterface
         $this->config->saveConfig(
             'system/currency/installed',
             'BRL,USD',
-            ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
+                ScopeConfigInterface::SCOPE_TYPE_DEFAULT,
             0
         );
 

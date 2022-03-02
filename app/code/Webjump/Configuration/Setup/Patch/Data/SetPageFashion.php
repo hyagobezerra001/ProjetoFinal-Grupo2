@@ -49,11 +49,6 @@ class SetPageFashion implements DataPatchInterface
             $this->pageFactory->create()->setData($page)->save();
             $this->config->saveConfig('web/default/cms_home_page',$page['identifier'], ScopeInterface::SCOPE_STORES, $page['stores'][0]);
         }
-
-
-//        $this->pageFactory->create()->setData($pageData)->save();
-//        $this->config->saveConfig('web/default/cms_home_page','banner_fashion', ScopeInterface::SCOPE_WEBSITES, $fashion);
-
         $this->moduleDataSetup->getConnection()->endSetup();
     }
 
@@ -146,7 +141,7 @@ class SetPageFashion implements DataPatchInterface
                    'identifier' => 'banner_fashion_en',
                    'content' =>
                        '<div class="page-main-image">
-                        <a href="http://fashion.develop.com.br/promocoesmoda.html">
+                        <a href="http://fashion.develop.com.br/promotion.html">
                           <img class="banner1" src="{{media url="wysiwyg/banner1.png"}}" alt="img1">
                         </a>
                     </div>
@@ -167,23 +162,23 @@ class SetPageFashion implements DataPatchInterface
                     <hr class="hr-top">
                     <div class="main_banner">
                         <div class="img1">
-                        <a href="http://fashion.develop.com.br/roupasmoda/blusas.html">
+                        <a href="http://fashion.develop.com.br/clothes/blouse.html">
                              <img src="{{media url="wysiwyg/banner_basicos.jpg"}}" alt="img4">
                         </a>
 
                         </div>
                         <div class="img2">
-                        <a href="http://fashion.develop.com.br/roupasmoda/saias.html">
+                        <a href="http://fashion.develop.com.br/clothes/skirt.html">
                             <img src="{{media url="wysiwyg/banner_saias.jpg"}}" alt="img5">
                         </a>
                         </div>
                         <div class="img3">
-                            <a href="http://fashion.develop.com.br/roupasmoda.html">
+                            <a href="http://fashion.develop.com.br/clothes.html">
                                 <img src="{{media url="wysiwyg/mulher-listrado.png"}}" alt="img6">
                             </a>
                         </div>
                         <div class="img4">
-                            <a href="http://fashion.develop.com.br/roupasmoda/vestidos.html">
+                            <a href="http://fashion.develop.com.br/clothes/dress.html">
                                 <img src="{{media url="wysiwyg/mulher-onca.png"}}" alt="img7">
                             </a>
                         </div>
@@ -216,8 +211,6 @@ class SetPageFashion implements DataPatchInterface
                    'sort_order' => 1,
                ]
                //----------FIM EN--------------//
-
-
            ];
     }
 

@@ -35,7 +35,7 @@ body {
 
 //resolvendo problema do page-main max-width 100%
 .column, .main{
-    padding: 0px 0px 40px 0px;
+    padding-left: 40px;
 }
 
 //comparar produtos
@@ -86,11 +86,11 @@ body {
     background-color: @panel-background;
 }
 
-// links do header
+//links do header
 .header.panel {
     .header.links {
-        .authorization-link:after{
-            color: @panel-font;
+        .authorization-link::after{
+            color:@panel-font;
             font-size: 14px;
             font-family: 'Raleway';
             font-weight: 500;
@@ -104,6 +104,21 @@ body {
         }
     }
 }
+
+.page-header > .panel.wrapper > .panel.header ul li a{
+    color:@panel-font;
+    font-size: 14px;
+    font-family: 'Raleway';
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    font-style: normal;
+    letter-spacing: 0.35px;
+    line-height: normal;
+}
+
 // input do header
 .block-search input{
     width: 261px;
@@ -156,17 +171,15 @@ body {
     bottom: 0px;
 
     .block-content{
-
         .action.search{
             right: -15px;
             top: 9px;
-
             &::before {
                 content: '';
                 display: block;
                 width: 16px;
                 height: 16px;
-                background-color: @panel-font;
+                filter: drop-shadow(0 0 0 #666666) brightness(.4);
                 background: url('@{baseDir}images/search.png');
             }
         }
@@ -184,7 +197,8 @@ body {
                 display: block;
                 width: 19px;
                 height: 25px;
-                background-color: #000000;
+                // background-color: #000000;
+                filter: opacity(1) drop-shadow(0 0 0 #000000);
                 background: url('@{baseDir}images/bag.png');
         }
     }
@@ -466,5 +480,15 @@ body {
 .page-title .base{
     padding: 0;
 }
+.checkout-payment-method .payment-option-title .action-toggle{
+        color: #40015f
+}
 
+a, .alink{
+    color: #40015f
+}
+.page-title-wrapper{
+    padding-left: 30px;
+    padding-top: 10px;
+}
 

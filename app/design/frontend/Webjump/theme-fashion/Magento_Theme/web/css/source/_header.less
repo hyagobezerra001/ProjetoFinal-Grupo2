@@ -416,8 +416,9 @@ body {
 
 }
 
-.action, .tocart, .primary {
-     &:hover{
-        background-color: red;
-    }
+.action.tocart.primary::before{    
+    content: '';
+    background-color: red;
 }
+
+

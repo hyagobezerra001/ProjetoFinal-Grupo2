@@ -133,6 +133,7 @@
 
         .navigation .submenu:not(:first-child) > li > a {
             color: @nav-span;
+            font-size: 16px;
         }
 
         //Footer
@@ -161,7 +162,11 @@
                 margin-left: 0;
             }
         }
-
+        .block.newsletter {
+            .actions {
+                width: auto;
+            }
+        }
         .block.newsletter .form.subscribe {
             justify-content: center;
         }
@@ -254,22 +259,17 @@
 
     }
 
-@media (min-width:767px) and (max-width: 1100px) {
-    .main-footer {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
-    }
+@media (min-width: 767px) and (max-width: 1100px) {
 
     .block.newsletter {
         input {
-            width: 250px;
+            max-width: 230px;
         }
 
         .action.subscribe {
-            width: 100px;
+            max-width: 100px;
         }
-    } 
+    }
 }
 
 

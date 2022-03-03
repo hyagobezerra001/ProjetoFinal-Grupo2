@@ -1,10 +1,10 @@
 //Container que engloba o carousel
 
-.um-prodslider.block.slider-type-featured.um-prodslider-t-slick {
-    height: 464px;
-    width: 1194px;
+.um-prodslider-t-slick .items.slick-initialized {
+    height: 450px;
+    width: 1213px;
+    margin: 20px;
 }
-
 
 // Image do produto no carousel 
 
@@ -14,35 +14,97 @@
     border-radius: 0 10px;
     border: 1px solid #8d8b8b;
     background-color: #ffffff;
+    margin: 0px;
 }
 
-.slider-desc{
-    padding-left: 53px;
+// .slider-desc{
+//     padding-left: 53px;
+//     text-align: left;
+//     color: #6e685c;
+//     font-family: Urbane;
+//     font-size: 15px;
+//     font-weight: 500;
+//     font-style: normal;
+//     letter-spacing: normal;
+//     line-height: 18.23px;
+
+// }
+
+.price-box.price-final_price{
+    padding-right: 53px;
     text-align: left;
+    display: inline-grid;
+}
+
+.product.name.product-item-name.slider-desc {
+    padding-right: 70px;
+    padding-left: 0;
+    text-align: left;
+}
+
+.product-item-name, .product.name a {
+
     color: #6e685c;
-    font-family: Urbane;
+    font-family: 'Urbane';
     font-size: 15px;
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.product-item-name > a:hover {
+    color: #6e685c;
+    font-family: 'Urbane';
+    font-size: 15px;
+    font-weight: bolder;
+    font-style: normal;
+    text-decoration: none;
+}
+
+.price-box > .special-price > .price-container > .price-wrapper > span {
+    color: #8b6722;
+    font-family: Urbane;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.um-prodslider .title-block {
+    color: #9a1e51;
+    font-family: 'Urbane';
+    font-size: 34px;
     font-weight: 500;
     font-style: normal;
     letter-spacing: normal;
-    line-height: 18.23px;
-
+    line-height: 31.86px;
+    text-align: center;
 }
 
-.price-box.price-final_price{
-    padding-left: 53px;
-    text-align: left;
+.um-prodslider .um-info {
+    padding: 0px 0px;
+}
 
+.um-prodslider .small-divider {
+    position: relative;
+    width: 60px;
+    height: 3px;
+    margin: 0 auto;
+    background: white;
+}
 
-    // width: 99px;
-    // height: 22px;
-    // color: #8b6722;
-    // font-family: Urbane;
-    // font-size: 20px;
-    // font-weight: 700;
-    // font-style: normal;
-    // letter-spacing: normal;
-    // line-height: 24.97px;
-    // text-transform: uppercase;
-    
+.um-prodslider .slick-prev {
+    visibility: visible;
+    left: -38px;
+    position: relative;
+}
+
+.slick-prev:before{
+    color: #9a1e51;
+    content: "ᐸ";
+}
+
+.slick-next:before {
+    color: #9a1e51;
+    content: "ᐳ";
 }

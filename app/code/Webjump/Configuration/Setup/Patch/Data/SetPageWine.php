@@ -64,13 +64,13 @@ class SetPageWine implements DataPatchInterface
                 'identifier' => 'banner_wine',
                 'content' =>
                     '<div class="page-main-image-wine">
-                    <a href="http://wine.develop.com.br/kitswine/variados.html">
+                    <a href="http://wine.develop.com.br/vinhos-italianos.html">
                         <img src="{{media url="wysiwyg/banner-principal.jpg"}}" alt="">
                     </a>
                 </div>
                 <div class="container">
                     <div class="img1">
-                        <a href="http://wine.develop.com.br/premiumwine/escolhidos-dos-enologos.html">
+                        <a href="http://wine.develop.com.br/sign-wine-mensal.html">
                             <img src="{{media url="wysiwyg/010.png"}}" alt="">
                         </a>
                     </div>

@@ -279,6 +279,11 @@ body {
 .navigation .level0 .submenu a:hover {
     background-color: #4B0082;
 }
+
+.navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
+    border-color: @li-desktop;
+}
+
 .message{
     display: flex;
     align-items: center;
@@ -331,15 +336,6 @@ body {
     line-height: normal;
 }
 
-.return_en{
-    display: flex;
-    width: auto;
-}
-
-.text-return_en{
-    width: 240px;
-}
-
 .image_message{
     margin-right: 20px;
 }
@@ -349,6 +345,17 @@ body {
     border: 1px solid #c0bebe;
     margin-bottom: 40px;
 }
+
+.return_en{
+    display: flex;
+
+}
+
+.text_message{
+    font-size: 20px;
+    width: 230px;
+}
+
 
 //grid
 .main_banner{
@@ -420,7 +427,74 @@ body {
 .div-text{
     width: 400px;
     text-align: center;
-    padding: 0 20px;
+    padding: 0 2gr0px;
+}
+
+// //carrosel
+// .content-block, .slider-list, .template-type-owl{
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     background-color: #ffffff;
+//     margin-left: 20px;
+// }
+
+// .product-image-photo{
+//     width: 231px;
+//     height: 289px;
+// }
+
+// // descrição dos produtos 
+// .product-item-name, .product.name a{
+//     width: 168px;
+//     height: 12px;
+//     color: #666666;
+//     font-family: 'Raleway-SemiBold';
+//     font-size: 14px;
+//     font-weight: 400;
+//     font-style: normal;
+//     letter-spacing: normal;
+//     line-height: 24px;
+//     text-align: left;
+//     margin-top: 20px;
+// }
+
+// .product-item-link{
+//     margin-bottom: 16px;
+// }
+
+// .price-box, .price-final_price{
+//     margin-top:30px;
+// }
+
+// // preços
+// .price{
+//     width: 47px;
+//     height: 12px;
+//     color: #000000;
+//     font-family: 'OpenSans-Regular';
+//     // font-size: 50px;
+//     font-weight: 700;
+//     font-style: normal;
+//     letter-spacing: normal;
+//     line-height: 24px;
+//     text-align: left;
+//     text-transform: uppercase;
+// }
+
+// .products, .wrapper, .grid, .products-grid, .products-{
+//     background-color: #ffffff;
+// }
+
+// before do input
+.um-prodslider .tocart::before{
+    content: '';
+
+}
+
+.action.tocart.primary::before{    
+    content: '';
+    background-color: red;
 }
 
 

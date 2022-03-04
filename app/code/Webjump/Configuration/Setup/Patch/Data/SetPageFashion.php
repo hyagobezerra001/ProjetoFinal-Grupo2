@@ -154,7 +154,7 @@ class SetPageFashion implements DataPatchInterface
                             <img class="image-card image_message" src="{{media url="wysiwyg/cartao.png"}}" alt="img2">
                             <span class="text-card text_message">Pay up to 5x interest free on your credit card</span>
                         </div>
-                        <div class="return_en">
+                        <div class="return_engrunt">
                             <img class=" image-return image_message" src="{{media url="wysiwyg/retornar.png"}}" alt="img3">
                             <span class="text-return_en text_message">First exchange guaranteed at no extra cost</span>
                         </div>

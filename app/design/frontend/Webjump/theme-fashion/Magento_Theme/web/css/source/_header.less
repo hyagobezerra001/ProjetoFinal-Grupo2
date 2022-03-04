@@ -1,11 +1,24 @@
-@panel-background:#eaeaea;
-@panel-font:#666666;
-@color-nav:#40015f;
-
+//Div do Entre ou Cadastre-se
 .page-header {
     .panel.wrapper {
         background-color: @panel-background;
     }
+
+    .header.panel {
+        height: 45px;
+        width: 1643px; 
+    }  
+}
+
+.page-header .panel.wrapper .switcher .options .action.toggle{ 
+    &:after {
+        line-height: 30px;
+    }
+}
+
+.page-header .panel.wrapper .switcher .options .action.toggle {
+    line-height: 25px;
+    margin-right: 11px;
 }
 
 *{
@@ -128,6 +141,10 @@ body {
 .block-search .label.active + .control input {
     box-shadow: 0 0 0 0;
     outline: 0;
+}
+
+.header.panel > .header.links {
+    line-height: 25px;
 }
 
 .header.panel > .header.links > li > a {

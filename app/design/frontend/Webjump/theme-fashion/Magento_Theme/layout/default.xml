@@ -19,13 +19,18 @@
             <block class="Magento\Cms\Block\Block" name="link1" before="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">footer-links1_Fashion</argument>
-                </arguments>    
-            </block>  
+                </arguments>
+            </block>
+            <block class="Magento\Cms\Block\Block" name="link2" before="-">
+                <arguments>
+                    <argument name="block_id" xsi:type="string">footer-links1_Fashion_en</argument>
+                </arguments>
+            </block>
             <block class="Magento\Newsletter\Block\Subscribe" name="link3" after="-">
                 <arguments>
                     <argument name="block_id" xsi:type="string">form.subscribe</argument>
-                </arguments>    
-            </block>  
+                </arguments>
+            </block>
         </container>
     </referenceContainer>
     <!-- <move element="form.subscribe" destination="footer-container" after="-" /> -->

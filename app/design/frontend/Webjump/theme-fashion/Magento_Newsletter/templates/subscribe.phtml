@@ -9,48 +9,53 @@
 <div class="block newsletter">
     <div class="main-footer">
         <div class="link3">
-            <h3>FIQUE POR DENTRO</h3>
+            <h3><?=__('STAY IN')?></h3>
             <ul>
-                <li><a>Assine a nossa Newletter para não perder nenhuma das promoções !</a></li>
+                <?=__("Subscribe to our Newsletter so you don't miss any of the promotions!")?>
             </ul>
-            <div class="icons">
-                <a href="https://pt-br.facebook.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>facebook.png"/></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>instagram.png"/></a>
-                <a href="https://www.youtube.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>youtube.png"/></a>
-                <a href="https://br.pinterest.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>pinterest.png"/></a>
+
+            <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+            <div class="content">
+            <form class="form subscribe"
+                    novalidate
+                    action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+                    method="post"
+                    data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+                    id="newsletter-validate-detail">
+                    <div class="field newsletter">
+                        <div class="control">
+                            <label for="newsletter">
+                                <span class="label">
+                                    <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
+                                </span>
+                                <input name="email" type="email" id="newsletter"
+                                    placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
+                                    data-mage-init='{"mage/trim-input":{}}'
+                                    data-validate="{required:true, 'validate-email':true}" />
+                            </label>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="action subscribe primary"
+                                title="<?= $block->escapeHtmlAttr(__('SUBSCRIBE')) ?>"
+                                type="submit"
+                                aria-label="Subscribe">
+                            <span><?= $block->escapeHtml(__('SUBSCRIBE')) ?></span>
+                        </button>
+                    </div>
+                </form>
+
+                <div class="icons">
+                    <a href="https://pt-br.facebook.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>facebook.png"/></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>instagram.png"/></a>
+                    <a href="https://www.youtube.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>youtube.png"/></a>
+                    <a href="https://br.pinterest.com" target="_blank"><img src="<?php echo $block->getUrl("pub/media/wysiwyg/")?>pinterest.png"/></a>
+                </div>
             </div>
         </div>
     </div>
-
-<div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
-    <div class="content">
-    <form class="form subscribe"
-            novalidate
-            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
-            method="post"
-            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
-            id="newsletter-validate-detail">
-            <div class="field newsletter">
-                <div class="control">
-                    <label for="newsletter">
-                        <span class="label">
-                            <?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?>
-                        </span>
-                        <input name="email" type="email" id="newsletter"
-                               placeholder="<?= $block->escapeHtml(__('Enter your email address')) ?>"
-                               data-mage-init='{"mage/trim-input":{}}'
-                               data-validate="{required:true, 'validate-email':true}" />
-                    </label>
-                </div>
-            </div>
-            <div class="actions">
-                <button class="action subscribe primary"
-                        title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>"
-                        type="submit"
-                        aria-label="Subscribe">
-                    <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
-                </button>
-            </div>
-        </form>
-    </div>
 </div>
+
+
+
+

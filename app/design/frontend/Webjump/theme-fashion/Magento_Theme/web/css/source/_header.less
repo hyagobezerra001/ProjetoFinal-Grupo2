@@ -1,17 +1,35 @@
-@panel-background:#eaeaea;
-@panel-font:#666666;
-@color-nav:#40015f;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
 .page-header {
     .panel.wrapper {
         background-color: @panel-background;
     }
+
+    .header.panel {
+        height: 45px;
+    }
+
+    .panel.wrapper {
+        .switcher {
+            .options {
+                .action.toggle {
+                    line-height: 25px;
+                }
+            }
+        }
+    }  
 }
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.page-header .panel.wrapper .switcher .options .action.toggle {
+    margin-right: 11px;
+
+    &:after {
+        line-height: 30px;
+    }
 }
 
 //Home
@@ -120,24 +138,31 @@ body {
     height: 32px;
     border: 1px solid #A6A6A6;
 
+    color: @panel-font;
+    font-family: 'Raleway';
+    font-size: 15px;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    font-style: normal;
+    letter-spacing: 0.38px;
+    line-height: normal;
+
     &::placeholder {
         color: @panel-font;
-        font-family: 'Raleway';
-        font-size: 15px;
-        font-weight: 300;
-        font-style: normal;
-        letter-spacing: normal;
-        line-height: normal;
-        text-align: center;
-        font-style: normal;
-        letter-spacing: 0.38px;
-        line-height: normal;
     }
 }
+
+
 
 .block-search .label.active + .control input {
     box-shadow: 0 0 0 0;
     outline: 0;
+}
+
+.header.panel > .header.links {
+    line-height: 25px;
 }
 
 .header.panel > .header.links > li > a {
@@ -149,14 +174,18 @@ body {
     letter-spacing: normal;
     line-height: normal;
     text-align: center;
-    /* Text style for "Entre ou c" */
     font-style: normal;
     letter-spacing: 0.35px;
     line-height: normal;
     transition: 0.2s;
 
-    &:hover{
+    &:hover {
         color: @black;
+        text-decoration: none;
+    }
+
+    &:visited {
+        color: @panel-font;
     }
 }
 
@@ -196,9 +225,26 @@ body {
                 filter: opacity(1) drop-shadow(0 0 0 #000000);
                 background: url('@{baseDir}images/bag.png');
         }
-    }
-}
 
+        .counter-number {
+            width: 6px;
+            height: 12px;
+            color: @li-color;
+            font-family: "Open Sans";
+            font-size: 16px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: normal;
+            text-align: center;
+            font-style: normal;
+            letter-spacing: 0.64px;
+            line-height: 25px;
+        }
+
+    }
+
+}
 
 .nav-sections {
     background-color: @color-nav;
@@ -224,6 +270,11 @@ body {
 
 .minicart-wrapper .block-minicart {
     top: 30px;
+    right: 45px;
+}
+
+.minicart-wrapper.active .block-minicart {
+    right: -10px;
 }
 
 //nav

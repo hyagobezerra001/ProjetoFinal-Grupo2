@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <!-- <referenceBlock name="page.main.title" remove="true" />-->
+
+    <!-- <referenceBlock name="price-container.price-final_price" remove="true"/> -->
+    
+    <referenceContainer name="main.content">
+        <block class="Ulmod\Productslider\Block\Slider\Items" as="product_slider" after="-">
+            <action method="setSliderId">
+                <argument xsi:type="number">2</argument>
+            </action>
+        </block>        
+    </referenceContainer>
+</page> 

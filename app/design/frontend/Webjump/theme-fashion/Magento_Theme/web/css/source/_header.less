@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+//Home
+body {
+    overflow-x: hidden;
+}
+
 .page-header {
     .panel.wrapper {
         background-color: @panel-background;
@@ -32,14 +37,8 @@
     }
 }
 
-
-//Home
-body {
-    overflow-x: hidden;
-}
-
 .page-main{
-    max-width: 100%;
+    width: 100%;
     padding: 0;
 }
 
@@ -50,43 +49,6 @@ body {
 
 .page-main-image{
     margin-bottom: 10px;
-}
-
-//resolvendo problema do page-main max-width 100%
-.column, .main{
-    padding: 0px 0px 40px 0px;
-}
-
-//comparar produtos
-.page-layout-2columns-left .sidebar-additional,.base {
-    padding-left: 20px;
-}
-
-//em estoque
-.page-layout-2columns-left .sidebar-additional, .base, .page-layout-1column .product-info-main{
-    padding-right: 20px;
-}
-
-//form checkout
-.opc-wrapper .step-content{
-    padding-left: 20px;
-}
-
-//entre
-.action-auth-toggle span{
-    padding-right: 20px;
-}
-
-
-//entre ou cadastre-se form
-.form.password.reset, .form.send.confirmation, .form.password.forget, .form.create.account, .form.search.advanced, .form.form-orders-search{
-    padding-left: 20px;
-}
-
-//logo magnolia
-
-.sections.nav-sections{
-    margin-bottom: 0;
 }
 
 // welcome padrão
@@ -258,12 +220,8 @@ body {
 
 .minicart-wrapper .block-minicart {
     top: 30px;
-    right: 45px;
 }
 
-.minicart-wrapper.active .block-minicart {
-    right: -10px;
-}
 
 //nav
 .section-items {
@@ -504,9 +462,5 @@ body {
 .step-title{
     padding-left: 15px;
 }
-
-// .navigation .level0 .submenu {
-//     border: none;
-// }
 
 

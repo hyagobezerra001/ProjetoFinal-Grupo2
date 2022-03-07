@@ -11,6 +11,7 @@
         letter-spacing: 1px;
         line-height: 31.86px;
         margin-top: 40px;
+        margin-bottom: 68px;
     }
 
     .block.widget.block-products-list.grid {
@@ -41,19 +42,12 @@
                             }
                         }
                         .product-item-details{
-                            color: #8b6722;
-                            font-family: 'Urbane';
-                            font-size: 20px;
-                            font-weight: bolder;
-                            font-style: normal;
-                            letter-spacing: 0.76px;
-                            line-height: 24.97px;
-                            text-transform: uppercase;
-
-
+                            width: 192px;
+                            height: 31px;
 
                             .product-item-name{
                                 a {
+                                    height: 3.5rem;
                                     color: #6e685c;
                                     font-family: 'Urbane';
                                     font-size: 15px;
@@ -62,6 +56,11 @@
                                     letter-spacing: 0.76px;
                                     line-height: 18.23px;
                                     text-decoration: none;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
                                 }
                             }
                             
@@ -88,11 +87,29 @@
                                 }
                             }
                             .price-box.price-final_price{
-
+                                .price-from {
+                                    display: none;
+                                }
+                                .price-to{
+                                    margin-top: 0;
+                                    .price-label {
+                                        display: none;
+                                    }
+                                }
+                                span{
+                                    color: #8b6722;
+                                    font-family: 'Urbane';
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    font-style: normal;
+                                    letter-spacing: 0.76px;
+                                    line-height: 24.97px;
+                                    text-transform: uppercase;
+                                }
                                 .price-box{
                                     .minimal-price{
                                         .price-label{
-                                            display: none;
+                                                display: none;
                                         }
                                     }
                                 }
@@ -106,6 +123,7 @@
                                     width: 231px;
                                     height: 55px;
                                     font-size: 20px;
+                                    position: relative;
                                     &:hover{
                                         background: #9a1e51;
                                     }

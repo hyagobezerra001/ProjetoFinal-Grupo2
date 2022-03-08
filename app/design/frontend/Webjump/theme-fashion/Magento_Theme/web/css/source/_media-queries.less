@@ -35,10 +35,16 @@
                 position: relative;
             }
         }
+
+        .action.showcart  {
+            .counter.qty  {
+                left: 0;
+            }
+        }
     }
 
     .minicart-wrapper .block-minicart {
-        width: 320px;
+        width: 330px;
         top: 30px;
     }
 
@@ -132,7 +138,8 @@
         }
 
         .navigation .submenu:not(:first-child) > li > a {
-            color: @li-desktop;
+            color: @nav-span;
+            font-size: 16px;
         }
 
         //Footer
@@ -160,6 +167,14 @@
                 flex-basis: 100px;
                 margin-left: 0;
             }
+        }
+        .block.newsletter {
+            .actions {
+                width: auto;
+            }
+        }
+        .block.newsletter .form.subscribe {
+            justify-content: center;
         }
 
         .icons {
@@ -224,10 +239,20 @@
 
             .text-return{
                 font-size: 18px;
-            }
+
+            }          
 
         }
 
+        .return_en{
+            display: flex;
+            padding: 35px;
+
+        }
+
+        .text-return_en{
+            font-size: 18px;
+        }
 
 
         .div-text{
@@ -249,6 +274,75 @@
         }
 
     }
+
+@media (min-width: 767px) and (max-width: 1274px) {
+
+    .block.newsletter {
+        input {
+            max-width: 230px;
+        }
+
+        .action.subscribe {
+            max-width: 110px;
+        }
+    }
+
+    .main-footer {
+        display: flex;
+        gap: 150px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0 40px;
+        margin-top: 50px;
+
+        .link3 {
+            flex-grow: 0;
+            flex-basis: 450px;
+            margin-left: 60px;
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 844px) {
+    .main-footer {
+        display: flex;
+        gap: 100px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0 40px;
+        margin-top: 50px;
+
+        .link3 {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media (min-width: 767px) and (max-width: 844px) {
+    .main-footer {
+        display: flex;
+        gap: 100px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        padding: 0 40px;
+        margin-top: 50px;
+
+        .link3 {
+            margin-right: 50px;
+        }
+    }
+}
+
+
+@media (max-width: 379px) {
+    .block.newsletter input {
+        width: 220px;
+    }
+}
+
 
 
 

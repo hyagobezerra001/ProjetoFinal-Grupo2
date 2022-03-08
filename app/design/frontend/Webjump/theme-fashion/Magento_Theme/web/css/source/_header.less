@@ -4,6 +4,53 @@
     box-sizing: border-box;
 }
 
+<<<<<<< HEAD
+=======
+
+#login-form > fieldset > div.actions-toolbar > div.secondary > a > span {
+    color: @color-nav;
+}
+.action.remind:hover{
+    text-decoration-color: @color-nav;
+}
+.page-header {
+    .panel.wrapper {
+        background-color: @panel-background;
+    }
+
+    .header.panel {
+        height: 45px;
+    }
+
+    .panel.wrapper {
+        .switcher {
+            .options {
+                .action.toggle {
+                    line-height: 25px;
+                }
+            }
+        }
+    }
+}
+//<<<<<<< HEAD
+//{
+///    padding: 0;
+ //   margin: 0;
+  //  box-sizing: border-box;
+//}
+//=======
+
+.page-header .panel.wrapper .switcher .options .action.toggle {
+    margin-right: 11px;
+
+    &:after {
+        line-height: 30px;
+    }
+}
+
+
+//Home
+>>>>>>> 20f5f5fc14aa28ce536f8a6b0cfddf2622814bab
 body {
     zoom: unset;
     min-width: auto;
@@ -148,8 +195,7 @@ html, body {
                 display: block;
                 width: 19px;
                 height: 25px;
-                // background-color: #000000;
-                filter: opacity(1) drop-shadow(0 0 0 #000000);
+                filter: opacity(1) drop-shadow(0 0 0 @black);
                 background: url('@{baseDir}images/bag.png');
         }
 
@@ -230,7 +276,7 @@ html, body {
 
 }
 
-// Botão de Promoção
+// LI DE PROMOÇÃO
 .nav-5 a span {
     font-family: 'Raleway';
     font-size: 20px;
@@ -255,55 +301,51 @@ html, body {
     background-color: #4B0082;
 }
 
+<<<<<<< HEAD
 // FIM JUSRISDIÇÃO
+=======
+>>>>>>> 20f5f5fc14aa28ce536f8a6b0cfddf2622814bab
 .navigation .level0 .submenu a:hover {
-    background-color: #4B0082;
+    background-color: @dropdown-hover;
 }
 
 .navigation .level0.active > .level-top, .navigation .level0.has-active > .level-top {
     border-color: @li-desktop;
 }
 
-.message{
+// CONDIÇÕES E VANTAGENS
+.message {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 5px;
+    margin: 20px 0px 23px 0px;
     padding: 0 23px;
+
+    .image-car {
+        width: 68px;
+        height: 45px;
+    }
+    
+    .image-card {
+        width: 69px;
+        height: 47px;
+    }
+    
+    .image-return {
+        width: 56px;
+        height: 46px;
+    }
+    
+    .car, .card, .return {
+        display: flex;
+        vertical-align: middle;
+    }
 }
 
-
-.image-car{
-    width: 68px;
-    height: 45px;
-}
-
-.image-card{
-    width: 69px;
-    height: 47px;
-}
-
-.image-return{
-    width: 56px;
-    height: 46px;
-}
-
-.car, .card, .return{
-    display: flex;
-    vertical-align: middle;
-
-}
-
-.message{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-}
-
-.text_message{
+.text_message {
     width: 226px;
     height: 43px;
-    color: #000000;
+    color: @black;
     font-size: 20px;
     font-family: 'Raleway-Regular';
     font-weight: 400;
@@ -322,23 +364,16 @@ html, body {
 
 .hr-top{
     height: 1px;
-    border: 1px solid #c0bebe;
+    border: 1px solid @hr-color;
     margin-bottom: 40px;
 }
 
-.return_en{
+.return_en {
     display: flex;
-
 }
-
-.text_message{
-    font-size: 20px;
-    width: 230px;
-}
-
 
 //grid
-.main_banner{
+.main_banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -349,21 +384,22 @@ html, body {
     padding-left: 10px;
 }
 
-// Estilização dos parágrafos
-
-.about-magnolia{
+// Sobre a Magnolia
+.about-magnolia {
     display: flex;
     align-items: center;
     margin-bottom: 27px;
     width: 100%;
+
+    hr {
+        border-top: 1px solid @black;
+        width: 100%;
+    }
 }
-.about-magnolia hr {
-    border-top: 1px solid @black;
-    width: 100%;
-}
-.about-magnolia-text{
+
+.about-magnolia-text {
     all:unset;
-    color: #000000;
+    color: @black;
     font-family: "Open Sans",sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -375,18 +411,21 @@ html, body {
     letter-spacing: 0.19px;
     line-height: normal;
 }
-.maincontainer{
+
+.maincontainer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 30px;
 }
-.magnolia, .decriptionlow{
+
+.magnolia, .decriptionlow {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
 }
-.part1, .part3{
+
+.part1, .part3 {
     font-family: 'OpenSans-SemiBold';
     font-weight: 600;
     font-style: normal;
@@ -394,10 +433,12 @@ html, body {
     line-height: normal;
     margin-bottom: 10px;
 }
-.part2{
+
+.part2 {
     margin-bottom: 20px;
 }
-.part2,.part4{
+
+.part2,.part4 {
     font-family: 'OpenSans-Light';
     font-weight: 300;
     font-style: normal;
@@ -407,123 +448,134 @@ html, body {
 .div-text{
     width: 400px;
     text-align: center;
+<<<<<<< HEAD
     padding: 0 2gr0px;
+=======
+    padding: 0 20px;
+>>>>>>> 20f5f5fc14aa28ce536f8a6b0cfddf2622814bab
 }
 
 // before do input
-.um-prodslider .tocart::before{
+.um-prodslider .tocart::before {
     content: '';
-
 }
 
-.action.tocart.primary::before{
+.action.tocart.primary::before {
     content: '';
-    background-color: red;
 }
 
-
-.page-products .products-grid .product-items{
-    background-color: #fff;
-
+.page-products .products-grid .product-items {
+    background-color: @li-color;
 }
 
-.page-products .product-item-info{
+.page-products .product-item-info {
     width: 260px;
 }
 
-.product-item-info{
+.product-item-info { 
     padding: 0;
     max-width: 260px;
-    //width: 250px;
 }
 
-.action.tocart.primary{
+.action.tocart.primary {
     width: 240px;
     border-radius: 5px;
 }
 
 //De Por
-
-.product-item .price-box .price-label{
+.product-item .price-box .price-label {
     font-size: 14px;
 }
 
-.special-price .price-label{
+.special-price .price-label {
     font-weight: 600;
 }
 
-.old-price, .special-price{
+.old-price, .special-price {
     display: block;
 }
 
-.price{
-    color:#40015f;
+.price {
+    color:@color-nav;
 }
 
-.step-title{
+.step-title {
     padding-left: 15px;
 }
 
 .opc-progress-bar-item._active:before {
-    background: #40015f;
-    border-color: #40015f;
-}
-.opc-progress-bar-item._active > span:before {
-    background: #40015f;
-    border-color: #40015f;
-}
-.opc-progress-bar-item._active > span:after{
-    border-color: #40015f;
-}
-input:not([disabled]):focus{
-    box-shadow: 0 0 3px 1px #40015f;
+    background: @color-nav;
+    border-color: @color-nav;
 }
 
+.opc-progress-bar-item._active > span:before {
+    background: @color-nav;
+    border-color: @color-nav;
+}
+
+.opc-progress-bar-item._active > span:after {
+    border-color: @color-nav;
+}
+
+<<<<<<< HEAD
 .opc-wrapper .shipping-address-item.selected-item:after{
     background: #40015f;
+=======
+input:not([disabled]):focus {
+    box-shadow: 0 0 3px 1px @color-nav;
+}
+
+.opc-wrapper .shipping-address-item.selected-item:after {
+    background: @color-nav;
+>>>>>>> 20f5f5fc14aa28ce536f8a6b0cfddf2622814bab
 }
 .opc-wrapper .shipping-address-item.selected-item {
-    border-color: #40015f;
+    border-color: @color-nav;
 }
 .paypal-review-discount .block > .title strong, .cart-discount .block > .title strong {
-    color: #40015f;
+    color: @color-nav;
 }
-.item.category5 a{
-    color: #40015f;
+.item.category5 a {
+    color: @color-nav;
 }
-.item.category6 a{
-    color: #40015f;
+.item.category6 a {
+    color: @color-nav;
 }
-.item.category7 a{
-    color: #40015f;
+.item.category7 a {
+    color: @color-nav;
 }
-.item.category8 a{
-    color: #40015f;
+.item.category8 a {
+    color: @color-nav;
 }
-.item.category9 a{
-    color: #40015f;
+.item.category9 a {
+    color: @color-nav;
 }
 .checkout-payment-method .checkout-billing-address .primary .action-update {
-    color:white;
-    background: #40015f;
+    color:@li-color;
+    background: @color-nav;
     border: none;
 }
 .breadcrumbs .items {
-    color:#40015f;
+    color:@color-nav;
 }
+
 #discount-form > div.actions-toolbar > div > button {
-    background-color: #40015f;
+    background-color: @color-nav;
     border:none;
 }
+
 #discount-form > div.actions-toolbar > div > button > span > span {
-    color:white;
+    color:@li-color;
 }
+
 #modal-content-8 > div > div > div.block-content > form > div.actions-toolbar > div.secondary > a{
-    color:#40015f;
+    color:@color-nav;
 }
+
 #checkout > div.authentication-wrapper > button > span {
-    color:#40015f;
+    color:@color-nav;
 }
+
 #customer-email-fieldset > fieldset > div.actions-toolbar > div.secondary > a > span{
-    color:#40015f;
+    color:@color-nav;
 }

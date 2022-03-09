@@ -27,7 +27,6 @@
                     }
 
                     li{
-                        padding-left: 1px;
                         height: 550px;
                         margin-top: 10px;
                         .product-item-info{
@@ -183,26 +182,21 @@
     }
 }
 
-// // produtos
-// .product-item {
-//     height: 520px;
-// }
-
-// //pontos de seleção
-// .slick-active, #slick-slide-control00{
-//     display: none;
-// }
-
-// #maincontent > div.columns > div > div.main-slider > div > div > div > ol > ul > li.slick-active{
-//     display: none;
-// }
-
-// #maincontent > div.columns > div > div.main-slider > div > div > div > ol > ul > li:nth-child(2){
-//     display: none;
-// }
-
-// //Icone de favorito e comparar
-// .product-item-actions .actions-primary + .actions-secondary{
-//     display: none;
-// }
+@media only screen and (max-width: 599px){
+    .main-slider {
+        .block.widget.block-products-list.grid {
+            ol {
+                .slick-list.draggable {
+                    .slick-track {
+                        li{
+                            height: 550px;
+                            justify-content: center;
+                            display: flex !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 

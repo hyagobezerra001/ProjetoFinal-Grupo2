@@ -1,131 +1,139 @@
-//Alterando cor e fonte do footer
-.page-footer {
-    background-color: #9a1e51;
-}
-
-.footer.content .links a {
-    color: #ffffff;
-    font-family: 'Urbanist';
-    font-size: 16px;
-    line-height: 27.32px;
-    &:hover {
-        color: #f6f4f4;  
-    } 
-}
-
-//Alterando campo de newsletter
-.block.newsletter{
-    margin-right: 60px;
-}
-
-.block.newsletter input { 
-    height: 35px;
-    border: 1px solid #f6f4f4;
-    background: none;
-    font-family: 'Urbanist';
-    font-size: 14px;
-    text-align: left;
-    color: #ffff;
-    margin-top: 25px;
-}
-
-.block.newsletter input::placeholder {
-    color: #ffffff;
-    font-family: 'Urbane';
-}
-
-.block.newsletter .field .control:before {
-    content: none;
-}
-
-.block.newsletter .action.subscribe {
-    background-color: #ffffff; 
-    color: #9a1e51;
-    border: none;
-    height: 35px;
-    transition: 0.2s;
-    font-family: 'Urbane';
-    font-size: 15px;
-    font-weight: 700;
-    font-style: normal;
-    letter-spacing: normal;
-    margin-top: 25px;
-    text-transform: uppercase;
-}
-
-.footer-links {
-    color: #ffffff;
-    display: flex;
-    gap: 0px;
-    padding: 0 8px;
-
-    .block2 {
-        display: inline-block;
-    }
-    
-    ul {
-        list-style: none;
-
-        h3 {
-            width: 170px;
-            height: 30px;
-            font-family: 'Urbane';
-            font-size: 19px;
-            font-style: normal;
-            letter-spacing: normal;
-            line-height: normal;
-        }
-
-        li {
-            font-family: 'Urbane-thin';
-            font-size: 16px;
-            font-weight: 400;
-            
-        }
-
-        a {
-            color: #ffffff;
-        }
-    }
-
-}
-
-@media (max-width:768px){
-
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        align-content: inherit;
-        text-align: inherit;
-
-        .block2 {
-            display: flex;
-        }
-
-        .footer-links {
-            width: 50%;
-            padding: 0px;
-
-            ul {
-                
-                padding: 0;
-                margin: 0 10px;
-                
+.page-footer{
+    background-color:#9a1e51;
+    .footer.content{
+        .block.newsletter{
+            margin-top: 0;
+            .content{
+                .control{
+                    width: 100%;
+                }
+                .form.subscribe{
+                    .field.newsletter{
+                        .control{
+                            &:before{
+                                content: "";
+                            }
+                            input{
+                                height: 35px;
+                                border: 1px solid #f6f4f4;
+                                background: #9a1e51;
+                                font-family: 'Urbanist';
+                                font-size: 14px;
+                                text-align: left;
+                                color: #ffff;
+                                margin-top: 25px;
+                                &::placeholder {
+                                    color: #ffffff;
+                                    font-family: "Urbane";
+                                }
+                            }
+                        }
+                    }
+                    .actions{
+                        float: none;
+                        width: 150px;
+                        margin-left: 10px;
+                        .action.subscribe.primary{
+                            white-space: normal;
+                            background-color: #ffffff; 
+                            color: #9a1e51;
+                            border: none;
+                            height: 35px;
+                            font-family: 'Urbane';
+                            font-size: 15px;
+                            font-weight: 700;
+                            font-style: normal;
+                            letter-spacing: normal;
+                            margin-top: 25px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
             }
         }
     }
+    .footer-links_container{
+        display: flex;
+        flex-wrap: wrap;
 
-    .block.newsletter {
-        margin-right: 0;
+        .footer-links{
+            width: 25%;
+            color: #fff;
+            ul{
+                list-style: none;
+                h3{
+                    width: 170px;
+                    height: 30px;
+                    font-family: 'Urbane';
+                    font-size: 19px;
+                    font-style: normal;
+                    letter-spacing: normal;
+                    line-height: normal;
+                }
+                li{
+                    font-family: 'Urbane-thin';
+                    font-size: 16px;
+                    font-weight: 400;
+                    a{
+                        color: #fff;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
     }
-
-    .page-header .panel.wrapper {
-        height: 0;
-    }
-
 }
 
-.copyright {
-    background: #9a1e51;
+@media only screen and (max-width: 775px){
+    .page-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .footer.content{
+            .block.newsletter{
+                margin-top: 0;
+                .content{
+                    .control{
+                        width: 100%;
+                    }
+                    .form.subscribe{
+                        .field.newsletter{
+                            float: none;
+                            width: 250px;
+                            margin-left: 10px;
+                        }
+                        .actions{
+                        }
+                    }
+                }
+            }
+        }
+        .footer-links_container{
+            display: flex;
+            flex-direction: column;
+            .footer-links{
+                ul{
+                    h3{
+                        width: 100px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 963px){
+    .page-footer{
+        .footer-links_container{
+            .footer-links{
+                ul{
+                    h3{
+                        width: 100px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
 }

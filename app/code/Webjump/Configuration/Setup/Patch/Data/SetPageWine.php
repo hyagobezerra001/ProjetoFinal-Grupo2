@@ -131,7 +131,7 @@ class SetPageWine implements DataPatchInterface
                     </div>
                 </div>
                 <div class="main-slider">
-<h3>Lançamentos da semana</h3>
+<h3>Releases of the week</h3>
 {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>',
                 'layout_update_xml' => '',
                 'url_key' => 'banner_wine_en',

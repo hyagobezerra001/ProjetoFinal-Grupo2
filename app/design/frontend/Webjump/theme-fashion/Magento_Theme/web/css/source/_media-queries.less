@@ -147,7 +147,7 @@
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            padding-left: 0;
+            // padding-left: 0;
 
             h3 {
                 font-size: 18px;
@@ -269,11 +269,19 @@
             margin-bottom: 0;
         }
 
-        .main_banner{
+        .main_banner {
             grid-template-rows: 0fr 0fr;
             grid-row-gap: 0px;
         }
 
+        //PRODUTOS
+        .page-products {
+            .products-grid {
+                .product-items {
+                    display: flex;
+                }
+            }
+        }
     }
 
 @media (min-width: 767px) and (max-width: 1274px) {

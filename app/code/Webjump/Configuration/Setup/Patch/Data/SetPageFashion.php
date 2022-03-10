@@ -106,7 +106,7 @@ class SetPageFashion implements DataPatchInterface
                         </div>
                     </div>
                     <h2 class="title-slider">novidades para você</h2>
-                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Lista de produtos do catálogo</span></span></div>
+                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"></span></div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
                             <hr />
@@ -127,10 +127,7 @@ class SetPageFashion implements DataPatchInterface
                                 <span class="part4">O género Magnolia tem como epónimo o nome de Pierre Magnol, um botânico de Montpellier (França). A primeira espécie identificada deste género foi Magnolia virginiana, encontrada por missionários enviados à América do Norte na década de 1680. Já em pleno século XVIII foi descrita, também a partir de amostras norte-americanas, a espécie Magnolia grandiflora, hoje a espéci mais conhecida do género dado ser amplamente utilizada como árvore ornamental nas regiões subtropicais e temperadas de clima moderado de todo o mundo.</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="main-slider">
-                    <h1>Novidades para você</h1>
-                    {{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}</div>',
+                    </div>',
                    'layout_update_xml' => '',
                    'url_key' => 'banner_fashion',
                    'is_active' => 1,
@@ -189,7 +186,7 @@ class SetPageFashion implements DataPatchInterface
                         </div>
                     </div>
                     <h2 class="title-slider">News for you</h2>
-                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"><span style="vertical-align: inherit;">Lista de produtos do catálogo</span></span></div>
+                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"></span></div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
                             <hr />

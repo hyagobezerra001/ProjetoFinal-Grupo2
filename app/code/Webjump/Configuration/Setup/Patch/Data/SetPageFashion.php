@@ -186,7 +186,7 @@ class SetPageFashion implements DataPatchInterface
                         </div>
                     </div>
                     <h2 class="title-slider">News for you</h2>
-                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="6" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"></span></div>
+                    <div class="main-slider">{{widget type="Magento\CatalogWidget\Block\Product\ProductsList" show_pager="0" products_count="5" template="Magento_CatalogWidget::product/widget/content/grid.phtml" conditions_encoded="^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^]^]"}}<span style="vertical-align: inherit;"></span></div>
                     <div class="maincontainer">
                         <div class="about-magnolia">
                             <hr />

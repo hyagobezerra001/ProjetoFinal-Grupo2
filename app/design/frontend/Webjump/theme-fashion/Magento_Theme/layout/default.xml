@@ -10,7 +10,7 @@
         <arguments>
             <argument name="logo_width" xsi:type="number">221</argument>
             <argument name="logo_height" xsi:type="number">40</argument>
-            <argument name="logo_file" xsi:type="string">images/logo.png</argument>
+            <argument name="logo_file" xsi:type="string">images/logo_copy.png</argument>
         </arguments>
     </referenceBlock>
 
@@ -37,7 +37,7 @@
     <referenceBlock name="footer_links" remove="true"></referenceBlock>
     <referenceBlock name="ui-state-focus" remove="true"></referenceBlock>
     <referenceBlock name="all-category" remove="true" />
-    
 
-  
+
+
 </page>

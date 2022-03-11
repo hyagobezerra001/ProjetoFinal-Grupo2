@@ -17,6 +17,26 @@
   *
   */
  module.exports = {
+     themewine: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'pt_BR',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
+    themewine: {
+        area: 'frontend',
+        name: 'Webjump/theme-wine',
+        locale: 'en_US',
+        files: [
+            'css/styles-m',
+            'css/styles-l'
+        ],
+        dsl: 'less'
+    },
     themefashion: {
         area: 'frontend',
         name: 'Webjump/theme-fashion',
@@ -36,6 +56,5 @@
             'css/styles-l'
         ],
         dsl: 'less'
-    },
-
+    }
  };
